@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta content="width=1280,height=720" name="viewport" />
+<title></title>
+<link rel="stylesheet" type="text/css" href="../../common/css/common.css" />
+<link rel="stylesheet" type="text/css" href="../../common/css/social.css" />
+<script defer src="../../common/js/jquery.min.js"></script>
+<script defer src="../../common/js/jquery-ui.min.js"></script>
+<script defer src="../../common/js/jquery.ui.touch-punch.min.js"></script>
+<script defer src="../../common/js/bootstrap.min.js"></script>
+<script defer src="../../common/js/swiper.min.js"></script>
+<script defer src="../../common/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script defer src="../../common/js/common.js"></script>
+<script defer src="../../common/js/navigation.js"></script>
+<script defer src="../../common/js/social.js"></script>
+ <!-- 페이지별 -->
+</head>
+<body>
+<div id="wrap" >
+	<header id="hd">
+		<div class="page-bread"></div>
+		<button type="button" class="page-label">
+			<i class="icon icon-book-pencil"></i>
+			<span class="text-purple">사회</span><span id="page-num" class="num"></span>
+		</button>
+		<button type="button" class="icon icon-hd-close">닫기</button>
+	</header>
+
+	<main id="ct">
+		<!-- 페이지 시작 -->
+		<div class="page-bottom-bg v2"></div>
+		<div class="page-hd">
+			<h1 class="text-hide"><img src="../../common/img/social/title-ch.png" height="54" alt="" />말풍선</h1>
+			<!-- <strong class="fs-xs"></strong> -->
+		</div>
+
+		<div class="slide-page page-fill">
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div id="slide1" class="swiper-slide">
+                        <div class="sect-bullet subtitle">
+							<div class="bullet">2.</div>
+							<strong class="cnt">백제 사람들의 생활 모습 알아보기</strong>
+						</div>
+						<div class="sect-bullet">
+							<div class="bullet"><img src="../../common/img/social/chick2.png" width="65" alt=""></div>
+							<div class="cnt">
+								삼국 시대에는 신분에 따라 다른 생활을 하였습니다. 왕족이나 귀족들은 어떻게 생활하였을까요?
+							</div>
+						</div>
+
+                        <!-- [D] 짧은 답변 일때는 페이지안에 -->
+						<div class="page-bottom">
+							<button type="button" class="wbtn" data-toggle="modal" data-target="#modal1"><span>예시 보기</span></button>
+						</div>
+                    </div>
+
+					<div id="slide2" class="swiper-slide">
+						<div class="sect-bullet">
+							<div class="bullet"><img src="../../common/img/social/chick2.png" width="65" alt=""></div>
+							<div class="cnt">
+								평민들은 어떻게 생활하였을까요?
+							</div>
+						</div>
+
+						<div class="page-bottom">
+							<button type="button" class="wbtn" data-toggle="modal" data-target="#modal2"><span>예시 보기</span></button>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-controls">
+					<div class="swiper-button-prev"></div>
+					<div class="swiper-pagination"></div>
+					<div class="swiper-button-next"></div>
+				</div>
+			</div>
+		</div>
+
+		<div id="modal1" class="modal fade">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <button type="button" class="icon icon-modal-close btn-sound" data-dismiss="modal">닫기</button>
+                    <div class="modal-body">
+                        <strong class="modal-title modal-title-ex">예시답안</strong>
+                        <div class="sect-bullet">
+							<div class="bullet"><img src="../../common/img/social/rabbit2.png" width="65" alt=""></div>
+							<div class="cnt">화려한 무늬를 넣은 벽돌이나 기와로 만든 집에서
+                                살았을 것 같습니다.
+							</div>
+						</div>
+
+                        <div class="sect-bullet">
+							<div class="bullet"><img src="../../common/img/social/rabbit2.png" width="65" alt=""></div>
+							<div class="cnt">집 안에는 부엌, 고깃간, 곡식 창고 등의 건물 등이
+                                있었을 것 같습니다.
+							</div>
+						</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+		<div id="modal2" class="modal fade">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <button type="button" class="icon icon-modal-close btn-sound" data-dismiss="modal">닫기</button>
+                    <div class="modal-body">
+                        <strong class="modal-title modal-title-ex">예시답안</strong>
+                        <div class="sect-bullet">
+							<div class="bullet"><img src="../../common/img/social/rabbit2.png" width="65" alt=""></div>
+							<div class="cnt">초가집에서 살았습니다.
+							</div>
+						</div>
+
+                        <div class="sect-bullet">
+							<div class="bullet"><img src="../../common/img/social/rabbit2.png" width="65" alt=""></div>
+							<div class="cnt">바닥에 거적 등을 깔고 생활하였습니다.
+							</div>
+						</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+		<!-- 페이지 끝 -->
+	</main>
+
+	<footer id="ft">
+		<button type="button" class="icon icon-mn index-toggle">목차보기</button>
+		<nav class="ft-navi nav"></nav>
+		<div class="ft-paging">
+			<button type="button" class="icon icon-paging-prev">이전목록</button>
+			<div class="pagin-num"><span id="current"></span><i></i><span id="total"></span></div>
+			<button type="button" class="icon icon-paging-next">다음목록</button>
+		</div>
+	</footer>
+</div>
+</body>
+</html>

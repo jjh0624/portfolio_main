@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta content="width=1280,height=720" name="viewport" />
+<title></title>
+<link rel="stylesheet" type="text/css" href="../../common/css/common.css" />
+<link rel="stylesheet" type="text/css" href="../../common/css/social.css" />
+<script defer src="../../common/js/jquery.min.js"></script>
+<script defer src="../../common/js/jquery-ui.min.js"></script>
+<script defer src="../../common/js/jquery.ui.touch-punch.min.js"></script>
+<script defer src="../../common/js/bootstrap.min.js"></script>
+<script defer src="../../common/js/swiper.min.js"></script>
+<script defer src="../../common/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script defer src="../../common/js/common.js"></script>
+<script defer src="../../common/js/navigation.js"></script>
+<script defer src="../../common/js/social.js"></script>
+<link rel="stylesheet" href="./css/page037_05.css">
+</head>
+<body>
+<div id="wrap" >
+	<header id="hd">
+		<div class="page-bread"></div>
+		<button type="button" class="page-label">
+			<i class="icon icon-book-pencil"></i>
+			<span class="text-purple">사회</span><span id="page-num" class="num"></span>
+		</button>
+		<button type="button" class="icon icon-hd-close">닫기</button>
+	</header>
+
+	<main id="ct">
+        <div id="modal1" class="modal fade">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <button
+                  type="button"
+                  class="icon icon-modal-close btn-sound"
+                  data-dismiss="modal"
+                >
+                  닫기
+                </button>
+                <div class="modal-body">
+                  <strong class="modal-title modal-title-ex">예시답안</strong>
+
+                  <div class="flex-center pb0">
+                    (&nbsp;
+                    <div class="d-inline-block short-answer short-answer-block position-relative text-center" style="width: 240px; height: 70px;" data-toggle="answer" role="button">
+                        한강
+                    </div>&nbsp;) 유역을 차지하였습니다.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="modal2" class="modal fade">
+			<div class="modal-dialog modal-dialog-centered">
+			  <div class="modal-content">
+				<button type="button" class="icon icon-modal-close btn-sound" data-dismiss="modal">
+				  닫기
+				</button>
+				<div class="modal-body">
+				  <strong class="modal-title modal-title-ex">예시답안</strong>
+				  <div class="sect-bullet">
+					<div class="bullet">
+					  <img src="../../common/img/social/rabbit2.png" width="65" alt=""/>
+					</div>
+					<div class="cnt">
+                        4세기에 백제의 근초고왕은 영토를 크게 넓히고, 주변 나라와 활발하게 교류하였습니다. 5세기에 고구려의 광개토 대왕과 장수왕은 영토를 크게 확장하고 주변 나라에 영향력을 행사하였습니다. 6세기에 신라의 진흥왕은 백제와 전쟁을 벌여 한강 유역 전체를 차지하였고, 대가야를 정복하였습니다.
+					</div>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		</div>
+
+          <!-- <div id="modal2" class="modal fade">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<button type="button" class="icon icon-modal-close btn-sound" data-dismiss="modal">닫기</button>
+					<div class="modal-body pb35">
+                        <strong class="modal-title modal-title-ex">예시답안</strong>
+
+                        <table class="text-center fs20">
+                            <tr class="all">
+                                <th class="left">구분</th>
+                                <th class="middle">왕</th>
+                                <th class="right text-center">업적</th>
+                            </tr>
+                            <tr>
+                                <th class="left">백제</th>
+                                <td class="middle"><span class="short-answer" data-toggle="answer" role="button">근초고왕</span></td>
+                                <td class="right"><span class="short-answer" data-toggle="answer" role="button">남해안까지 영토를 넓히고 북쪽의 고구려를 공격하여 황해도 일부를 차지하였으며, 중국, 일본 등 주변 나라와 활발히 교류하였다.</span></td>
+                            </tr>
+                            <tr>
+                                <th class="left" rowspan="2">고구려</th>
+                                <td class="middle"><span class="short-answer" data-toggle="answer" role="button">광개토 대왕</span></td>
+                                <td class="right"><span class="short-answer" data-toggle="answer" role="button">북쪽으로 영토를 넓히고, 남쪽으로는 백제를 공격하여 한강 이북의 땅을 차지하는 등 영토를 크게 확장하였다.</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="middle"><span class="short-answer" data-toggle="answer" role="button">장수왕</span></td>
+                                <td class="right"><span class="short-answer" style="height: 80px;" data-toggle="answer" role="button">도읍을 평양성으로 옮긴 후 백제의 도읍인 한성을 함락하여 한강 유역을 모두 차지하였다.</span></td>
+                            </tr>
+                            <tr>
+                                <th class="left">신라</th>
+                                <td class="middle"><span class="short-answer" data-toggle="answer" role="button">진흥왕</span></td>
+                                <td class="right"><span class="short-answer" data-toggle="answer" role="button">백제와 함께 고구려를 공격하여 한강 유역을 빼앗았다. 이후 진흥왕은 백제와 전쟁을 벌여 한강 유역 전체를 차지하였으며, 한강을 통해 중국과 직접 교류할 수 있게 되었다. 또, 대가야를 정복하고 점령한 지역에 순수비를 세웠다.</span>
+                                </td>
+                            </tr>
+                        </table>
+					</div>
+				</div>
+			</div>
+		</div> -->
+		<!-- 페이지 시작 -->
+		<div class="page-hd">
+			<h1 class="text-hide"><img src="../../common/img/social/title-act.png" height="54" alt="" />활동해요</h1>
+            <div class="page-bottom-bg v2"></div>
+		</div>
+		<div class="page-fill slide-page">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide slide1">
+                        <div class="sect-bullet subtitle">
+                          <strong class="cnt">삼국의 전성기 알아보기
+                        </strong>
+                        </div>
+
+                        <div class="sect-bullet">
+                            <div class="bullet text-brw">
+                                1
+                            </div>
+                            <div class="cnt">다음 지도에 <img src="./img/page037_05/1.jpg" height="50" class="d-inline-block position-relative" style="bottom: 2px;" alt="">를 활용하여 삼국의 전성기 지도를 붙여 보고, 다음 문장을 완성해 보자.</div>
+                        </div>
+
+						<div class="page-bottom">
+							<button type="button" class="wbtn" data-toggle="modal" data-target="#modal1"><span>정답 보기</span></button>
+						</div>
+                    </div>
+
+                    <div class="swiper-slide slide3">
+                        <div class="sect-bullet">
+                            <div class="bullet">
+                                <b class="text-brw">2</b>
+                            </div>
+                            <div class="cnt"><b class="text-brw">1</b>의 지역을 차지하는 것이 어떤 의미가 있었을지 써 보자.</div>
+                        </div>
+
+						<div class="sect-bullet" data-invisible>
+							<div class="bullet"><img src="../../common/img/social/rabbit2.png" width="65" alt=""></div>
+							<div class="cnt">
+								한강 유역은 넓은 평야가 있어 농사짓기에 좋았고, 황해를 통해 중국과 쉽게 교류할 수 있었습니다.
+							</div>
+						</div>
+						<!-- [D] 짧은 답변 일때는 페이지안에 -->
+						<div class="page-bottom">
+							<button type="button" class="wbtn btn-toggle" data-toggle="answer-all" data-target=".slide3"><span>예시 보기</span><span>예시 닫기</span></button>
+						</div>
+                    </div>
+                </div>
+                <div class="swiper-controls">
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+        </div>
+		<!-- 페이지 끝 -->
+	</main>
+
+	<footer id="ft">
+		<button type="button" class="icon icon-mn index-toggle">목차보기</button>
+		<nav class="ft-navi nav"></nav>
+		<div class="ft-paging">
+			<button type="button" class="icon icon-paging-prev">이전목록</button>
+			<div class="pagin-num"><span id="current"></span><i></i><span id="total"></span></div>
+			<button type="button" class="icon icon-paging-next">다음목록</button>
+		</div>
+	</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,162 @@
+@charset "utf-8";
+
+/* 주제 마무리(게임) */
+/* 공통 */
+.lst-num {display: inline-block;padding: 20px 40px;border: 5px solid #eee;border-radius: 30px;font-size: 50px;text-align: left}
+.lst-num>li{position: relative;margin: 10px 0;padding-left: 1.5em;line-height: 1.5}
+.lst-num>li>b{content: '';position: absolute;top: 0.2em;left: 0;width: 1.2em;height: 1.2em;border: 1px solid;border-radius: 50%;line-height: 1.1;text-align: center}
+.lst-num>li>b.num-circle.text-brw {border: 0;}
+#gameModal{overflow: hidden}
+#gameModal .modal-dialog, #gameModal .modal-content, #gameModal .modal-body{width: 100%;height: 100%;margin: 0;border-radius: 0}
+#gameModal .modal-body {height: 100%;margin: 0;padding: 0;}
+#gameModal .modal-content::before{display: none}
+#gameModal .icon-modal-close{top: 20px;right: 20px;width: 50px;height: 50px;background-image: url(../img/social/game/icon-modal-close.png)}
+#game{position: relative;width: 100%;height: 100%}
+#game>.game-bg{position: absolute;top:0;left:0;width:100%;height:100%}
+#game .active{display:block}
+.game-title{position:absolute;top: 127px;left: 90px}
+#gameStep{position: absolute;top: 199px;left: 111px;width: 550px;z-index: 10}
+#gameStep li{position: absolute;left:0;top:0;width:100%;height:100%;opacity:0;transition:1.5s}
+#gameStep li.active{animation: fadeIn 1s both}
+#game.start #gameStep li{opacity:1}
+#game.start #gameStep li.active~*{opacity:0 !important}
+#game.start #gameStep li.active::before{opacity:1}
+#game .char-start{position: absolute;transition:1s}
+#game.start .char-start {opacity:0}
+.game-control{position: absolute;top: 78px;right: 58px;width: 462px;height: 602px;background: url(../img/social/game/bg-control.png) no-repeat 0 0 / 100% auto}
+.game-control:before{content: '';position: absolute;top: 137px;left: 37px;width: 360px;height: 327px;background: url(../img/social/game/intro.png) no-repeat center / 100% auto}
+#game.start .game-control:before{animation: fadeOut .5s forwards}
+#gameStart{position: absolute;top: -65px;left: 50%;width:238px;height:145px;z-index: 10;background: url(../img/social/game/btn.png) no-repeat 0 0 / 100%;transform: translateX(-50%);transition: none}
+#gameStart:after{content: '';position: absolute;top: 0;left: 0;width: 100%;height: 100%;background: url(../img/social/game/btn-effect.png) no-repeat center / 100% auto;opacity: 0;animation: flash 1s forwards;animation-iteration-count: 3}
+#game.start #gameStart{background-position: 0 100%}
+#game.start #gameStart:after{display: none}
+#gameStart>*:last-child, .timer span:last-child{display: none}
+.timer{position: absolute;top:2px;left:50%;width: 235px;padding:0;width: 50%;height:120px; padding-left:70px;font-weight:700; font-size:30px;line-height: 120px;text-align: center; color:#ff8c11}
+.timer span:first-child{margin-left:30px}
+.timer span:last-child{font-size:55px}
+#gameQ{position: relative;width: 100%;height: 100%;padding: 66px 37px 0 35px}
+#gameQ li{display: none;position: relative;height: 328px;padding: 78px 35px 20px;border: 2px solid #cec9ba;box-shadow: 0px 3px 12px rgba(0, 0, 0, .1);border-radius: 18px;background: #fff;font-size: 40px;font-weight: 700;text-align: center;line-height: 1.2;letter-spacing: -.04em;animation: fadeIn 1s 1s both}
+#gameQ li:last-child:not([data-answer]){align-items: center;padding-top:0;padding-bottom:0}
+#gameQ li b{position: absolute;top: 19px;left: 50%;width: 88px;height: 46px;background: #056cdf;border-radius: 24px;font-family:'OMPOP',sans-serif;font-size: 32px;color: #fff;text-align: center;line-height: 46px;transform: translateX(-50%)}
+#gameQ li.active{display: flex;justify-content: center}
+#gameQ .answer-bx{display: flex;align-items: center;justify-content: center;position: absolute;top: calc( 100% + 27px );left: 50%;width: 100%;transform: translateX(-50%)}
+#gameQ .short-answer{display: flex;align-items: center;justify-content: center;position: absolute;left: 50%;transform: translateX(-50%);top: calc( 100% + 20px );width: calc( 100% + 4px );height: 152px;border: transparent;font-size: 40px;color: #FF0000}
+#gameQ .short-answer:not(.active)::before{background: url(../img/social/game/btn-chk.png) no-repeat center / cover}
+#gameQ .short-answer.active{border: 3px solid #888;pointer-events: none;cursor:none}
+[data-toggle=step-o],[data-toggle=step-x]{display:inline-block;width: 142px;height: 142px;margin: 0 7px;background:url(../img/social/game/btn-o.png) no-repeat 0 0 / 100% auto}
+[data-toggle=step-x]{background-image: url(../img/social/game/btn-x.png)}
+.start #gameStart>*:last-child,
+.start .timer span:last-child,
+.start #gameO{display:block}
+.start #gameStart>*:first-child,
+.start .timer span:first-child{display: none}
+.start .start-dicegame{opacity:0}
+.no-pointer{pointer-events: none}
+.modal-alert{background: rgba(0,0,0,.5)}
+.modal-alert .icon-close {top: -25px;right: -25px}
+.modal-alert .modal-dialog {width: 598px}
+.modal-alert .modal-content {margin: 0;padding: 0}
+.modal-alert .modal-content::before{display: none}
+.modal-alert .modal-body {display: flex;align-items: center;justify-content: center;width: 100%;height: 371px;padding: 40px 18px 20px;background: url(../img/social/game/bg-alert.png) no-repeat center / 100% auto;font-family: 'OMPOP',sans-serif;text-align: center}
+.modal-alert h4 {font-size: 54px}
+.modal-alert .icon-smile {    position: absolute;
+    top: -52px;
+    left: 50%;
+    width: 340px;
+    height: 204px;
+    background: url(../img/social/game/icon-smile.png) no-repeat center / 100%;
+    transform: translateX(-50%);}
+.modal-alert.alert-correct .icon-smile,
+#gameAlertWord .icon-smile {background-image: url(../img/social/game/icon-default.png)}
+.modal-alert .icon-ox{display: inline-block;vertical-align: middle;width: 68px;height: 68px;background: url(../img/social/game/icon-o.png) no-repeat center / 100% auto}
+.modal-alert.alert-answer-x .icon-ox {background-image: url(../img/social/game/icon-x.png)}
+#gameAlertOX button, #gameAlertCorrect button, #gameAlertWord button{position: absolute;bottom: 48px;left: 50%;width: 215px;height: 74px;background: url(../img/social/game/btn-next.png) no-repeat center / 100%;transform: translateX(-50%)}
+#gameAlertFin button{position: absolute;bottom: 48px;left: 50%;width: 135px;height: 72px;margin: 0 0 0 76px;background: url(../img/social/game/btn-no.png) no-repeat center / 100%;transform: translateX(-50%)}
+#gameAlertFin button#gameRe{margin: 0 0 0 -76px;background: url(../img/social/game/btn-yes.png) no-repeat center / 100%}
+#gameAlertFin .icon-ok{position: absolute;top: -46px;left: 50%;width: 310px;height: 180px;background: url(../img/social/game/ending.png) no-repeat center / 100%;transform: translateX(-50%)}
+.game-control>[data-toggle^=step-]{position: absolute;bottom: 41px;left: 74px;z-index: 10}
+.game-control>[data-toggle=step-x]{bottom: 41px;left: 231px}
+#game.start .game-control>[data-toggle=step-o], #game.start .game-control>[data-toggle=step-x]{display:block;animation: fadeIn 1s 1s both}
+#game.start .game-control>.answer-bx, #game.start .game-control>.answer-bx{display: flex;animation: fadeIn 1s 1s both}
+#game:not(.start) .game-control>[data-toggle=step-o], #game:not(.start) .game-control>[data-toggle=step-x],
+#game.finish .game-control>[data-toggle=step-o], #game.finish .game-control>[data-toggle=step-x],
+#game:not(.start) .game-control>.answer-bx, #game:not(.start) .game-control>.answer-bx,
+#game.finish .game-control>.answer-bx, #game.finish .game-control>.answer-bx{display: none}
+#game button:disabled{pointer-events: none;opacity: .6}
+/* 숨은그림찾기 */
+.find-game #gameStep li:first-child{opacity:1;animation: none}
+/* 미로찾기 */
+.miroh-game #gameStep{top: 110px;left: 68px;width: 600px}
+.miroh-game #gameStep li{display:block;position: absolute;top:0;left:0}
+.miroh-game #gameStep li::before{content: "";position: absolute;left:0;top:0;z-index:999;width:124px;height:124px;background-size:100% auto;opacity:0;transition:.8s}
+#lst-quest {position: absolute;left:0;top:0;width:100%;font-size:14px;font-weight: 700}
+#lst-quest p{position: absolute;left: 548px;top:107px;width:116px;text-align:center;letter-spacing: -.06em;line-height: 1.2}
+#lst-quest p>b{position: absolute;top: -22px;left: 0;width: 20px;height: 20px;background: #fff;border-radius: 2px;border: 2px solid #48AC82;text-align: center}
+/* 사다리타기 */
+.ladder-game #gameStep li:not(.active){opacity: 0 !important}
+.ladder-game #gameStep li.active::after{content:'';position: absolute;top:0;left:0;width:24px;height:24px}
+.ladder-game #lst-quest span:not(.text-nowrap) {display: inline-block;padding: 0 14px;line-height: 16px;background: #fff;border: 1px solid #E4943F;border-radius: 4px;font-size: 12px;color: #E4943F}
+.game-control>.answer-bx,
+.game-control .answer-bx.text{display: flex;align-items: center;position: absolute;right: 37px;left: 37px;bottom: 44px;height: 146px;z-index: 10}
+.input-step{display: flex;align-items: center;justify-content: center;width: 100%;flex: 1;height: 100%;padding: 20px;background: #fff;border: 3px solid #888;border-radius: 15px;font-size: 40px;font-weight: 700;text-align: center;user-select: none}
+.btn-step{width: 99px;height: 100%;margin-left: 11px;font-size: 0;background: url(../img/social/game/btn-chk-sm.png) no-repeat center / 100%}
+#word-block {position: absolute}
+#word-block p{position: absolute;transition: .5s}
+#word-block p span{display: block;position:relative;z-index: 10;padding: 2px 10px;background: #fff;border-radius: 20px;border: 2px solid #B1782F;font-size: 16px;color: #B1782F;text-align: center;font-weight: 700;white-space: nowrap}
+#word-block p span:nth-child(2){display: none;color:#000}
+#word-block .is-correct span:first-child{display:none}
+#word-block .is-correct span:nth-child(2){display: block}
+#word-block p.active i{display: block;animation: fadeIn 1s both}
+#word-block i{display: none;position: absolute;top: -9px;left: 50%;width: 12px;height: 12px;background: #FF0000;border-radius: 50%;transform: translateX(-50%)}
+#word-block i:before, #word-block i:after {content: '';position: absolute;top: 50%;left: 50%;width: calc( 100% + 20px );height: calc( 100% + 20px );background: rgba(255, 0, 0, .2);border-radius: 50%;transform: translate(-50%, -50%);animation: flash 2s linear 0.25s infinite alternate}
+#word-block i:after {width: calc( 100% + 10px );height: calc( 100% + 10px );background: rgba(255, 0, 0, .3);animation: flash 2s linear 0s infinite alternate;}
+
+
+/* 5-6학년 주제마무리 공통 수정사항 */
+
+.modal-content {background-color: transparent;border: 0;margin-top: 15px;}
+
+.modal-alert .modal-body {height: 500px;}
+
+.modal-alert .icon-smile {top: 17px;}
+
+#gameAlertOX button, #gameAlertCorrect button, #gameAlertWord button {bottom: 38px;}
+
+.game-control {top: 83px;right: 18px;width: 505px;height: 581px;}
+
+.game-control>.answer-bx, .game-control .answer-bx.text {bottom: 35px;}
+
+#gameQ li b {position: absolute;width: 50px;background: #FAD36C;color: #5B3F1C;}
+
+.alert-correct .icon-smile {position: absolute;top: 17px;left: 40%;width: 340px;height: 204px;background: url(../img/social/game/icon-default.png) no-repeat center / 100%;transform: translateX(-50%);}
+
+#gameAlertFin .icon-ok {top: 25px;}
+
+.btn-step {width: 99px;height: 100%;margin-left: 11px;font-size: 0;background: url(../img/social/game/btn-chk-sm.png) no-repeat center / 100%;}
+
+.game-control:before {top: 124px;left: 58px}
+
+#gameStart {position: absolute;top: -93px;left: 50%;height: 145px;z-index: 10;background: url(../img/social/game/btn.png) no-repeat 0 0 / 100%;transform: translateX(-50%);transition: none}
+
+.game-control>[data-toggle^=step-o] {position: absolute;bottom: 33px;left: 96px;z-index: 10;}
+
+.game-control>[data-toggle=step-x] {bottom: 33px;left: 248px;}
+
+#gameAlertFin button {bottom: 40px;}
+
+
+#gameStart:after {left: -14px;width: 113%;}
+
+#gameQ{position: relative;width: 100%;height: 100%;padding: 45px 37px 0 35px}
+
+#gameQ li.active.fin > p {
+    width: 100%;
+    height: 100%;
+    text-indent: -9999px !important;
+    background: url(../img/social/game/final.png) no-repeat center/cover !important;
+  }
+
+  #gameQ li.active.fin > b,
+  #gameQ li.active.fin > p span {
+    display: none !important;
+  }

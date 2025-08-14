@@ -1,0 +1,6 @@
+.pic-box {display: flex; justify-content: center; padding-bottom: 100px;}
+
+.short-answer {position: absolute; font-size: 34px;}
+
+.short-answer.ti10:not(.active) {background: transparent; }
+.short-answer.ti10:not(.active):after { background-color: transparent;}

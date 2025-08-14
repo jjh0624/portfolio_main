@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="ko">
+    <head>
+        <meta charset="utf-8" />
+        <meta content="width=1280,height=720" name="viewport" />
+        <title></title>
+        <link rel="stylesheet" type="text/css" href="../../common/css/common.css" />
+        <link rel="stylesheet" type="text/css" href="../../common/css/social.css" />
+        <script defer src="../../common/js/jquery.min.js"></script>
+        <script defer src="../../common/js/jquery-ui.min.js"></script>
+        <script defer src="../../common/js/jquery.ui.touch-punch.min.js"></script>
+        <script defer src="../../common/js/bootstrap.min.js"></script>
+        <script defer src="../../common/js/swiper.min.js"></script>
+        <script defer src="../../common/js/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script defer src="../../common/js/common.js"></script>
+        <script defer src="../../common/js/navigation.js"></script>
+        <script defer src="../../common/js/social.js"></script>
+        <!-- 페이지별 -->
+        <script defer src="../../common/js/video-js.js"></script>
+        <script defer src="../../common/js/video.js"></script>
+        <link rel="stylesheet" href="./css/page028_03.css">
+    </head>
+    <body>
+        <div id="wrap">
+            <header id="hd">
+                <div class="page-bread"></div>
+                <button type="button" class="page-label">
+                    <i class="icon icon-book-pencil"></i>
+                    <span class="text-purple">사회</span><span id="page-num" class="num"></span>
+                </button>
+                <button type="button" class="icon icon-hd-close">닫기</button>
+            </header>
+
+            <main id="ct">
+                <!-- 페이지 시작 -->
+                <div id="modal1" class="modal fade">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <button type="button" class="icon icon-modal-close btn-sound" data-dismiss="modal">닫기</button>
+                            <div class="modal-body">
+                                <strong class="modal-title modal-title-ex">예시답안</strong>
+                                <div class="sect-bullet">
+                                    <div class="bullet">
+                                        <img src="../../common/img/social/ch1.png" width="65" alt="" />
+                                    </div>
+                                    <div class="cnt">날씨를 예측하여 농사를 잘 짓기 위해서입니다.</div>
+                                </div>
+                                <div class="sect-bullet">
+                                    <div class="bullet">
+                                        <img src="../../common/img/social/ch4.png" width="65" alt="" />
+                                    </div>
+                                    <div class="cnt">천문 현상을 예측하여 왕권을 강화하기 위해서입니다.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide-page">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide slide1">
+                                <div class="page-hd">
+                                    <h1 class="text-hide"><img src="../../common/img/social/title-think-open.png" height="54" alt="" />생각이 활짝</h1>
+                                    <strong class="fs-xs">경주 첨성대의 용도</strong>
+                                </div>
+                                <div class="page-fill">
+                                    <video data-dtext_index="dtext_cls_video" class="video-js" controls="controls" poster="media/poster/521_028_a.jpg" webkit-playsinline="" playsinline="" title="">
+                                        <source src="media/521_028_a.mp4" type="video/mp4" />
+                                        <!-- <track label="Korean" kind="subtitles" srclang="ko" src="media/sample.vtt" default="" /> -->
+                                    </video>
+                                </div>
+                            </div>
+                            <div class="swiper-slide slide2">
+                                <div class="page-hd">
+                                    <h1 class="text-hide"><img src="../../common/img/social/title-think-open.png" height="54" alt="" />생각이 활짝</h1>
+                                </div>
+                                <div class="page-fill">
+                                    <div class="sect-bullet">
+                                        <div class="cnt text-center">
+                                            신라 사람들은 왜 별을 관측하려고 했을까?
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="page-bottom">
+                                    <button type="button" class="wbtn btn-toggle" data-toggle="modal" data-target="#modal1"><span>예시 보기</span><span>닫기</span></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-controls">
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-button-next"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 페이지 끝 -->
+            </main>
+
+            <footer id="ft">
+                <button type="button" class="icon icon-mn index-toggle">목차보기</button>
+                <nav class="ft-navi nav"></nav>
+                <div class="ft-paging">
+                    <button type="button" class="icon icon-paging-prev">이전목록</button>
+                    <div class="pagin-num"><span id="current"></span><i></i><span id="total"></span></div>
+                    <button type="button" class="icon icon-paging-next">다음목록</button>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

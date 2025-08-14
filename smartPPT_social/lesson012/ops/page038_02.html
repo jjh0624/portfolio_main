@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta content="width=1280,height=720" name="viewport" />
+<title></title>
+<link rel="stylesheet" type="text/css" href="../../common/css/common.css" />
+<link rel="stylesheet" type="text/css" href="../../common/css/social.css" />
+<script defer src="../../common/js/jquery.min.js"></script>
+<script defer src="../../common/js/jquery-ui.min.js"></script>
+<script defer src="../../common/js/jquery.ui.touch-punch.min.js"></script>
+<script defer src="../../common/js/bootstrap.min.js"></script>
+<script defer src="../../common/js/swiper.min.js"></script>
+<script defer src="../../common/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script defer src="../../common/js/common.js"></script>
+<script defer src="../../common/js/navigation.js"></script>
+<script defer src="../../common/js/social.js"></script>
+</head>
+<body>
+	<div id="wrap" >
+		<header id="hd">
+			<div class="page-bread"></div>
+			<button type="button" class="page-label">
+				<i class="icon icon-book-pencil"></i>
+				<span class="text-purple">사회</span><span id="page-num" class="num"></span>
+			</button>
+			<button type="button" class="icon icon-hd-close">닫기</button>
+		</header>
+
+		<main id="ct">
+			<div id="modal1" class="modal fade">
+				<div class="modal-dialog modal-dialog-centered">
+				  <div class="modal-content">
+					<button type="button" class="icon icon-modal-close btn-sound" data-dismiss="modal">
+					  닫기
+					</button>
+					<div class="modal-body">
+					  <strong class="modal-title modal-title-ex">예시답안</strong>
+					  <div class="sect-bullet">
+						<div class="bullet">
+						  <img src="../../common/img/social/rabbit2.png" width="65" alt=""/>
+						</div>
+						<div class="cnt">
+                            시간이 지나면서 성골의 범위가 축소되고, 진평왕 대 아들이 없었습니다. 신라는 왕족을 성골로 유지하고자 성골인 덕만 공주를 왕으로 내세웠고, 덕만 공주는 신라의 27대 왕으로 즉위하게 되었습니다.
+						</div>
+					  </div>
+					</div>
+				  </div>
+				</div>
+			</div>
+			<!-- 페이지 시작 -->
+			<div class="page-hd">
+				<h1 class="text-hide"><img src="../../common/img/social/title-open.png" height="54" alt="" />궁금해요</h1>
+			</div>
+			<div class="page-bottom-bg v2"></div>
+			<div class="page-fill slide-page">
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide slide1">
+							<div class="sect-bullet subtitle">
+								<strong class="cnt">우리나라 최초의 여왕은 어떻게 탄생하<span class="text-nowrap">였나</span>
+                                </strong>
+							</div>
+				
+							<div class="sect-bullet">
+								<div class="bullet"><img src="../../common/img/social/chick2.png" width="65" alt=""></div>
+								<div class="cnt">
+									신라에서 왕위는 어떤 신분이 계승하였나요?
+								</div>
+							</div>
+
+                            <div class="sect-bullet" data-invisible>
+                                <div class="bullet"><img src="../../common/img/social/rabbit2.png" width="65" alt=""></div>
+                                <div class="cnt">
+                                    성골 남자입니다.
+                                </div>
+                            </div>
+                            <!-- [D] 짧은 답변 일때는 페이지안에 -->
+                            <div class="page-bottom">
+                                <button type="button" class="wbtn btn-toggle" data-toggle="answer-all" data-target="#slide1"><span>정답 보기</span><span>정답 닫기</span></button>
+                            </div>
+						</div>
+
+                        <div class="swiper-slide slide2">
+							<div class="sect-bullet">
+								<div class="bullet">
+									<img src="../../common/img/social/chick2.png" width="65" alt="" />
+								</div>
+								<div class="cnt">덕만 공주는 어떻게 왕이 될 수 있었나요?</div>
+							</div>
+
+                            <div class="page-bottom">
+                                <button type="button" class="wbtn" data-toggle="modal" data-target="#modal1"><span>예시 보기</span></button>
+                            </div>
+						</div>
+					</div>
+					<div class="swiper-controls">
+						<div class="swiper-button-prev"></div>
+						<div class="swiper-pagination"></div>
+						<div class="swiper-button-next"></div>
+					</div>
+				</div>
+			</div>
+			<!-- 페이지 끝 -->
+		</main>
+
+		<footer id="ft">
+			<button type="button" class="icon icon-mn index-toggle">목차보기</button>
+			<nav class="ft-navi nav"></nav>
+			<div class="ft-paging">
+				<button type="button" class="icon icon-paging-prev">이전목록</button>
+				<div class="pagin-num"><span id="current"></span><i></i><span id="total"></span></div>
+				<button type="button" class="icon icon-paging-next">다음목록</button>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>

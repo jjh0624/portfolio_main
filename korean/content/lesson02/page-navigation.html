@@ -1,0 +1,931 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+<link rel="shortcut icon" href="" type="image/x-icon">
+<meta property="og:url" content="//"><meta property="og:title" content="">
+<meta property="og:type" content="website">
+<meta property="og:image" content="">
+<meta property="og:site_name" content="">
+<meta property="og:description" content="">
+
+<title></title>
+<meta name="path_role" content="">
+<meta name="author" content="">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<style>
+    /* global defaults */
+        body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,span,th,td,legend {margin:0;padding:0;}
+        fieldset,img,abbr,acronym{border:none;}
+        fieldset{display:block;}
+        ol,ul {list-style:none outside;}
+        h1,h2,h3,h4,h5,h6,address,caption,cite,code,dfn,em,th,var {font-size:100%;font-weight:300;}
+
+        .accessibility,hr,legend,caption,hr{position:absolute; top:0; left:0; width:0; height:0; font-size:0; line-height:0; margin:0; padding:0; overflow:hidden; visibility:hidden; text-indent:-1000em;}
+        .skip{position:absolute; top:-50px; left:0; z-index:9999; width:100%; height:35px; padding-top:15px; display:block; font-size:12px; line-height:20px; color:#333; background-color:#eee; text-align: center;}
+
+    /* Skip Navigation */
+        #skip_to_container a {z-index:100000;position:absolute;top:0;left:0;width:1px;height:1px;font-size:0;line-height:0;overflow:hidden;}
+        #skip_to_container:hover,#skip_to_container:active,#skip_to_container:focus{width:100%;height:auto;margin:0;padding:5px 0;font-weight:400;font-size:12px;line-height:1;color:#202020;text-decoration:none !important;text-indent:10px;}
+
+    /* s: All Style */
+        a:link, a:visited{text-decoration:none}
+        a:hover{text-decoration:none}
+        input[type=text],input[type=email],input[type=tel],input[type=submit],input[type=password],input[type=image],input[type=button],textarea,select{ -webkit-border-radius:0; -moz-appearance:none; -webkit-appearance:none; appearance:none;}
+        select::-ms-expand {display:none}
+        input[type=radio],input[type=checkbox]{-webkit-border-radius:0; -webkit-appearance:none; display:none}
+        img,video,audio,object,embed,iframe{max-width:100%;}
+        /*:lang(zh), zh{font-family: 'Kanit', sans-serif;}*/
+        body,th,td,input,select,button,textarea{font-style:normal;font-weight:normal;font-size:100%;font-family:'Open Sans', 'Noto Sans KR', 'Malgun Gothic', 'Dotum', sans-serif !important;color:#1b1b1b;line-height:1.2;letter-spacing:-0.03em; /*-webkit-font-smoothing: antialiased; font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;*/ }
+        /*'Trirong', */
+        table{width:100%;border-collapse:collapse;table-layout:fixed;}
+        figure{margin:0;padding:0;font-size:0;line-height:0;}
+        br{font-family:'Dotum', sans-serif !important;}
+
+        #container {padding:15px;min-width:1000px;}
+        #table-wrap {border:1px solid #ccc;}
+        #table-wrap + #table-wrap{margin-top:30px;}
+        #table-wrap table thead tr th {padding:10px;font-size:13px;font-weight:400;background-color:rgba(0,0,0,0.05);}
+        #table-wrap table thead tr th + th {border-left:1px dotted #ccc;}
+        #table-wrap table tbody tr td {padding:10px;font-size:13px;font-weight:300;}
+        #table-wrap table tbody tr td {border-top:1px solid #ddd;}
+        #table-wrap table tbody tr td + td {border-left:1px dotted #ccc;}
+        #table-wrap table tbody tr td:nth-child(1) {text-align:center;}
+        #table-wrap table tbody tr.completed td {background-color:#ffeecc;cursor:pointer;}
+        #table-wrap table tbody tr td.red {background-color:#ff0000; color: #fff;}
+        #table-wrap table tbody tr.none {opacity:.2;}
+        #container > p{font-size: 80px;}
+</style>
+<script src="../common/js/jquery.min.js"></script>
+
+</head>
+<body>
+<div id="container">
+    <p>2단원</p>
+	<div id="table-wrap">
+        <table summary="">
+            <caption></caption>
+            <colgroup>
+                <col style="width:50px;">
+                <col style="width:10%;">
+                <col style="width:15%;">
+                <col style="width:15%;">
+                <col style="width:10%;">
+                <col style="width:15%;">
+                <col style="width:10%;">
+                <col style="width:120px;">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>페이지 ID</th>
+                    <th>대메뉴</th>
+                    <th>메뉴 Lv.1</th>
+                    <th>메뉴 Lv.2</th>
+                    <th>메뉴 Lv.3</th>
+                    <th>메뉴 Lv.4</th>
+                    <th>PPT Page</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="completed" data-url="/page062_01">
+                    <td>●</td>
+                    <td colspan="" class=""></td>
+                    <td colspan="">2. 나와 너의 세상 보기</td>
+                    <td colspan="">대단원 도입</td>
+                    <td colspan="">-</td>
+                    <td colspan="">메인</td>
+                    <td colspan="">단원표지</td>
+                    <td>page062_01</td>
+                </tr>
+                <tr class="completed" data-url="/page062_02">
+                    <td>●</td>
+                    <td colspan=""></td>
+                    <td colspan="">2. 나와 너의 세상 보기</td>
+                    <td colspan="">대단원 도입</td>
+                    <td colspan="">-</td>
+                    <td colspan="">-</td>
+                    <td colspan="">-</td>
+                    <td>page062_02</td>
+                </tr>
+                <tr class="completed" data-url="/page064_01">
+                    <td>●</td>
+                    <td colspan=""></td>
+                    <td colspan="">2. 나와 너의 세상 보기</td>
+                    <td colspan="">대단원 도입</td>
+                    <td colspan=""></td>
+                    <td colspan="">-</td>
+                    <td colspan="">학습목표</td>
+                    <td>page064_01</td>
+                </tr>
+
+                <tr class="completed" data-url="/page064_02">
+                    <td>●</td>
+                    <td colspan=""></td>
+                    <td colspan="">2. 나와 너의 세상 보기</td>
+                    <td colspan="">(1) 시와 화자</td>
+                    <td colspan="">소단원 도입</td>
+                    <td colspan="">-</td>
+                    <td colspan="">소단원 미리보기</td>
+                    <td>page064_02</td>
+                </tr>
+                <tr class="completed" data-url="/page064_03">
+                    <td>●</td>
+                    <td colspan=""></td>
+                    <td colspan="">2. 나와 너의 세상 보기</td>
+                    <td colspan="">(1) 시와 화자</td>
+                    <td colspan="">소단원 도입</td>
+                    <td colspan="">-</td>
+                    <td colspan="">학습 계획</td>
+                    <td>page064_03</td>
+                </tr>
+                <tr class="completed" data-url="/page066_01">
+                    <td>●</td>
+                    <td colspan=""></td>
+                    <td colspan="">2. 나와 너의 세상 보기</td>
+                    <td colspan="">(1) 시와 화자</td>
+                    <td colspan="">-</td>
+                    <td colspan="">-</td>
+                    <td colspan="">글 읽기</td>
+                    <td>page066_01</td>
+                </tr>
+                <tr class="completed" data-url="/page068_01">
+                    <td>●</td>
+                    <td colspan=""></td>
+                    <td colspan="">2. 나와 너의 세상 보기</td>
+                    <td colspan="">(1) 시와 화자</td>
+                    <td colspan="">이해 활동</td>
+                    <td colspan="">-</td>
+                    <td colspan="">이해 활동</td>
+                    <td>page068_01</td>
+                </tr>
+                <tr class="completed" data-url="/page069_01">
+                    <td>●</td>
+                    <td colspan=""></td>
+                    <td colspan="">2. 나와 너의 세상 보기</td>
+                    <td colspan="">(1) 시와 화자</td>
+                    <td colspan="">이해 활동</td>
+                    <td colspan="">-</td>
+                    <td colspan="">이해 활동</td>
+                    <td>page069_01</td>
+                </tr>
+                <tr class="completed" data-url="/page071_02">
+                    <td>●</td>
+                    <td colspan=""></td>
+                    <td colspan="">2. 나와 너의 세상 보기</td>
+                    <td colspan="">(1) 시와 화자</td>
+                    <td colspan="">적용 활동</td>
+                    <td colspan="">-</td>
+                    <td colspan="">적용 활동</td>
+                    <td>page071_02</td>
+                </tr>
+                <tr class="completed" data-url="/page072_01">
+                    <td>●</td>
+                    <td colspan=""></td>
+                    <td colspan="">2. 나와 너의 세상 보기</td>
+                    <td colspan="">(1) 시와 화자</td>
+                    <td colspan="">적용 활동</td>
+                    <td colspan="">-</td>
+                    <td colspan="">적용 활동</td>
+                    <td>page072_01</td>
+                </tr>
+                <tr class="completed" data-url="/page073_03">
+                    <td>●</td>
+                    <td colspan=""></td>
+                    <td colspan="">2. 나와 너의 세상 보기</td>
+                    <td colspan="">(1) 시와 화자</td>
+                    <td colspan="">소단원 마무리</td>
+                    <td colspan="">-</td>
+                    <td colspan="">어휘 학습</td>
+                    <td>page073_03</td>
+                </tr>
+                <tr class="completed" data-url="/page073_04">
+                    <td>●</td>
+                    <td colspan=""></td> 
+                    <td colspan="">2. 나와 너의 세상 보기</td>
+                    <td colspan="">(1) 시와 화자</td>
+                    <td colspan="">소단원 마무리</td>
+                    <td colspan="">-</td>
+                    <td colspan="">확인 퀴즈</td>
+                    <td>page073_04</td>
+                </tr>
+                <tr class="completed" data-url="/page078_01">
+                    <td>●</td>
+                    <td colspan=""></td>
+                    <td colspan="">2. 나와 너의 세상 보기</td>
+                    <td colspan="">(1) 시와 화자</td>
+                    <td colspan="">글 읽기</td>
+                    <td colspan="">-</td>
+                    <td colspan="">글 읽기</td>
+                    <td>page078_01</td>
+                </tr>
+                <tr class="completed" data-url="/page089_01">
+                    <td>●</td>
+                    <td colspan=""></td>
+                    <td colspan="">2. 나와 너의 세상 보기</td>
+                    <td colspan="">(1) 시와 화자</td>
+                    <td colspan="">글 읽기</td>
+                    <td colspan="">-</td>
+                    <td colspan="">읽기 확인</td>
+                    <td>page089_01</td>
+                </tr>
+                <tr class="completed" data-url="/page090_01">
+                    <td>●</td>
+                    <td colspan=""></td>
+                    <td colspan="">2. 나와 너의 세상 보기</td>
+                    <td colspan="">(1) 시와 화자</td>
+                    <td colspan="">이해 활동</td>
+                    <td colspan="">-</td>
+                    <td colspan="">이해 활동</td>
+                    <td>page090_01</td>
+                </tr>
+                <tr class="completed" data-url="/page090_02">
+                    <td>●</td>
+                    <td colspan=""></td>
+                    <td colspan="">2. 나와 너의 세상 보기</td>
+                    <td colspan="">(1) 시와 화자</td>
+                    <td colspan="">이해 활동</td>
+                    <td colspan="">-</td>
+                    <td colspan="">이해 활동</td>
+                    <td>page090_02</td>
+                </tr>
+                <tr class="completed" data-url="/page091_01">
+                    <td>●</td>
+                    <td colspan=""></td>
+                    <td colspan="">2. 나와 너의 세상 보기</td>
+                    <td colspan="">(1) 시와 화자</td>
+                    <td colspan="">이해 활동</td>
+                    <td colspan="">-</td>
+                    <td colspan="">이해 활동</td>
+                    <td>page091_01</td>
+                </tr>
+                <tr class="completed" data-url="/page093_01">
+                    <td>●</td>
+                    <td colspan=""></td>
+                    <td colspan="">2. 나와 너의 세상 보기</td>
+                    <td colspan="">(1) 시와 화자</td>
+                    <td colspan="">이해 활동</td>
+                    <td colspan="">-</td>
+                    <td colspan="">이해 활동</td>
+                    <td>page093_01</td>
+                </tr>
+                <tr class="completed" data-url="/page094_01" style="border-top: 2px solid red;">
+                    <td>●</td>
+                    <td colspan=""></td>
+                    <td colspan="">2. 나와 너의 세상 보기</td>
+                    <td colspan="">(1) 시와 화자</td>
+                    <td colspan="">이해 활동</td>
+                    <td colspan="">-</td>
+                    <td colspan="">이해 활동</td>
+                    <td>page094_01</td>
+                </tr>
+                <tr class="completed" data-url="/page095_01">
+                    <td>●</td>
+                    <td colspan=""></td>
+                    <td colspan="">2. 나와 너의 세상 보기</td>
+                    <td colspan="">(1) 시와 화자</td>
+                    <td colspan="">적용 활동</td>
+                    <td colspan="">-</td>
+                    <td colspan="">적용 활동</td>
+                    <td>page095_01</td>
+                </tr>
+                <tr class="completed" data-url="/page096_01">
+                    <td>●</td>
+                    <td colspan=""></td>
+                    <td colspan="">2. 나와 너의 세상 보기</td>
+                    <td colspan="">(1) 시와 화자</td>
+                    <td colspan="">적용 활동</td>
+                    <td colspan="">-</td>
+                    <td colspan="">적용 활동</td>
+                    <td>page096_01</td>
+                </tr>
+                <tr class="completed" data-url="/page096_02">
+                    <td>●</td>
+                    <td colspan=""></td>
+                    <td colspan="">2. 나와 너의 세상 보기</td>
+                    <td colspan="">(1) 시와 화자</td>
+                    <td colspan="">적용 활동</td>
+                    <td colspan="">-</td>
+                    <td colspan="">적용 활동</td>
+                    <td>page096_02</td>
+                </tr>
+                <tr class="completed" data-url="/page098_04">
+                    <td>●</td>
+                    <td colspan=""></td>
+                    <td colspan="">2. 나와 너의 세상 보기</td>
+                    <td colspan="">(1) 시와 화자</td>
+                    <td colspan="">이해 활동</td>
+                    <td colspan="">-</td>
+                    <td colspan="">어휘 학습</td>
+                    <td>page098_04</td>
+                </tr>
+                <tr class="completed" data-url="/page102_01">
+                    <td>●</td>
+                    <td colspan=""></td>
+                    <td colspan="">2. 나와 너의 세상 보기</td>
+                    <td colspan="">(1) 시와 화자</td>
+                    <td colspan="">이해 활동</td>
+                    <td colspan="">-</td>
+                    <td colspan="">생활 속 국어 활동</td>
+                    <td>page102_01</td>
+                </tr>
+                <tr class="completed" data-url="/page187_01">
+                    <td>●</td>
+                    <td colspan=""></td>
+                    <td colspan="">2. 나와 너의 세상 보기</td>
+                    <td colspan="">(1) 시와 화자</td>
+                    <td colspan="">이해 활동</td>
+                    <td colspan="">-</td>
+                    <td colspan="">대단원 마무리</td>
+                    <td>page187_01</td>
+                </tr>
+                <tr class="completed" data-url="/page187_02">
+                    <td>●</td>
+                    <td colspan=""></td>
+                    <td colspan="">2. 나와 너의 세상 보기</td>
+                    <td colspan="">(1) 시와 화자</td>
+                    <td colspan="">이해 활동</td>
+                    <td colspan="">-</td>
+                    <td colspan="">대단원 마무리</td>
+                    <td>page187_02</td>
+                </tr>
+                <tr class="completed" data-url="/page187_03">
+                    <td>●</td>
+                    <td colspan=""></td>
+                    <td colspan="">2. 나와 너의 세상 보기</td>
+                    <td colspan="">(1) 시와 화자</td>
+                    <td colspan="">이해 활동</td>
+                    <td colspan="">-</td>
+                    <td colspan="">대단원 마무리</td>
+                    <td>page187_03</td>
+                </tr>
+                <tr class="completed" data-url="/page187_04">
+                    <td>●</td>
+                    <td colspan=""></td>
+                    <td colspan="">2. 나와 너의 세상 보기</td>
+                    <td colspan="">(1) 시와 화자</td>
+                    <td colspan="">이해 활동</td>
+                    <td colspan="">-</td>
+                    <td colspan="">대단원 마무리</td>
+                    <td>page187_04</td>
+                </tr>
+				 <tr class="completed" data-url="/page065_01" style="border-top: 2px solid greenyellow;">
+					<td>●</td>
+                    <td colspan=""></td>
+                    <td colspan="">2. 나와 너의 세상 보기</td>
+                    <td colspan="">(1) 시와 화자</td>
+                    <td colspan="">소단원 도입</td>
+                    <td colspan="">-</td>
+                    <td colspan="">-</td>
+                    <td>page065_01</td>
+				 </tr>
+				 <tr class="completed" data-url="/page066_01">
+                    <td>●</td>
+                    <td colspan=""></td>
+                    <td colspan="">2. 나와 너의 세상 보기</td>
+                    <td colspan="">(1) 시와 화자</td>
+                    <td colspan="">글 읽기</td>
+                    <td colspan="">-</td>
+                    <td colspan=""></td>
+                    <td>page066_01</td>
+                </tr>
+				 <tr class="completed" data-url="/page066_02">
+                    <td>●</td>
+                    <td colspan=""></td>
+                    <td colspan="">2. 나와 너의 세상 보기</td>
+                    <td colspan="">(1) 시와 화자</td>
+                    <td colspan="">글 읽기</td>
+                    <td colspan="">-</td>
+                    <td colspan="">작가 소개</td>
+                    <td>page066_02</td>
+                </tr>
+				 <tr class="completed" data-url="/page066_04">
+                    <td>●</td>
+                    <td colspan=""></td>
+                    <td colspan="">2. 나와 너의 세상 보기</td>
+                    <td colspan="">(1) 시와 화자</td>
+                    <td colspan="">글 읽기</td>
+                    <td colspan="">-</td>
+                    <td colspan="">제재 개관</td>
+                    <td>page066_04</td>
+                </tr>
+				 <tr class="completed" data-url="/page066_04">
+                    <td>●</td>
+                    <td colspan=""></td>
+                    <td colspan="">2. 나와 너의 세상 보기</td>
+                    <td colspan="">(1) 시와 화자</td>
+                    <td colspan="">글 읽기</td>
+                    <td colspan="">-</td>
+                    <td colspan="">제재 개관/구성</td>
+                    <td>page066_04</td>
+                </tr>
+				 <tr class="completed" data-url="/page069_02">
+                    <td>●</td>
+                    <td colspan=""></td>
+                    <td colspan="">2. 나와 너의 세상 보기</td>
+                    <td colspan="">(1) 시와 화자</td>
+                    <td colspan="">이해 활동</td>
+                    <td colspan="">-</td>
+                    <td colspan="">-</td>
+                    <td>page069_02</td>
+                </tr>
+				 <tr class="completed" data-url="/page070_01">
+                    <td>●</td>
+                    <td colspan=""></td>
+                    <td colspan="">2. 나와 너의 세상 보기</td>
+                    <td colspan="">(1) 시와 화자</td>
+                    <td colspan="">이해 활동</td>
+                    <td colspan="">-</td>
+                    <td colspan="">-</td>
+                    <td>page070_01</td>
+                </tr>
+				 <tr class="completed" data-url="/page070_02">
+                    <td>●</td>
+                    <td colspan=""></td>
+                    <td colspan="">2. 나와 너의 세상 보기</td>
+                    <td colspan="">(1) 시와 화자</td>
+                    <td colspan="">이해 활동</td>
+                    <td colspan="">-</td>
+                    <td colspan="">-</td>
+                    <td>page070_02</td>
+                </tr>
+				 <tr class="completed" data-url="/page070_03">
+                    <td>●</td>
+                    <td colspan=""></td>
+                    <td colspan="">2. 나와 너의 세상 보기</td>
+                    <td colspan="">(1) 시와 화자</td>
+                    <td colspan="">이해 활동</td>
+                    <td colspan="">-</td>
+                    <td colspan="">-</td>
+                    <td>page070_03</td>
+                </tr>
+				 <tr class="completed" data-url="/page071_01">
+                    <td>●</td>
+                    <td colspan=""></td>
+                    <td colspan="">2. 나와 너의 세상 보기</td>
+                    <td colspan="">(1) 시와 화자</td>
+                    <td colspan="">적용 활동</td>
+                    <td colspan="">-</td>
+                    <td colspan="">-</td>
+                    <td>page071_01</td>
+                </tr>
+				 <tr class="completed" data-url="/page072_02">
+                    <td>●</td>
+                    <td colspan=""></td>
+                    <td colspan="">2. 나와 너의 세상 보기</td>
+                    <td colspan="">(1) 시와 화자</td>
+                    <td colspan="">적용 활동</td>
+                    <td colspan="">-</td>
+                    <td colspan="">-</td>
+                    <td>page072_02</td>
+                </tr>
+				 <tr class="completed" data-url="/page073_01">
+                    <td>●</td>
+                    <td colspan=""></td>
+                    <td colspan="">2. 나와 너의 세상 보기</td>
+                    <td colspan="">(1) 시와 화자</td>
+                    <td colspan="">소단원 마무리</td>
+                    <td colspan="">-</td>
+                    <td colspan="">-</td>
+                    <td>page073_01</td>
+                </tr>
+				 <tr class="completed" data-url="/page073_02">
+                    <td>●</td>
+                    <td colspan=""></td>
+                    <td colspan="">2. 나와 너의 세상 보기</td>
+                    <td colspan="">(1) 시와 화자</td>
+                    <td colspan="">소단원 마무리</td>
+                    <td colspan="">-</td>
+                    <td colspan="">-</td>
+                    <td>page073_02</td>
+                </tr>
+				 <tr class="completed" data-url="/page073_05">
+                    <td>●</td>
+                    <td colspan=""></td>
+                    <td colspan="">2. 나와 너의 세상 보기</td>
+                    <td colspan="">(1) 시와 화자</td>
+                    <td colspan="">소단원 마무리</td>
+                    <td colspan="">-</td>
+                    <td colspan="">확인 퀴즈</td>
+                    <td>page073_05</td>
+                </tr>
+				 <tr class="completed" data-url="/page073_06">
+                    <td>●</td>
+                    <td colspan=""></td>
+                    <td colspan="">2. 나와 너의 세상 보기</td>
+                    <td colspan="">(1) 시와 화자</td>
+                    <td colspan="">소단원 마무리</td>
+                    <td colspan="">-</td>
+                    <td colspan="">확인 퀴즈</td>
+                    <td>page073_06</td>
+                </tr>
+				 <tr class="completed" data-url="/page074_01">
+                    <td>●</td>
+                    <td colspan=""></td>
+                    <td colspan="">2. 나와 너의 세상 보기</td>
+                    <td colspan="">(1) 시와 화자</td>
+                    <td colspan="">더 읽어 보기</td>
+                    <td colspan="">-</td>
+                    <td colspan="">-</td>
+                    <td>page074_01</td>
+                </tr>
+				 <tr class="completed" data-url="/page074_02">
+                    <td>●</td>
+                    <td colspan=""></td>
+                    <td colspan="">2. 나와 너의 세상 보기</td>
+                    <td colspan="">(1) 시와 화자</td>
+                    <td colspan="">더 읽어 보기</td>
+                    <td colspan="">-</td>
+                    <td colspan="">제재개관</td>
+                    <td>page074_02</td>
+                </tr>
+				 <tr class="completed" data-url="/page074_03">
+                    <td>●</td>
+                    <td colspan=""></td>
+                    <td colspan="">2. 나와 너의 세상 보기</td>
+                    <td colspan="">(1) 시와 화자</td>
+                    <td colspan="">더 읽어 보기</td>
+                    <td colspan="">-</td>
+                    <td colspan="">-</td>
+                    <td>page074_03</td>
+                </tr>
+				 <tr class="completed" data-url="/page076_01">
+                    <td>●</td>
+                    <td colspan=""></td>
+                    <td colspan="">2. 나와 너의 세상 보기</td>
+                    <td colspan="">(2) 소설과 서술자</td>
+                    <td colspan="">소단원 도입</td>
+                    <td colspan="">-</td>
+                    <td colspan="">-</td>
+                    <td>page076_01</td>
+                </tr>
+				 <tr class="completed" data-url="/page076_01">
+                    <td>●</td>
+                    <td colspan=""></td>
+                    <td colspan="">2. 나와 너의 세상 보기</td>
+                    <td colspan="">(2) 소설과 서술자</td>
+                    <td colspan="">소단원 도입</td>
+                    <td colspan="">-</td>
+                    <td colspan="">-</td>
+                    <td>page076_01</td>
+                </tr>
+				 <tr class="completed" data-url="/page076_02">
+                    <td>●</td>
+                    <td colspan=""></td>
+                    <td colspan="">2. 나와 너의 세상 보기</td>
+                    <td colspan="">(2) 소설과 서술자</td>
+                    <td colspan="">소단원 도입</td>
+                    <td colspan="">-</td>
+                    <td colspan="">-</td>
+                    <td>page076_02</td>
+                </tr>
+				 <tr class="completed" data-url="/page077_01">
+                    <td>●</td>
+                    <td colspan=""></td>
+                    <td colspan="">2. 나와 너의 세상 보기</td>
+                    <td colspan="">(2) 소설과 서술자</td>
+                    <td colspan="">소단원 도입</td>
+                    <td colspan="">-</td>
+                    <td colspan="">-</td>
+                    <td>page077_01</td>
+                </tr>
+				 <tr class="completed" data-url="/page079_01">
+                    <td>●</td>
+                    <td colspan=""></td>
+                    <td colspan="">2. 나와 너의 세상 보기</td>
+                    <td colspan="">(2) 소설과 서술자</td>
+                    <td colspan="">글 읽기</td>
+                    <td colspan="">-</td>
+                    <td colspan="">-</td>
+                    <td>page079_01</td>
+                </tr>
+				 <tr class="completed" data-url="/page079_02">
+                    <td>●</td>
+                    <td colspan=""></td>
+                    <td colspan="">2. 나와 너의 세상 보기</td>
+                    <td colspan="">(2) 소설과 서술자</td>
+                    <td colspan="">글 읽기</td>
+                    <td colspan="">-</td>
+                    <td colspan="">읽기 중 활동</td>
+                    <td>page079_02</td>
+                </tr>
+				 <tr class="completed" data-url="/page079_03">
+                    <td>●</td>
+                    <td colspan=""></td>
+                    <td colspan="">2. 나와 너의 세상 보기</td>
+                    <td colspan="">(2) 소설과 서술자</td>
+                    <td colspan="">글 읽기</td>
+                    <td colspan="">-</td>
+                    <td colspan="">읽기 중 활동</td>
+                    <td>page079_03</td>
+                </tr>
+				 <tr class="completed" data-url="/page080_01">
+                    <td>●</td>
+                    <td colspan=""></td>
+                    <td colspan="">2. 나와 너의 세상 보기</td>
+                    <td colspan="">(2) 소설과 서술자</td>
+                    <td colspan="">글 읽기</td>
+                    <td colspan="">-</td>
+                    <td colspan="">읽기 중 활동</td>
+                    <td>page080_01</td>
+                </tr>
+				 <tr class="completed" data-url="/page082_01">
+                    <td>●</td>
+                    <td colspan=""></td>
+                    <td colspan="">2. 나와 너의 세상 보기</td>
+                    <td colspan="">(2) 소설과 서술자</td>
+                    <td colspan="">글 읽기</td>
+                    <td colspan="">-</td>
+                    <td colspan="">읽기 중 활동</td>
+                    <td>page082_01</td>
+                </tr>
+				 <tr class="completed" data-url="/page082_02">
+                    <td>●</td>
+                    <td colspan=""></td>
+                    <td colspan="">2. 나와 너의 세상 보기</td>
+                    <td colspan="">(2) 소설과 서술자</td>
+                    <td colspan="">글 읽기</td>
+                    <td colspan="">-</td>
+                    <td colspan="">읽기 중 활동</td>
+                    <td>page082_02</td>
+                </tr>
+				 <tr class="completed" data-url="/page084_01">
+                    <td>●</td>
+                    <td colspan=""></td>
+                    <td colspan="">2. 나와 너의 세상 보기</td>
+                    <td colspan="">(2) 소설과 서술자</td>
+                    <td colspan="">글 읽기</td>
+                    <td colspan="">-</td>
+                    <td colspan="">읽기 중 활동</td>
+                    <td>page084_01</td>
+                </tr>
+				 <tr class="completed" data-url="/page088_01">
+                    <td>●</td>
+                    <td colspan=""></td>
+                    <td colspan="">2. 나와 너의 세상 보기</td>
+                    <td colspan="">(2) 소설과 서술자</td>
+                    <td colspan="">글 읽기</td>
+                    <td colspan="">-</td>
+                    <td colspan="">읽기 중 활동</td>
+                    <td>page088_01</td>
+                </tr>
+				 <tr class="completed" data-url="/page089_01">
+                    <td>●</td>
+                    <td colspan=""></td>
+                    <td colspan="">2. 나와 너의 세상 보기</td>
+                    <td colspan="">(2) 소설과 서술자</td>
+                    <td colspan="">읽기 확인</td>
+                    <td colspan="">-</td>
+                    <td colspan="">읽기 확인</td>
+                    <td>page089_01</td>
+                </tr>
+				 <tr class="completed" data-url="/page089_02">
+                    <td>●</td>
+                    <td colspan=""></td>
+                    <td colspan="">2. 나와 너의 세상 보기</td>
+                    <td colspan="">(2) 소설과 서술자</td>
+                    <td colspan="">읽기 확인</td>
+                    <td colspan="">-</td>
+                    <td colspan="">제재 개관</td>
+                    <td>page089_02</td>
+                </tr>
+				 <tr class="completed" data-url="/page089_03">
+                    <td>●</td>
+                    <td colspan=""></td>
+                    <td colspan="">2. 나와 너의 세상 보기</td>
+                    <td colspan="">(2) 소설과 서술자</td>
+                    <td colspan="">읽기 확인</td>
+                    <td colspan="">-</td>
+                    <td colspan="">제재 구성</td>
+                    <td>page089_03</td>
+                </tr>
+				 <tr class="completed" data-url="/page094_02">
+                    <td>●</td>
+                    <td colspan=""></td>
+                    <td colspan="">2. 나와 너의 세상 보기</td>
+                    <td colspan="">(2) 소설과 서술자</td>
+                    <td colspan="">이해 활동</td>
+                    <td colspan="">-</td>
+                    <td colspan="">서술자와 시점</td>
+                    <td>page094_02</td>
+                </tr>
+				 <tr class="completed" data-url="/page097_01">
+                    <td>●</td>
+                    <td colspan=""></td>
+                    <td colspan="">2. 나와 너의 세상 보기</td>
+                    <td colspan="">(2) 소설과 서술자</td>
+                    <td colspan="">적용 활동</td>
+                    <td colspan="">-</td>
+                    <td colspan="">-</td>
+                    <td>page097_01</td>
+                </tr>
+				 <tr class="completed" data-url="/page097_02">
+                    <td>●</td>
+                    <td colspan=""></td>
+                    <td colspan="">2. 나와 너의 세상 보기</td>
+                    <td colspan="">(2) 소설과 서술자</td>
+                    <td colspan="">적용 활동</td>
+                    <td colspan="">-</td>
+                    <td colspan="">-</td>
+                    <td>page097_02</td>
+                </tr>
+				 <tr class="completed" data-url="/page098_01">
+                    <td>●</td>
+                    <td colspan=""></td>
+                    <td colspan="">2. 나와 너의 세상 보기</td>
+                    <td colspan="">(2) 소설과 서술자</td>
+                    <td colspan="">핵심 정리</td>
+                    <td colspan="">-</td>
+                    <td colspan="">-</td>
+                    <td>page098_01</td>
+                </tr>
+				 <tr class="completed" data-url="/page098_02">
+                    <td>●</td>
+                    <td colspan=""></td>
+                    <td colspan="">2. 나와 너의 세상 보기</td>
+                    <td colspan="">(2) 소설과 서술자</td>
+                    <td colspan="">핵심 정리</td>
+                    <td colspan="">-</td>
+                    <td colspan="">-</td>
+                    <td>page098_02</td>
+                </tr>
+				 <tr class="completed" data-url="/page098_03">
+                    <td>●</td>
+                    <td colspan=""></td>
+                    <td colspan="">2. 나와 너의 세상 보기</td>
+                    <td colspan="">(2) 소설과 서술자</td>
+                    <td colspan="">핵심 정리</td>
+                    <td colspan="">-</td>
+                    <td colspan="">-</td>
+                    <td>page098_03</td>
+                </tr>
+				 <tr class="completed" data-url="/page098_05">
+                    <td>●</td>
+                    <td colspan=""></td>
+                    <td colspan="">2. 나와 너의 세상 보기</td>
+                    <td colspan="">(2) 소설과 서술자</td>
+                    <td colspan="">확인 퀴즈</td>
+                    <td colspan="">-</td>
+                    <td colspan="">-</td>
+                    <td>page098_05</td>
+                </tr>
+				 <tr class="completed" data-url="/page098_06">
+                    <td>●</td>
+                    <td colspan=""></td>
+                    <td colspan="">2. 나와 너의 세상 보기</td>
+                    <td colspan="">(2) 소설과 서술자</td>
+                    <td colspan="">확인 퀴즈</td>
+                    <td colspan="">-</td>
+                    <td colspan="">-</td>
+                    <td>page098_06</td>
+                </tr>
+				 <tr class="completed" data-url="/page098_07">
+                    <td>●</td>
+                    <td colspan=""></td>
+                    <td colspan="">2. 나와 너의 세상 보기</td>
+                    <td colspan="">(2) 소설과 서술자</td>
+                    <td colspan="">확인 퀴즈</td>
+                    <td colspan="">-</td>
+                    <td colspan="">-</td>
+                    <td>page098_07</td>
+                </tr>
+				 <tr class="completed" data-url="/page099_01">
+                    <td>●</td>
+                    <td colspan=""></td>
+                    <td colspan="">2. 나와 너의 세상 보기</td>
+                    <td colspan="">(2) 소설과 서술자</td>
+                    <td colspan="">더 읽어 보기</td>
+                    <td colspan="">-</td>
+                    <td colspan="">-</td>
+                    <td>page099_01</td>
+                </tr>
+				 <tr class="completed" data-url="/page099_02">
+                    <td>●</td>
+                    <td colspan=""></td>
+                    <td colspan="">2. 나와 너의 세상 보기</td>
+                    <td colspan="">(2) 소설과 서술자</td>
+                    <td colspan="">더 읽어 보기</td>
+                    <td colspan="">-</td>
+                    <td colspan="">-</td>
+                    <td>page099_02</td>
+                </tr>
+				 <tr class="completed" data-url="/page099_03">
+                    <td>●</td>
+                    <td colspan=""></td>
+                    <td colspan="">2. 나와 너의 세상 보기</td>
+                    <td colspan="">(2) 소설과 서술자</td>
+                    <td colspan="">더 읽어 보기</td>
+                    <td colspan="">-</td>
+                    <td colspan="">-</td>
+                    <td>page099_03</td>
+                </tr>
+				 <tr class="completed" data-url="/page101_01">
+                    <td>●</td>
+                    <td colspan=""></td>
+                    <td colspan="">2. 나와 너의 세상 보기</td>
+                    <td colspan="">(2) 소설과 서술자</td>
+                    <td colspan="">더 읽어 보기</td>
+                    <td colspan="">-</td>
+                    <td colspan="">-</td>
+                    <td>page101_01</td>
+                </tr>
+				 <tr class="completed" data-url="/page102_02">
+                    <td>●</td>
+                    <td colspan=""></td>
+                    <td colspan="">2. 나와 너의 세상 보기</td>
+                    <td colspan="">(2) 소설과 서술자</td>
+                    <td colspan="">생활 속 국어 활동</td>
+                    <td colspan="">-</td>
+                    <td colspan="">-</td>
+                    <td>page102_02</td>
+                </tr>
+				 <tr class="completed" data-url="/page103_01">
+                    <td>●</td>
+                    <td colspan=""></td>
+                    <td colspan="">2. 나와 너의 세상 보기</td>
+                    <td colspan="">(2) 소설과 서술자</td>
+                    <td colspan="">생활 속 국어 활동</td>
+                    <td colspan="">-</td>
+                    <td colspan="">-</td>
+                    <td>page103_01</td>
+                </tr>
+				 <tr class="completed" data-url="/page103_02">
+                    <td>●</td>
+                    <td colspan=""></td>
+                    <td colspan="">2. 나와 너의 세상 보기</td>
+                    <td colspan="">(2) 소설과 서술자</td>
+                    <td colspan="">생활 속 국어 활동</td>
+                    <td colspan="">-</td>
+                    <td colspan="">-</td>
+                    <td>page103_02</td>
+                </tr>
+				 <tr class="completed" data-url="/page103_03">
+                    <td>●</td>
+                    <td colspan=""></td>
+                    <td colspan="">2. 나와 너의 세상 보기</td>
+                    <td colspan="">(2) 소설과 서술자</td>
+                    <td colspan="">생활 속 국어 활동</td>
+                    <td colspan="">-</td>
+                    <td colspan="">-</td>
+                    <td>page103_03</td>
+                </tr>
+				 <tr class="completed" data-url="/page104_01">
+                    <td>●</td>
+                    <td colspan=""></td>
+                    <td colspan="">2. 나와 너의 세상 보기</td>
+                    <td colspan="">(2) 소설과 서술자</td>
+                    <td colspan="">생활 속 국어 활동</td>
+                    <td colspan="">-</td>
+                    <td colspan="">-</td>
+                    <td>page104_01</td>
+                </tr>
+				 <tr class="completed" data-url="/page105_01">
+                    <td>●</td>
+                    <td colspan=""></td>
+                    <td colspan="">2. 나와 너의 세상 보기</td>
+                    <td colspan="">(2) 소설과 서술자</td>
+                    <td colspan="">대단원 마무리</td>
+                    <td colspan="">-</td>
+                    <td colspan="">-</td>
+                    <td>page105_01</td>
+                </tr>
+				 <tr class="completed" data-url="/page105_02">
+                    <td>●</td>
+                    <td colspan=""></td>
+                    <td colspan="">2. 나와 너의 세상 보기</td>
+                    <td colspan="">(2) 소설과 서술자</td>
+                    <td colspan="">대단원 마무리</td>
+                    <td colspan="">-</td>
+                    <td colspan="">-</td>
+                    <td>page105_02</td>
+                </tr>
+            </tbody>
+        </table>
+	</div>
+
+</div>
+<script type="text/javascript">
+$(document).ready(function(){
+
+	$("#table-wrap table tbody tr").each(function(index){
+		//console.log( $(this).children("td").text().indexOf("-") );
+		if( $(this).children("td:nth-child(8)").text().indexOf("-") > 0 || $(this).children("td").text().indexOf("동일메뉴 존재") > 0){
+			$(this).addClass("none");
+		}
+	});
+
+	$("body").on("click", "#table-wrap table tbody tr", function(){
+		if($(this).data("url")){
+			window.open("."+$(this).data("url")+".html", "_blank");
+		}else if($(this).is(".none") == false){
+			alert("현재 페이지는 작업중이거나 완료되지 않았습니다.");
+		}
+	});
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta content="width=1280,height=720" name="viewport" />
+<title></title>
+<link rel="stylesheet" type="text/css" href="../../common/css/common.css" />
+<link rel="stylesheet" type="text/css" href="../../common/css/social.css" />
+<script defer src="../../common/js/jquery.min.js"></script>
+<script defer src="../../common/js/jquery-ui.min.js"></script>
+<script defer src="../../common/js/jquery.ui.touch-punch.min.js"></script>
+<script defer src="../../common/js/bootstrap.min.js"></script>
+<script defer src="../../common/js/swiper.min.js"></script>
+<script defer src="../../common/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script defer src="../../common/js/common.js"></script>
+<script defer src="../../common/js/navigation.js"></script>
+<script defer src="../../common/js/social.js"></script>
+</head>
+<body>
+<div id="wrap" data-lesson="2-1">
+	<header id="hd">
+		<div class="page-bread"></div>
+		<button type="button" class="page-label">
+			<i class="icon icon-book-pencil"></i>
+			<span class="text-purple">사회</span><span id="page-num" class="num"></span>
+		</button>
+		<button type="button" class="icon icon-hd-close">닫기</button>
+	</header>
+
+	<main id="ct">
+		<!-- 페이지 시작 -->
+		<div class="page-hd">
+			<h1 class="text-hide"><img src="../../common/img/social/title-think.png" height="54" alt="" />생각열기</h1>
+		</div>
+
+		<div class="page-fill one-page">
+			<div class="think-title">
+				<h1 class="title">고구려를 떠난 온조가 남쪽으로<br>
+					내려와 한강 유역에 세운 나라의<br>
+					이름은 무엇일까요?
+					</h1>
+				<div class="think-title-ch think-title-ch2"></div>
+			</div>
+			<!-- [D] 긴 답변 일때는 팝업으로 -->
+			<div class="page-bottom">
+				<button type="button" class="wbtn" data-toggle="modal" data-target="#modal1"><span>예시 보기</span></button>
+			</div>
+		</div>
+
+		<div id="modal1" class="modal fade">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<button type="button" class="icon icon-modal-close btn-sound" data-dismiss="modal">닫기</button>
+					<div class="modal-body">
+						<strong class="modal-title modal-title-ex">예시답안</strong>
+						<div class="sect-bullet">
+							<div class="bullet"><img src="../../common/img/social/ch1.png" width="65" alt=""></div>
+							<div class="cnt">백제입니다.
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 페이지 끝 -->
+	</main>
+
+	<footer id="ft">
+		<button type="button" class="icon icon-mn index-toggle">목차보기</button>
+		<nav class="ft-navi nav"></nav>
+		<div class="ft-paging">
+			<button type="button" class="icon icon-paging-prev">이전목록</button>
+			<div class="pagin-num"><span id="current"></span><i></i><span id="total"></span></div>
+			<button type="button" class="icon icon-paging-next">다음목록</button>
+		</div>
+	</footer>
+</div>
+</body>
+</html>

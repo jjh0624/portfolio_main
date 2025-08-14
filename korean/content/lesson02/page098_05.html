@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta content="width=1920,height=1080" name="viewport" />
+<title></title>
+<script src="../common/js/jquery.min.js"></script>
+<script src="../common/js/jquery-ui.min.js"></script>
+<script src="../common/js/jquery.ui.touch-punch.min.js"></script>
+<script src="../common/js/bootstrap.min.js"></script>
+<script src="../common/js/video.js"></script>
+<script src="../common/js/video-js.js"></script>
+<script src="../common/js/swiper.min.js"></script>
+<script defer src="../common/js/navigation.js"></script>
+<script defer src="../common/js/common.js"></script>
+<script defer src="../common/js/language.js"></script>
+<link rel="stylesheet" type="text/css" href="../common/css/common.css" />
+<!-- 페이지 -->
+</head>
+<body>
+
+<div id="wrap" data-lesson="2">
+     <header id="hd">
+        <div class="page-bread">
+			<div><button type="button" class="icon icon-mn index-toggle">목차보기</button></div>
+		</div>
+        <button type="button" class="page-label btn-ebook">
+			<span class="num">
+				교과서 <strong></strong> 쪽
+			</span>
+        </button>
+
+		<div class="page-move">
+			<button type="button" class="left text-hide" data-action="prev">이전목록</button>
+			<p><span class="now-page">000</span><span class="total-page">999</span></p>
+			<button type="button" class="right text-hide" data-action="next">다음목록</button>
+		</div>
+    </header>
+
+<main id="ct">
+	<div class="activity-title">
+		<h2><img src="../common/img/quiz.png" alt="확인 퀴즈"><span class="text-hide">확인 퀴즈</span></h2> 
+	</div>
+
+    <!-- 컨텐츠 -->
+	<div class="page-fill">
+		<h3 class="tit-wrap">
+			<span class="num">1</span> 
+			<span class="sub-tit d-flex align-items-center">
+				다음 빈칸에 들어갈 알맞은 말을 골라 보자.
+			</span>
+		</h3>
+		<div class="question">
+			<p class="fs58  ti10">
+				「동백꽃<span class="mr-n4">」</span>은 서술자 ‘나’가 주인공인 자신의 이야기를 직접 서술하는 1인칭 <span class="blank w150"></span> 시점이다. 
+			</p>
+
+			<div class="q-wrap choice-wrap">
+				<label data-chk="answer">
+					<input type="radio" name="answer" class="sr-only" data-audio="../common/media/click.mp3">
+					① 주인공
+				</label>
+				<label>
+					<input type="radio" name="answer" class="sr-only" data-audio="../common/media/click.mp3">
+					② 관찰자
+				</label>
+				<label>
+					<input type="radio" name="answer" class="sr-only" data-audio="../common/media/click.mp3">
+					③ 전지적
+				</label>
+				<!-- <label>
+					<input type="radio" name="answer" class="sr-only" data-audio="../common/media/click.mp3">
+					<span class="text-hide">동그라미</span>
+					<span class="btn-o"></span>
+				</label>
+				<label data-chk="answer">
+					<input type="radio" name="answer" class="sr-only" data-audio="../common/media/click.mp3">
+					<span class="text-hide">엑스</span>
+					<span class="btn-x"></span>
+				</label> -->
+			</div>
+		</div>
+	</div>
+    <!-- //컨텐츠 -->
+
+	<div class="btn-wrap">
+		<button type="button" class="btn org btn-modal-comment d-none" data-toggle="modal" data-target="#modal" data-audio="../common/media/btn_click.mp3"><span>해설 보기</span></button>
+		<button type="button" class="btn btn-toggle btn-answer" data-toggle=answer-all><span>정답 확인</span><span>다시 하기</span></button>
+	</div>
+</main>
+
+<div id="modal" class="modal comment-modal" aria-modal="true">
+	<div class="modal-dialog">
+		<div class="modal-content explan">
+			<button type="button" class="icon icon-modal-close" data-dismiss="modal">닫기</button>
+			<div class="modal-body">
+				<strong class="comment-modal-title font-oneMobTit">해설</strong>
+				<p class="text-indent">「동백꽃<span class="mr-n4">」</span>의 서술자 ‘나’는 이야기 안에 존재하는 인물로, 주인공인 자신의 이야기를 직접 서술하고 있다. 이러한 시점을 1인칭 주인공 시점이라고 한다.</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+</div>
+</body>
+</html>
+
+
+

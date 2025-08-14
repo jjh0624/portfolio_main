@@ -1,0 +1,13 @@
+table{border: 1px solid #f5b68b; border-bottom: 0;}
+tr{border-bottom: 1px solid #f5b68b; line-height: 50px;}
+.all{background-color: #ffd966;}
+.left{border-right: 1px solid #f5b68b; background-color: #ffd966; width: 10%;}
+.middle{ width: 15%; border-right: 1px solid #f5b68b;}
+td.middle{color: red; padding: 5px 5px;}
+.right{text-align: left; padding: 0 20px; line-height: 2;}
+td.right{color: red; padding: 5px 5px;}
+
+#modal1 .short-answer, .answer-consonant{font-size: 44px; padding: 2px 20px 4px; display: flex; align-items: center; justify-content: center;}
+#modal2 .short-answer, .answer-consonant{font-size: 20px; padding: 2px 20px 4px; display: flex; align-items: center; justify-content: center;}
+td.middle .short-answer, td.middle .answer-consonant{min-width: 154px; height: 60px !important; position: relative;}
+.short-answer:not(.active):before{background-size: 50px auto;}

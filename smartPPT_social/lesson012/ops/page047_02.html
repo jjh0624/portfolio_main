@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=1280,height=720" name="viewport" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../../common/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/social.css" />
+    <script defer src="../../common/js/jquery.min.js"></script>
+    <script defer src="../../common/js/jquery-ui.min.js"></script>
+    <script defer src="../../common/js/jquery.ui.touch-punch.min.js"></script>
+    <script defer src="../../common/js/bootstrap.min.js"></script>
+    <script defer src="../../common/js/swiper.min.js"></script>
+    <script defer src="../../common/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script defer src="../../common/js/common.js"></script>
+    <script defer src="../../common/js/navigation.js"></script>
+    <script defer src="../../common/js/social.js"></script>
+    <!-- 페이지별 -->
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="hd">
+            <div class="page-bread"></div>
+            <button type="button" class="page-label">
+                <i class="icon icon-book-pencil"></i>
+                <span class="text-purple">사회</span><span id="page-num" class="num"></span>
+            </button>
+            <button type="button" class="icon icon-hd-close">닫기</button>
+        </header>
+
+        <main id="ct">
+            <!-- 페이지 시작 -->
+            <div class="page-bottom-bg left blue"></div>
+            <div class="page-hd">
+                <h1 class="text-hide"><img src="../../common/img/social/title-self.png" height="54" alt="" />스스로 평가해요
+                </h1>
+            </div>
+            <div class="page-fill slide-page">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide slide1">
+                            <div class="sect-bullet-dot">
+                                <div class="bullet"><i class="dot"></i></div>
+                                <div class="cnt">고구려 사람들의 생활 모습을 설명할 수 있나요?</div>
+                            </div>
+                            <div class="self-check mt50"><input type="checkbox" name="self1" id="self1-1"
+                                    class="sr-only" /><label for="self1-1">최고야</label> <input type="checkbox"
+                                    name="self1" id="self1-2" class="sr-only" /><label for="self1-2">잘했어</label> <input
+                                    type="checkbox" name="self1" id="self1-3" class="sr-only" /><label
+                                    for="self1-3">아쉬워</label></div>
+                        </div>
+                        <div class="swiper-slide slide2">
+                            <div class="sect-bullet-dot">
+                                <div class="bullet"><i class="dot"></i></div>
+                                <div class="cnt">백제 사람들의 생활 모습을 설명할 수 있나요?</div>
+                            </div>
+                            <div class="self-check mt50"><input type="checkbox" name="self2" id="self2-1"
+                                    class="sr-only" /><label for="self2-1">최고야</label> <input type="checkbox"
+                                    name="self2" id="self2-2" class="sr-only" /><label for="self2-2">잘했어</label> <input
+                                    type="checkbox" name="self2" id="self2-3" class="sr-only" /><label
+                                    for="self2-3">아쉬워</label></div>
+                        </div>
+                        <div class="swiper-slide slide3">
+                            <div class="sect-bullet-dot">
+                                <div class="bullet"><i class="dot"></i></div>
+                                <div class="cnt">신라와 가야 사람들의 생활 모습을 설명할 수 있나요?</div>
+                            </div>
+                            <div class="self-check mt50"><input type="checkbox" name="self3" id="self3-1"
+                                    class="sr-only" /><label for="self3-1">최고야</label> <input type="checkbox"
+                                    name="self3" id="self3-2" class="sr-only" /><label for="self3-2">잘했어</label> <input
+                                    type="checkbox" name="self3" id="self3-3" class="sr-only" /><label
+                                    for="self3-3">아쉬워</label></div>
+                        </div>
+                        <div class="swiper-slide slide3">
+                            <div class="sect-bullet-dot">
+                                <div class="bullet"><i class="dot"></i></div>
+                                <div class="cnt">발해 사람들의 생활 모습을 설명할 수 있나요?
+                                </div>
+                            </div>
+                            <div class="self-check mt50"><input type="checkbox" name="self4" id="self4-1"
+                                    class="sr-only" /><label for="self4-1">최고야</label> <input type="checkbox"
+                                    name="self4" id="self4-2" class="sr-only" /><label for="self4-2">잘했어</label> <input
+                                    type="checkbox" name="self4" id="self4-3" class="sr-only" /><label
+                                    for="self4-3">아쉬워</label></div>
+                        </div>
+                    </div>
+                    <div class="swiper-controls">
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- 페이지 끝 -->
+        </main>
+
+        <footer id="ft">
+            <button type="button" class="icon icon-mn index-toggle">목차보기</button>
+            <nav class="ft-navi nav"></nav>
+            <div class="ft-paging">
+                <button type="button" class="icon icon-paging-prev">이전목록</button>
+                <div class="pagin-num"><span id="current"></span><i></i><span id="total"></span></div>
+                <button type="button" class="icon icon-paging-next">다음목록</button>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

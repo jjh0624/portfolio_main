@@ -1,0 +1,3 @@
+.slide-page .swiper-slide:not(.scrolled){padding: 0;}
+
+.figcaption.move:before{transform: rotate(-90deg);}

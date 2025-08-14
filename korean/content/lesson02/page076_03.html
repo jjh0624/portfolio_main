@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta content="width=1920,height=1080" name="viewport" />
+<title></title>
+<script src="../common/js/jquery.min.js"></script>
+<script src="../common/js/jquery-ui.min.js"></script>
+<script src="../common/js/jquery.ui.touch-punch.min.js"></script>
+<script src="../common/js/bootstrap.min.js"></script>
+<script src="../common/js/video.js"></script>
+<script src="../common/js/video-js.js"></script>
+<script src="../common/js/swiper.min.js"></script>
+<script defer src="../common/js/navigation.js"></script>
+<script defer src="../common/js/common.js"></script>
+<script defer src="../common/js/language.js"></script>
+<link rel="stylesheet" type="text/css" href="../common/css/common.css" />
+<!-- 페이지 -->
+</head>
+<body>
+
+<div id="wrap" data-lesson="2">
+    <header id="hd">
+        <div class="page-bread">
+			<div><button type="button" class="icon icon-mn index-toggle">목차보기</button></div>
+		</div>
+        <button type="button" class="page-label btn-ebook">
+			<span class="num">
+				교과서 <strong></strong> 쪽
+			</span>
+        </button>
+
+		<div class="page-move">
+			<button type="button" class="left text-hide" data-action="prev">이전목록</button>
+			<p><span class="now-page">000</span><span class="total-page">999</span></p>
+			<button type="button" class="right text-hide" data-action="next">다음목록</button>
+		</div>
+    </header>
+	
+<main id="ct">
+	<!-- 탑 타이틀+탭 -->
+	<div class="activity-title">
+		<h2><img src="../common/img/plan.png" alt="학습계획"><span class="text-hide">학습계획</span></h2> 
+	</div>
+	<!-- // 탑 타이틀+탭 -->
+
+    <!-- 컨텐츠 -->
+	<div class="page-fill">
+		<h3 class="tit1">다음 질문에 답하며 자신의 학습 계획을 세워 보자.</h3>
+		<div class="learning-table-wrap">
+			<div class="plan-table">
+				<ul class="table-head">
+					<li class="q-title">질문</li>
+					<li class="a-blank">예</li>
+					<li class="a-blank">아니요</li>
+				</ul>
+
+				<div class="table-body">
+					<ul class="q-blank">
+						<li class="q-title">소설을 읽으며 사건을 전달하는 이가 누구인지 파악할 수 있는가?</li>
+
+						<li class="a-blank">
+							<label>
+								<input type="radio" name="plan1" data-audio="../common/media/click.mp3" class="sr-only">
+								<span class="text-hide">예</span>
+							</label>
+						</li>
+
+						<li class="a-blank">
+							<label>
+								<input type="radio" name="plan1" data-audio="../common/media/click.mp3" class="sr-only">
+								<span class="text-hide">아니요</span>
+							</label>
+						</li>
+					</ul>
+
+					<ul class="q-blank">
+						<li class="q-title">말하는 이가 누구냐에 따라 소설의 내용이나 분위기가 달라지는 것을 경험해 본 적이 있는가?</li>
+						<li class="a-blank">
+							<label>
+								<input type="radio" name="plan2" data-audio="../common/media/click.mp3" class="sr-only">
+								<span class="text-hide">예</span>
+							</label>
+						</li>
+						<li class="a-blank">
+							<label>
+								<input type="radio" name="plan2" data-audio="../common/media/click.mp3" class="sr-only">
+								<span class="text-hide">아니요</span>
+							</label>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<h3 class="tit1 mt0">이 단원에서 나는</h3>
+		<div class="short-answer d-block" data-toggle="answer" role="button" data-audio="../common/media/btn_click.mp3">
+			<ul class="list-dot">
+				<li>소설을 읽으며 서술자의 특성을 파악할 것이다.</li>
+				<li>서술자의 특성에 따라 소설이 얻을 수 있는 효과를 알아볼 것이다.</li>
+			</ul>
+		</div>
+	</div>
+	<!-- //컨텐츠 -->
+
+	<!-- 하단 버튼 -->
+	<div class="btn-wrap">
+		<button type="button" class="btn btn-toggle" data-toggle="answer-all" data-target="#ct" data-audio="../common/media/correct.mp3"><span>내용 확인</span><span>다시 하기</span></button>
+	</div>
+    <!-- //하단 버튼 -->
+</main>
+
+<div id="modal" class="modal comment-modal" aria-modal="true">
+	<div class="modal-dialog">
+		<div class="modal-content explan">
+			<button type="button" class="icon icon-modal-close" data-dismiss="modal">닫기</button>
+			<div class="modal-body">
+				<strong class="comment-modal-title font-oneMobTit">해설</strong>
+				<p class="text-indent">「어쩌면」의 화자는 ‘주말에 뭐 해?’라는 말을 밤새 연습하고도 말이 떨어지지 않는 내성적인 성격이다.</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+</div>
+</body>
+</html>
+
+
+

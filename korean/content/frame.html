@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta content="width=1920,height=1010" name="viewport" />
+<title></title>
+<style>
+html, body{margin: 0;padding: 0;width: 100%;height: 100%;background: #E7F2FA}
+iframe{width: 100%;height: 100%;border: 0;display: block}
+#wrapper{position: relative;width: 100vw;height: 1080px;transform-origin: 0 0;overflow: hidden}
+</style>
+</head>
+<body>
+
+<div id="wrapper">
+    <iframe id="content-frame" class="hide" src="./lesson01/01_a_a01_01.html"  frameborder="0" width="1700" height="1080" scrolling="no"></iframe>
+</div>
+<audio id="parentAudio" src=""></audio>
+<script>
+function setView() {
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+    const wrap = document.querySelector('#wrapper');
+    const horizontalZoomRate = width / 1700;
+    const verticalZoomRate = height / 1080;
+    const zoomRate = 1700 * verticalZoomRate >width ? horizontalZoomRate : verticalZoomRate;
+
+    wrap.style.transform = `scale(${zoomRate})`;
+    wrap.style.width = '1700px';
+    wrap.style.left = `${(width - 1700 * zoomRate) / 2}px`;
+}
+
+setView();
+window.addEventListener("resize", setView);
+
+function framefn(surl){
+    var iframe = document.getElementById("content-frame");
+    var audio = document.getElementById("parentAudio");
+
+    audio.src =  surl;
+	audio.currentTime = 0;
+	audio.play();
+}
+</script>
+</body>
+</html>

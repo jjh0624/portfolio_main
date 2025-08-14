@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta content="width=1920,height=1080" name="viewport" />
+<title></title>
+<script src="../common/js/jquery.min.js"></script>
+<script src="../common/js/jquery-ui.min.js"></script>
+<script src="../common/js/jquery.ui.touch-punch.min.js"></script>
+<script src="../common/js/bootstrap.min.js"></script>
+<script src="../common/js/video.js"></script>
+<script src="../common/js/video-js.js"></script>
+<script src="../common/js/swiper.min.js"></script>
+<script defer src="../common/js/navigation.js"></script>
+<script defer src="../common/js/common.js"></script>
+<script defer src="../common/js/language.js"></script>
+<link rel="stylesheet" type="text/css" href="../common/css/common.css" />
+<!-- 페이지 -->
+</head>
+<body>
+
+<div id="wrap" data-lesson="2">
+     <header id="hd">
+        <div class="page-bread">
+			<div><button type="button" class="icon icon-mn index-toggle">목차보기</button></div>
+		</div>
+        <button type="button" class="page-label btn-ebook">
+			<span class="num">
+				교과서 <strong></strong> 쪽
+			</span>
+        </button>
+
+		<div class="page-move">
+			<button type="button" class="left text-hide" data-action="prev">이전목록</button>
+			<p><span class="now-page">000</span><span class="total-page">999</span></p>
+			<button type="button" class="right text-hide" data-action="next">다음목록</button>
+		</div>
+    </header>
+
+<main id="ct">
+	<div class="activity-title">
+		<h2><img src="../common/img/quiz.png" alt="확인 퀴즈"><span class="text-hide">확인 퀴즈</span></h2> 
+	</div>
+
+    <!-- 컨텐츠 -->
+	<div class="page-fill">
+		<h3 class="tit-wrap">
+			<span class="num">3</span> 
+			<span class="sub-tit d-flex align-items-center">
+				다음 빈칸에 들어갈 알맞은 말을 골라 보자.
+			</span>
+		</h3>
+		<div class="question">
+			<p class="fs58 ti10">
+				「어쩌면<span class="mr-n4">」</span>의 화자는 누군가와 친구가 되어 가까워지면 서로의 <span class="blank"></span>을/를 털어놓기를 바라고 있다.
+			</p>
+
+			<div class="q-wrap choice-wrap">
+				<label>
+					<input type="radio" name="answer" class="sr-only" data-audio="../common/media/click.mp3">
+					① 비밀
+				</label>
+				<label>
+					<input type="radio" name="answer" class="sr-only" data-audio="../common/media/click.mp3">
+					② 속마음
+				</label>
+				<label data-chk="answer">
+					<input type="radio" name="answer" class="sr-only" data-audio="../common/media/click.mp3">
+					③ 고민
+				</label>
+				<!-- <label>
+					<input type="radio" name="answer" class="sr-only" data-audio="../common/media/click.mp3">
+					<span class="text-hide">동그라미</span>
+					<span class="btn-o"></span>
+				</label>
+				<label data-chk="answer">
+					<input type="radio" name="answer" class="sr-only" data-audio="../common/media/click.mp3">
+					<span class="text-hide">엑스</span>
+					<span class="btn-x"></span>
+				</label> -->
+			</div>
+		</div>
+	</div>
+    <!-- //컨텐츠 -->
+
+	<div class="btn-wrap">
+		<button type="button" class="btn org btn-modal-comment d-none" data-toggle="modal" data-target="#modal" data-audio="../common/media/btn_click.mp3"><span>해설 보기</span></button>
+		<button type="button" class="btn btn-toggle btn-answer" data-toggle=answer-all><span>정답 확인</span><span>다시 하기</span></button>
+	</div>
+</main>
+
+<div id="modal" class="modal comment-modal" aria-modal="true">
+	<div class="modal-dialog">
+		<div class="modal-content explan">
+			<button type="button" class="icon icon-modal-close" data-dismiss="modal">닫기</button>
+			<div class="modal-body">
+				<strong class="comment-modal-title font-oneMobTit">해설</strong>
+				<p class="text-indent">「어쩌면」의 화자는 누군가와 친구가 되면 주말에 함께 영화를 보거나 떡볶이를 먹을 수 있고, 가까워지면 서로의 고민도 하나씩 털어놓게 될 것이라고 하였다.</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+</div>
+</body>
+</html>
+
+
+

@@ -1,0 +1,14 @@
+.short-answer.bg-mint {background: #D5EAD8; border-radius: 60px; padding: 30px; margin-left: 20px;} 
+.short-answer:not(.bg-mint) {text-align: left;} 
+
+.poem{font-size: 46px;}
+.poem-wrap {display: flex; gap: 120px; margin-top: 50px;}
+.poem-wrap .poem { height: 1300px; display: flex; flex-direction: column; justify-content: center; margin-bottom: 100px;}
+.poem{font-weight: 400;}
+.poem-wrap .poem:nth-of-type(1) { background: #fbf2ff; padding: 40px 50px;}
+.poem-wrap .poem:nth-of-type(1) div:not(:first-child) { margin-top: 50px; position: relative; z-index: 1;}
+.poem-wrap .poem:nth-of-type(2) { border: 10px solid #E9DDED; padding: 40px 50px;}
+.poem-wrap .poem:nth-of-type(2) div:not(:first-child) { margin-top: 50px;}
+
+.board-bg{background: url(../../common/img/board-bg.png) no-repeat top / contain; background-size: 1800px 1800px; font-size: 48px; padding: 0 50px; padding-right: 70px;}
+.board-txt{padding-top: 116px;}

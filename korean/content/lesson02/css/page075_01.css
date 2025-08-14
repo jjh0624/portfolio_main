@@ -1,0 +1,8 @@
+.position-absolute{line-height: 140%;}
+.short-answer.trans{padding: 0;}
+
+.main-bg{margin-top: 400px;}
+.img{position: relative; z-index: 2;}
+.q-box{background-color: #B2DAB8; border-radius: 150px; padding: 50px 40px; position: relative; z-index: 1; margin-top: -50px;}
+.q-box2{padding: 50px 53px;}
+.q-box3{padding: 65px 77px 40px;}

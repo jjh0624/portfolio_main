@@ -1,0 +1,6 @@
+.memo-list{display: flex; align-items: center; justify-content: center; gap: 20px;}
+.memo-list >li{display: flex; align-items: center; width: calc(100% / 3); gap: 20px;}
+.memo-list >li:last-child{display: flex; align-items: center; width: 453px}
+.memo-list >li p{border: 3px solid #9A9B9D; border-radius: 20px; width: 100%; height: 548px; display: flex; align-items: center; justify-content: center; padding: 0 50px;}
+.memo-list>li::after{content: ""; display: block; background: url(../../common/img/arr-grn-right.png) no-repeat center / contain ; width: 80px; height: 62px;}
+.memo-list>li:last-child:after{display: none;}

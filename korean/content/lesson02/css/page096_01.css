@@ -1,0 +1,6 @@
+.conts-top{display: flex; align-items: center; gap: 31px;}
+.bx{padding: 40px; background-color: #FCE3CD; margin-bottom: 100px;}
+.bx ul li:nth-child(2){margin-top: 36px;}
+.top-bx{padding: 15px 50px; background-color: rgba(255, 255, 255, 0.6); border-radius: 50px;}
+.ex{margin-right: 17px;}
+.conts-top div:nth-child(2){display: flex; align-items: center;}

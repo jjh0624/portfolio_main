@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta content="width=1280,height=720" name="viewport" />
+<title></title>
+<link rel="stylesheet" type="text/css" href="../../common/css/common.css" />
+<link rel="stylesheet" type="text/css" href="../../common/css/social.css" />
+<script defer src="../../common/js/jquery.min.js"></script>
+<script defer src="../../common/js/jquery-ui.min.js"></script>
+<script defer src="../../common/js/jquery.ui.touch-punch.min.js"></script>
+<script defer src="../../common/js/bootstrap.min.js"></script>
+<script defer src="../../common/js/swiper.min.js"></script>
+<script defer src="../../common/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script defer src="../../common/js/common.js"></script>
+<script defer src="../../common/js/navigation.js"></script>
+<script defer src="../../common/js/social.js"></script>
+ <!-- 페이지별 -->
+ <link rel="stylesheet" type="text/css" href="./css/page034_04.css" />
+</head>
+<body>
+<div id="wrap" >
+	<header id="hd">
+		<div class="page-bread"></div>
+		<button type="button" class="page-label">
+			<i class="icon icon-book-pencil"></i>
+			<span class="text-purple">사회</span><span id="page-num" class="num"></span>
+		</button>
+		<button type="button" class="icon icon-hd-close">닫기</button>
+	</header>
+
+	<main id="ct">
+		<!-- 페이지 시작 -->
+		<div class="page-bottom-bg v2"></div>
+		<div class="page-hd">
+			<h1 class="text-hide"><img src="../../common/img/social/title-ch.png" height="54" alt="" />말풍선</h1>
+			<!-- <strong class="fs-xs"></strong> -->
+		</div>
+
+		<div class="slide-page page-fill">
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div id="slide1" class="swiper-slide">
+                        <div class="sect-bullet subtitle">
+							<div class="bullet">1.</div>
+							<strong class="cnt">백제의 성장 알아보기</strong>
+						</div>
+						<div class="sect-bullet">
+							<div class="bullet"><img src="../../common/img/social/chick2.png" width="65" alt=""></div>
+							<div class="cnt">
+								온조는 한강 유역에 백제를 세웠습니다. 왜 한강 유역에 백제를 세웠을까요?
+							</div>
+						</div>
+
+                        <!-- [D] 짧은 답변 일때는 페이지안에 -->
+						<div class="page-bottom">
+							<button type="button" class="wbtn" data-toggle="modal" data-target="#modal1"><span>예시 보기</span></button>
+						</div>
+                    </div>
+
+					<div id="slide2" class="swiper-slide">
+						<div class="sect-bullet">
+							<div class="bullet"><img src="../../common/img/social/chick2.png" width="65" alt=""></div>
+							<div class="cnt">
+								백제는 4세기에 전성기를 맞이하였습니다. 전성기를 맞이한 왕은 누구인가요?
+							</div>
+						</div>
+
+						<div class="sect-bullet" data-invisible>
+							<div class="bullet"><img src="../../common/img/social/rabbit2.png" width="65" alt=""></div>
+							<div class="cnt">
+								근초고왕입니다.
+							</div>
+						</div>
+						<!-- [D] 짧은 답변 일때는 페이지안에 -->
+						<div class="page-bottom">
+							<button type="button" class="wbtn btn-toggle" data-toggle="answer-all" data-target="#slide2"><span>정답 보기</span><span>정답 닫기</span></button>
+						</div>
+					</div>
+
+					<div id="slide3" class="swiper-slide">
+						<div class="sect-bullet">
+							<div class="bullet"><img src="../../common/img/social/chick2.png" width="65" alt=""></div>
+							<div class="cnt">
+								근초고왕은 어떤 일을 하였나요?
+							</div>
+						</div>
+						<div class="page-bottom">
+							<button type="button" class="wbtn" data-toggle="modal" data-target="#modal2"><span>예시 보기</span></button>
+						</div>
+					</div>
+
+					<div id="slide4" class="swiper-slide">
+						<div class="sect-bullet">
+							<div class="bullet"><img src="../../common/img/social/chick2.png" width="65" alt=""></div>
+							<div class="cnt">
+								칠지도는 무엇인가요?
+							</div>
+						</div>
+
+						<div class="page-bottom">
+							<button type="button" class="wbtn" data-toggle="modal" data-target="#modal3"><span>예시 보기</span></button>
+						</div>
+					</div>
+
+					<div id="slide6" class="swiper-slide">
+						<div class="sect-bullet">
+							<div class="bullet"><img src="../../common/img/social/chick2.png" width="65" alt=""></div>
+							<div class="cnt">
+								칠지도를 통해 무엇을 알 수 있나요?
+							</div>
+						</div>
+						<div class="sect-bullet" data-invisible>
+							<div class="bullet"><img src="../../common/img/social/rabbit2.png" width="65" alt=""></div>
+							<div class="cnt">
+								백제가 일본(왜)과 교류하였다는 것을 알 수 있습니다.
+							</div>
+						</div>
+
+						<!-- [D] 짧은 답변 일때는 페이지안에 -->
+						<div class="page-bottom">
+							<button type="button" class="wbtn btn-toggle" data-toggle="answer-all" data-target="#slide6"><span>예시 보기</span><span>예시 닫기</span></button>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-controls">
+					<div class="swiper-button-prev"></div>
+					<div class="swiper-pagination"></div>
+					<div class="swiper-button-next"></div>
+				</div>
+			</div>
+		</div>
+
+		<div id="modal1" class="modal fade">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <button type="button" class="icon icon-modal-close btn-sound" data-dismiss="modal">닫기</button>
+                    <div class="modal-body">
+                        <strong class="modal-title modal-title-ex">예시답안</strong>
+                        <div class="sect-bullet">
+							<div class="bullet"><img src="../../common/img/social/rabbit2.png" width="65" alt=""></div>
+							<div class="cnt">넓은 평야가 있어 농사짓기에 좋기 때문입니다.
+							</div>
+						</div>
+
+                        <div class="sect-bullet">
+							<div class="bullet"><img src="../../common/img/social/rabbit2.png" width="65" alt=""></div>
+							<div class="cnt">황해를 통해 다른 나라와 쉽게 교류할 수 있기 때문입니다.
+							</div>
+						</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="modal2" class="modal fade">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <button type="button" class="icon icon-modal-close btn-sound" data-dismiss="modal">닫기</button>
+                    <div class="modal-body pt90 pb35">
+                        <strong class="modal-title2 modal-title-ex">예시답안</strong>
+                        <div class="swiper-basic swiper-container">
+                            <ul class="swiper-wrapper">
+                                <li class="swiper-slide">
+                                    <div class="text-center">
+                                        <div class="img-wrp sample-img">
+                                            <img src="./img/page034_04/1.png" height="400" alt="">
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide">
+                                    <div class="sect-bullet">
+                                      <div class="bullet pt3">
+                                        <img src="../../common/img/social/rabbit2.png" width="65" alt=""/>
+                                      </div>
+                                      <div class="cnt">
+                                        북쪽의 고구려를 공격하여 황해도 지역 일부를 차지하였습니다.
+                                      </div>
+                                    </div>
+                                    <div class="sect-bullet">
+                                      <div class="bullet">
+                                        <img src="../../common/img/social/rabbit2.png" width="65" alt=""/>
+                                      </div>
+                                      <div class="cnt">
+                                        남해안까지 영토를 넓혔습니다.
+                                      </div>
+                                    </div>
+                                    <div class="sect-bullet">
+                                      <div class="bullet">
+                                        <img src="../../common/img/social/rabbit2.png" width="65" alt=""/>
+                                      </div>
+                                      <div class="cnt">
+                                        중국, 일본(왜) 등 주변 나라와 활발히 교류하였습<span class="text-nowrap">니다.</span>
+                                      </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="swiper-controls">
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-pagination"></div>
+                                <div class="swiper-button-next"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="modal3" class="modal fade">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <button type="button" class="icon icon-modal-close btn-sound" data-dismiss="modal">닫기</button>
+                    <div class="modal-body pt90 pb35">
+                        <strong class="modal-title2 modal-title-ex">예시답안</strong>
+                        <div class="swiper-basic swiper-container">
+                            <ul class="swiper-wrapper">
+                                <li class="swiper-slide">
+                                    <div class="text-center">
+                                        <div class="img-wrp">
+                                            <img src="./img/page034_04/2.jpg" height="320" alt="">
+
+                                            <div class="figcaption img-txt flex-row-reverse move align-items-baseline" style="left: -240px;top: 120px;">
+                                                <div>
+                                                    칠지도(일본 나라현)
+                                                <!-- <span class="d-block" style="font-weight: normal; width: 206px;">
+                                                    백제가 일본(왜)에 보낸 칼로, 근초고왕이 보낸 것으로 추측된다.
+                                                </span> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide">
+                                    <div class="sect-bullet">
+                                      <div class="bullet">
+                                        <img src="../../common/img/social/rabbit2.png" width="65" alt=""/>
+                                      </div>
+                                      <div class="cnt">
+                                        백제가 일본(왜)에 보낸 칼입니다.
+                                      </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="swiper-controls">
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-pagination"></div>
+                                <div class="swiper-button-next"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+		<!-- 페이지 끝 -->
+	</main>
+
+	<footer id="ft">
+		<button type="button" class="icon icon-mn index-toggle">목차보기</button>
+		<nav class="ft-navi nav"></nav>
+		<div class="ft-paging">
+			<button type="button" class="icon icon-paging-prev">이전목록</button>
+			<div class="pagin-num"><span id="current"></span><i></i><span id="total"></span></div>
+			<button type="button" class="icon icon-paging-next">다음목록</button>
+		</div>
+	</footer>
+</div>
+</body>
+</html>

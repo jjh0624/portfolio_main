@@ -1,0 +1,15 @@
+.pic-box-wrap { display: flex; gap: 50px; justify-content: center; padding-top: 60px;} 
+.pic-box { position: relative; width: auto; } 
+.pic-tit, .ylw-box { position: absolute; } 
+.pic-tit { font-size: 35px; right: 0; padding: 15px; top: -38px; background: #F8F0D6;border-radius: 50px; border: 3px solid gray;} 
+.back { position: absolute; background-color: #F8F0D6; width: 610px; height: 403px; display: flex; justify-content: center; align-items: center; border-radius: 30px; } 
+
+
+.ylw {background-color: #F8F0D6}
+.pink {background-color: #F8E9F2;}
+
+.short-answer:not(.active) { background-color: transparent; } 
+
+.back ~ .short-answer { position: absolute; padding: 0; } 
+.back.ylw ~ .short-answer.img-answer:not(.active)::after { background-color: #F8F0D6; } 
+.back.pink ~ .short-answer.img-answer:not(.active)::after { background-color: #F8E9F2; } 

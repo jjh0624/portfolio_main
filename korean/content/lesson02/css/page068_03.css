@@ -1,0 +1,36 @@
+.short-answer { background: #FFC00099; border: 4px solid #FFC000; border-radius: 10px; font-weight: 500; padding: 10px 20px;  } 
+.short-answer:not(.active):before, .short-answer:not(.active):hover::before {  border-radius: 10px;} 
+
+
+.poem-list { margin-top: 100px; font-weight: 500; line-height: 160%; font-size: 58px;} 
+
+
+.poem-list:nth-of-type(1) li:nth-of-type(1) .p-bd::after { left: 650px; } 
+.poem-list:nth-of-type(1) li:nth-of-type(3) .p-bd::after { left: 620px; } 
+.poem-list:nth-of-type(1) li:nth-of-type(4) .p-bd::after { content: none; } 
+.poem-list:nth-of-type(1) li:nth-of-type(5) .p-bd::after { left: 766px; } 
+.poem-list:nth-of-type(2) .p-bd::after { left: 744px; } 
+.poem-list:nth-of-type(2) li:nth-of-type(1)  .p-bd::after { left: 900px; } 
+.poem-list:nth-of-type(3) .p-bd::after { left: 518px; } 
+.poem-list:nth-of-type(4) .p-bd::after { left: 330px; } 
+
+
+.list-dot>li { font-size: 40px; } 
+.list-dot>li:before { left: 5%; } 
+.tab-modal .list-dot > li{font-size: 52px;}
+.tab-modal .list-dot > li:before{left: 5px;}
+
+.row { display: flex; justify-content: center; gap: 100px; } 
+.row .bx { text-indent: 0; } 
+.bx { position: relative; background: transparent; border-radius: 50px; font-size: 40px; display: flex; align-items: center; padding: 50px; } 
+.bx::after { content: ""; position: absolute; background: url(../img/page007/arr.png) no-repeat; width: 70px; height: 70px; background-size: contain; top:45%; left: 107%; } 
+.bx:last-child::after { content: none; } 
+
+.border-purple { border: 8px solid #8064A2 !important; } 
+
+.memo-list{display: flex; align-items: center; justify-content: center; gap: 20px;}
+.memo-list >li{display: flex; align-items: center; width: calc(100% / 3); gap: 20px;}
+.memo-list >li:last-child{display: flex; align-items: center; width: 453px}
+.memo-list >li p{border: 3px solid #9A9B9D; border-radius: 20px; width: 100%; height: 548px; display: flex; align-items: center; justify-content: center; padding: 0 50px;}
+.memo-list>li::after{content: ""; display: block; background: url(../../common/img/arr-grn-right.png) no-repeat center / contain ; width: 80px; height: 62px;}
+.memo-list>li:last-child:after{display: none;}
