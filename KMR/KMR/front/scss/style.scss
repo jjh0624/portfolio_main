@@ -1,0 +1,25 @@
+@import "abstracts/mixins";
+@import "abstracts/variables";
+@import "abstracts/functions";
+
+@import "common/base";
+@import "common/components";
+@import "common/layout";
+
+@import "pages/index";
+
+@import "pages/content";
+@import "pages/board";
+@import "pages/ecommerce"; // 홍보물
+
+@import "pages/government_project"; // 정부 프로젝트
+@import "pages/iso"; // ISO인증
+@import "pages/certificate"; //인증검증평가
+@import "pages/service"; // Service & Insight
+@import "pages/customer"; // 고객상담
+@import "pages/recruit"; // 채용
+@import "pages/intro"; // 소개
+@import "pages/esg"; // ESG 경영
+@import "pages/edu"; // 교육
+
+@import "pages/etc"; 

@@ -1,0 +1,9 @@
+@use "sass:math";
+
+@function rem($px, $base: $base-rem) {
+    @return (remove-unit(math.div($px, $base))) * 1rem;
+}
+
+@function remove-unit($value) {
+    @return math.div($value, $value * 0 + 1);
+}

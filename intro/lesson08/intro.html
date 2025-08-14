@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=1920,height=980" name="viewport" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="./common/css/common.css" />
+    <script src="./common/js/jquery.min.js"></script>
+    <script defer src="./common/js/jquery-ui.min.js"></script>
+    <script defer src="./common/js/jquery.ui.touch-punch.min.js"></script>
+    <!-- <script defer src="./common/js/interaction.js"></script> -->
+    <script defer src="./common/js/bootstrap.min.js"></script>
+	<script defer src="./common/js/video-js.js"></script>
+    <script defer src="./common/js/common.js"></script>
+    <!-- 페이지별 -->
+    <link rel="stylesheet" type="text/css" href="css/intro.css" />
+    <script src="js/intro.js"></script>
+</head>
+
+<body>
+
+<div id="idg-viewer-wraper">
+    <header id="hd">
+        <p class="lesson-title">
+            <strong>Lesson 8</strong>
+            Be smart online
+        </p>
+        <div class="hd-btns">
+            <button type="button" data-toggleclass="muted" class="no-style icon hd-sound" aria-label="소리 끄기/켜기">sound</button>
+            <button type="button" data-active="start" class="no-style icon hd-home" aria-label="처음 화면으로 돌아가기">home</button>
+			<button type="button" data-toggle="modal" data-target="#vodModal1" class="icon hd-video" aria-label="영상 보기">video</button>
+            <button type="button" class="no-style icon hd-close" aria-label="창 닫기">close</button>
+        </div>
+    </header>
+
+    <main id="ct" data-step="start">
+        <div id="start" class="" >
+        </div>
+        <div id="stage1" class="" data-quiz="" data-count="">
+			<div class="title">
+				<img src="./img/intro/title.png" alt="제목-만약 등장인물이 스마트 기기를 가지고 있다면 어떤 말을 이어서 할까요?" tabindex="0">
+			</div>
+
+			<div class="motion">
+				<div class="stage1-motion" aria-hidden="true">
+					<img src="./img/intro/notebook.png" alt="신데렐라">
+					<img src="./img/intro/left-arm.png" alt="신데렐라">
+					<img src="./img/intro/right-arm.png" alt="신데렐라">
+				</div>
+
+				<div class="stage2-motion">
+					<div class="char1">
+						<img src="./img/intro/gretel.png" class="body" alt="헨젤과 그레텔">
+						<img src="./img/intro/gretel1.png" alt="그레텔" aria-hidden="true">
+						<img src="./img/intro/gretel2.png" alt="그레텔" aria-hidden="true">
+						<img src="./img/intro/gretel3.png" alt="그레텔" aria-hidden="true">
+						<img src="./img/intro/gretel4.png" class="char-flash" alt="그레텔" aria-hidden="true">
+					</div>
+					<div class="char2">
+						<img src="./img/intro/Hensel-pin.png" alt="헨젤" aria-hidden="true">
+						<img src="./img/intro/Hensel.png" class="body" alt="헨젤">
+						<img src="./img/intro/Hensel1.png" alt="헨젤" aria-hidden="true">
+						<img src="./img/intro/Hensel2.png" alt="헨젤" aria-hidden="true">
+					</div>
+				</div>
+
+				<div class="stage3-motion">
+					<span class="flash"></span>
+					<img src="./img/intro/grash-body.png" class="body" alt="베짱이">
+					<img src="./img/intro/grash2.png" alt="베짱이" aria-hidden="true">
+					<img src="./img/intro/grash3.png" alt="베짱이" aria-hidden="true">
+					<img src="./img/intro/grash4.png" alt="베짱이" aria-hidden="true">
+					<img src="./img/intro/grass.png" alt="베짱이" aria-hidden="true">
+
+					<img src="./img/intro/ant1.png" alt="개미">
+					<img src="./img/intro/ant2.png" alt="개미" aria-hidden="true">
+				</div>
+
+				<div class="stage4-motion">
+					<img src="./img/intro/rapunzel-body.png" alt="라푼젤">
+					<img src="./img/intro/rapunzel-arm.png" alt="라푼젤" aria-hidden="true">
+					<img src="./img/intro/rapunzel-arm2.png" alt="라푼젤" aria-hidden="true">
+					<img src="./img/intro/rapunzel-head.png" alt="라푼젤" aria-hidden="true">
+				</div>
+			</div>
+
+			<div class="part1-pic">
+				<div class="pic pic1" tabindex="0" aria-label="공주 드레스"></div>
+				<div class="pic pic2" tabindex="0" aria-label="진주 목걸이"></div>
+				<div class="pic pic3" tabindex="0" aria-label="유리구두"></div>
+			</div>
+
+			<div class="bubble bubble1">
+				<p class="font-sans">
+					<span tabindex="0">I want to go to the party....</span>
+				</p>
+			</div>
+			<div class="bubble bubble2 active">
+				<p><span tabindex="0">We are lost...</span></p>
+			</div>
+			<div class="bubble bubble3">
+				<p>
+					<span tabindex="0">I’m so bored...</span>
+				</p>
+			</div>
+			<div class="bubble bubble4">
+				<p>
+					<span tabindex="0">I like my new hairstyle....</span>
+				</p>
+			</div>
+
+			<div class="dialogue-wrap">
+				<p class="dialogue dialogue1">
+					<span tabindex="0" onclick="playMp3('./media/intro/08_yoon_8-1.mp3', event)" aria-label="I’ll buy new shoes online.">I’ll buy new shoes online.</span>
+					<!-- <a class="soundBtn soundBtn1" type="button" tabindex="1" >
+						<img src="./img/intro/soundBtn.png" alt="나래이션 재생" tabindex="0">
+						<img src="./img/intro/soundBtn2.png" class="over" alt="나래이션 재생" aria-hidden="true">
+					</a> -->
+				</p>
+				<p class="dialogue dialogue2" >
+					<span tabindex="0" onclick="playMp3('./media/intro/08_yoon_8-2.mp3', event)" aria-label="Let’s use an online map.">Let’s use an online map.</span>
+					<!-- <a class="soundBtn soundBtn2" type="button" >
+						<img src="./img/intro/soundBtn.png" alt="나래이션 재생" tabindex="0">
+						<img src="./img/intro/soundBtn2.png" class="over" alt="나래이션 재생" aria-hidden="true">
+					</a> -->
+				</p>
+				<p class="dialogue dialogue3">
+					<span tabindex="0" onclick="playMp3('./media/intro/08_yoon_8-3.mp3', event)" aria-label="I’ll play games on my phone.">I’ll play games on my phone.</span>
+					<!-- <a class="soundBtn soundBtn3" type="button" >
+						<img src="./img/intro/soundBtn.png" alt="나래이션 재생" tabindex="0">
+						<img src="./img/intro/soundBtn2.png" class="over" alt="나래이션 재생" aria-hidden="true">
+					</a> -->
+				</p>
+				<p class="dialogue dialogue4">
+					<span tabindex="0"  onclick="playMp3('./media/intro/08_yoon_8-4.mp3', event)" aria-label="I’ll take a selfie and share it on social media.">I’ll take a selfie and share it on social media.</span>
+					<!-- <a class="soundBtn soundBtn4" type="button">
+						<img src="./img/intro/soundBtn.png" alt="나래이션 재생" tabindex="0">
+						<img src="./img/intro/soundBtn2.png" class="over" alt="나래이션 재생" aria-hidden="true">
+					</a> -->
+				</p>
+			</div>
+
+            <div class="sticker-popup">
+                <img src="./img/intro/click-zone.png" alt="답안 영역" aria-hidden="true">
+
+				<div class="box-area" tabindex="0">
+					<dl data-answer="1" tabindex="0">
+						<dt><img src="./img/intro/answer1.png" alt="Let’s use an online map."></dt>
+						<dd><img src="./img/intro/answer1-1.png" alt="Let’s use an online map." aria-hidden="true"></dd>
+					</dl>
+					<dl data-answer="2" tabindex="0">
+						<dt><img src="./img/intro/answer2.png" alt="I’ll buy new shoes online."></dt>
+						<dd><img src="./img/intro/answer2-1.png" alt="I’ll buy new shoes online." aria-hidden="true"></dd>
+					</dl>
+					<dl data-answer="3" tabindex="0">
+						<dt><img src="./img/intro/answer3.png" alt="I’ll play games on my phone."></dt>
+						<dd><img src="./img/intro/answer3-1.png" alt="I’ll play games on my phone." aria-hidden="true"></dd>
+					</dl>
+					<dl data-answer="4" tabindex="0">
+						<dt><img src="./img/intro/answer4.png" alt="I’ll take a selfie and share it on social media."></dt>
+						<dd><img src="./img/intro/answer4-1.png" alt="I’ll take a selfie and share it on social media." aria-hidden="true"></dd>
+					</dl>
+
+					<div class="btn-wrap">
+						<button type="button" id="toStage4" class="to-nextStage text-hide"><img src="./img/intro/next-btn.svg" alt="다음으로 가기"></button>
+					</div>
+				</div>
+            </div>
+            <img class="click-icon" src="./img/intro/click.png" alt="클릭하기" tabindex="0">
+        </div>
+    </main>
+</div>
+
+<!-- 팝업 -->
+<div id="startModal" class="modal fade modal-message" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <!-- <button type="button" class="icon icon-close" data-dismiss="modal">닫기</button> -->
+            <div class="modal-body">
+                <div class="text-center">
+                    <!-- <p><img src="./common/img/gatemodal-title.png" alt="환영합니다."></p> -->
+                    <p class="mt20" tabindex="0">
+                        그림을 보고, 등장인물이 스마트 기기를 가지고 있다면<br> 어떤 말을 이어서 할지 선택하세요.
+                    </p>
+
+                    <p class="mt45">
+                        <button id="btnStart" type="button" data-active="stage1" class="no-style img-button">
+                            <img src="./common/img/btn-start.png" alt="시작하기">
+                            <img class="over" src="./common/img/btn-start-over.png" alt="시작하기">
+                        </button>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 영상 모달 -->
+<div id="vodModal" class="modal fade modal-vod" data-backdrop="static">
+	<a class="no-style img-button btn-reset" type="button">
+		<img src="./common/img/btn-retry-over.png" alt="다시하기" tabindex="0">
+		<img src="./common/img/btn-retry.png" class="hover" alt="다시하기" aria-hidden="true">
+	</a>
+
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+			<!-- <h3 class="video-title">
+				<img src="./img/intro/video-title.png" alt="동영상을 보며 상상한 말이 맞는지 확인해 보세요.">
+			</h3> -->
+            <button type="button" class="icon icon-close" data-dismiss="modal">닫기</button>
+            <!-- vod button  mainVod-->
+            <button type="button" class="icon icon-vod icon-vtt icon-vtt2">vtt</button>
+            <button type="button" class="icon icon-vod icon-script icon-script2">script</button>
+            <div class="modal-body">
+				<!-- <button class="btn-vodclick">
+					<span class="video-btn play-btn show">
+						<img src="./img/intro/play-btn.png" class="play play1" alt="재생버튼">
+						<img src="./img/intro/play-btn-over.png" class="play play2" alt="재생버튼" aria-hidden="true">
+					</span>
+
+					<span class="video-btn stop-btn">
+						<img src="./img/intro/stop-btn.png" class="stop stop1" alt="멈춤 버튼">
+						<img src="./img/intro/stop-btn-over.png" class="stop stop2" alt="멈춤 버튼" aria-hidden="true">
+					</span>
+				</button> -->
+                <video id="mainVod1" class="video-js" controls preload="auto"  height="810" data-setup="{}">
+                  <source
+                    src="https://zwlkfvorupgj3657960.cdn.gov-ntruss.com/hls/~uZjyjVw5AqJ-XFY1RV2iQ__/lcms/c1abe813ae21461e89ba6e1210c680e3/c1abe813ae21461e89ba6e1210c680e3_,4000,2000,1000,k.mp4.smil/master.m3u8"
+                    type="application/x-mpegURL"
+                  />
+                  <track label="English" kind="subtitles" srclang="en" src="./media/intro/L8_BYB.vtt" mode="hidden" default>
+                </video>
+                <article class="vod-script">
+                    <div>
+						(네 개의 다른 동화가 한 화면에 나타난다.)
+						<br>
+						(온라인 쇼핑을 하는 신데렐라)
+						<br>
+						I want to go to the party.
+						<br>
+						I will buy new shoes online.
+						<br>
+						(온라인 지도로 길을 찾는 헨젤과 그레텔)
+						<br>
+						We are lost.
+						<br>
+						Let's use an online map.
+						<br>
+						(게임을 하는 베짱이와 열심히 일하는 개미들)
+						<br>
+						I'm so bored.
+						<br>
+						I will play games on my phone.
+						<br>
+						(핸드폰으로 셀카를 찍는 라푼젤)
+						<br>
+						I like my new hairstyle.
+						<br>
+						I'll take a selfie and share it on social media.
+						<br>
+						(다시 전체 화면이 나타난다.)
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="vodModal1" class="modal fade modal-vod show" data-backdrop="static">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <button type="button" class="icon icon-close" data-dismiss="modal">닫기</button>
+            <!-- vod button  mainVod-->
+            <button type="button" class="icon icon-vod icon-vtt">vtt</button>
+            <button type="button" class="icon icon-vod icon-script">script</button>
+            <div class="modal-body">
+                <video id="mainVod" class="video-js" controls preload="auto"  height="810" data-setup="{}">
+                  <source
+                    src="https://zwlkfvorupgj3657960.cdn.gov-ntruss.com/hls/~uZjyjVw5AqJ-XFY1RV2iQ__/lcms/c1abe813ae21461e89ba6e1210c680e3/c1abe813ae21461e89ba6e1210c680e3_,4000,2000,1000,k.mp4.smil/master.m3u8"
+                    type="application/x-mpegURL"
+                  />
+                  <track label="English" kind="subtitles" srclang="en" src="./media/intro/L8_BYB.vtt" mode="hidden" default>
+                </video>
+                <article class="vod-script">
+                    <div>
+						(네 개의 다른 동화가 한 화면에 나타난다.)
+						<br>
+						(온라인 쇼핑을 하는 신데렐라)
+						<br>
+						I want to go to the party.
+						<br>
+						I will buy new shoes online.
+						<br>
+						(온라인 지도로 길을 찾는 헨젤과 그레텔)
+						<br>
+						We are lost.
+						<br>
+						Let's use an online map.
+						<br>
+						(게임을 하는 베짱이와 열심히 일하는 개미들)
+						<br>
+						I'm so bored.
+						<br>
+						I will play games on my phone.
+						<br>
+						(핸드폰으로 셀카를 찍는 라푼젤)
+						<br>
+						I like my new hairstyle.
+						<br>
+						I'll take a selfie and share it on social media.
+						<br>
+						(다시 전체 화면이 나타난다.)
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 마지막 모달 -->
+<div id="modal_finish" class="modal fade modal-vod show" data-backdrop="static">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <p class="modal_desc">등장인물들이 스마트 기기를 사용하며 할 말을 확인해 보세요.</p>
+                <div class="img-wrp">
+                    <button type="button" class="img-btn img-btn-1 is-active"><img src="./img/intro/modal_char1.jpg" alt="신데렐라"></button>
+                    <button type="button" class="img-btn img-btn-2"><img src="./img/intro/modal_char2.jpg" alt="헨젤과 그레텔"></button>
+                    <button type="button" class="img-btn img-btn-3"><img src="./img/intro/modal_char3.jpg" alt="개미와 베짱이"></button>
+                    <button type="button" class="img-btn img-btn-4"><img src="./img/intro/modal_char4.jpg" alt="라푼젤"></button>
+                </div>
+                <div class="modal_desc_wrp">
+                    <button type="button" class="desc desc_1 is-look is-active" onclick="playMp3('./media/intro/08_yoon_8-1.mp3', event)">I’ll buy new shoes online.</button>
+                    <button type="button" class="desc desc_2 is-look" onclick="playMp3('./media/intro/08_yoon_8-2.mp3', event)">Let’s use an online map.</button>
+                    <button type="button" class="desc desc_3 is-look" onclick="playMp3('./media/intro/08_yoon_8-3.mp3', event)">I’ll play games
+					on my phone.</button>
+                    <button type="button" class="desc desc_4 is-look" onclick="playMp3('./media/intro/08_yoon_8-4.mp3', event)">I’ll take a selfie and share it on social media.</button>
+                </div>
+                <div class="ch-modal-btn-wrp">
+                    <button type="button" data-dismiss="modal" data-toggle="modal" data-target="#vodModal" class="no-style img-button">
+                        <img src="./common/img/btn-video.png" alt="영상보기">
+                        <img class="over" src="./common/img/btn-video-over.png" alt="영상보기">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- <script src="./js/data.make.js"></script>
+<script src="./js/dragword.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/common.send.js"></script>
+<script src="./js/common.receive.js"></script> -->
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+// Grid
+$grid-breakpoints: ( 
+	"sm": 576px,
+	"md": 768px,
+	"lg": 992px,
+	"xl": 1200px,
+	"xxl": 1400px,
+	"xxxl": 1600px,
+);
+$mobilevh : calc((var(--vh, 1vh) * 100)) ;
+
+$color-body: #333;
+$color-white: #fff;
+
+$color-secondary: #5A371E;
+$color-ylw: #FFC908;
+$color-gray : #666; 
+$color-light : #999; 
+$color-light2 : #888; 
+$color-line : #DDD; 
+
+// Typography
+$font-sans: 'Pretendard', -apple-system, sans-serif; 
+$font-mont: "Montserrat", 'Pretendard', sans-serif;
+$font-suit: "SUIT", 'Pretendard', sans-serif;
+
+$base-rem: 18px;
+$base-rem-mobile: 16px;
+
+$line-height-base: 1.5;
+
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+// util
+$radius : 20px;
+
+// animation
+$animation-timing: cubic-bezier(0.165, 0.84, 0.44, 1);

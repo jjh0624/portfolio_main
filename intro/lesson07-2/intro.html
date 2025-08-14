@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=1920,height=980" name="viewport" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="./common/css/common.css" />
+    <script src="./common/js/jquery.min.js"></script>
+    <script defer src="./common/js/jquery-ui.min.js"></script>
+    <script defer src="./common/js/jquery.ui.touch-punch.min.js"></script>
+    <script defer src="./common/js/bootstrap.min.js"></script>
+	<script defer src="./common/js/video-js.js"></script>
+    <script defer src="./common/js/common.js"></script>
+    <!-- 페이지별 -->
+    <link rel="stylesheet" type="text/css" href="css/intro.css" />
+    <script src="js/intro.js"></script>
+</head>
+
+<body>
+<div id="idg-viewer-wraper">
+    <header id="hd">
+        <p class="lesson-title">
+            <strong>Lesson 7</strong>
+            Think Big, Be Creative!
+        </p>
+        <div class="hd-btns">
+            <button type="button" data-toggleclass="muted" class="no-style icon hd-sound" aria-label="소리 끄기/켜기">sound</button>
+            <button type="button" data-active="start" class="no-style icon hd-home" aria-label="처음 화면으로 돌아가기">home</button>
+			<button type="button" data-toggle="modal" data-target="#vodModal" class="icon hd-video" aria-label="영상 보기">video</button>
+            <button type="button" class="no-style icon hd-close" aria-label="창 닫기">close</button>
+        </div>
+    </header>
+
+    <main id="ct" data-step="start">
+        <!-- start -->
+        <div id="start" class="">
+        </div>
+
+        <!-- stage1 -->
+         <div id="stage1" data-count="0" data-answer="4" class="">
+			<div class="arrow">
+				<img src="./img/intro/stage-arr.png" alt="클릭 돋보기">
+			</div>
+
+			<!-- <div class="title-text">
+				<p>미술 작품의 빈 조각을 찾아 작품을 완성해 보세요.</p>
+			</div> -->
+
+			<img class="sparkle-effect" src="./img/intro/modal2-effect1.png" alt="흔드는 효과 아이콘">
+
+			<div class="picture">
+				<div class="pic-bg pic-bg1">
+					<img src="./img/intro/pic1.png" class="pic pic1" alt="명화1">
+					<img src="./img/intro/drag-item1_blank.png" class="blank blank1" alt="빈 퍼즐 조각1">
+					<img src="./img/intro/drag-item1_frame.png" class="frame frame1" alt="">
+				</div>
+				<div class="pic-bg pic-bg2">
+					<img src="./img/intro/pic2.png" class="pic pic2" alt="명화2">
+					<img src="./img/intro/drag-item2_blank.png" class="blank blank2" alt="빈 퍼즐 조각2">
+					<img src="./img/intro/drag-item2_frame.png" class="frame frame2" alt="">
+				</div>
+				<div class="pic-bg pic-bg3">
+					<img src="./img/intro/pic3.png" class="pic pic3" alt="명화3">
+					<img src="./img/intro/drag-item3_blank.png" class="blank blank3" alt="빈 퍼즐 조각3">
+					<img src="./img/intro/drag-item4_blank.png" class="blank blank4" alt="빈 퍼즐 조각4">
+					<img src="./img/intro/drag-item3_frame.png" class="frame frame3" alt="">
+					<img src="./img/intro/drag-item4_frame.png" class="frame frame4" alt="">
+
+					<button type="button" class="arrow-pink">
+						<img src="./img/intro/arrow.png" alt="화살표">
+					</button>
+				</div>
+			</div>
+
+			<div class="char">
+				<img src="./img/intro/char1.png" class="char-img charimg1" alt="명화를 구경하는 캐릭터">
+				<img src="./img/intro/char2.png" class="char-img charimg2" alt="돋보기로 명화를 살펴보는는 캐릭터들">
+			</div>
+
+			<div class="dialogue-wrap">
+				<img src="./img/intro/map.png" class="dialogue" alt="">
+
+				<div class="dialogue-conts">
+					<div class="puzzle-modal puzzle-modal1 show">
+						<div class="puzzle-conts puzzle3" data-number="1">
+							<img src="./img/intro/drag-item3.png" class="show" alt="첫번째 퍼즐">
+							<img src="./img/intro/drag-item3-hover.png" class="puzzle-move puzzle-move1" alt="첫번째 퍼즐">
+							<img src="./img/intro/drag-item3-none.png" class="puzzle-none" alt="사용한 퍼즐">
+						</div>
+						<div class="puzzle-conts puzzle4" data-number="2">
+							<img src="./img/intro/drag-item4.png" class="show" alt="두번째 퍼즐">
+							<img src="./img/intro/drag-item4-hover.png" class="puzzle-move puzzle-move2" alt="두번째 퍼즐">
+							<img src="./img/intro/drag-item4-none.png" class="puzzle-none" alt="사용한 퍼즐즐">
+						</div>
+						<div class="puzzle-conts puzzle2" data-number="3">
+							<img src="./img/intro/drag-item2.png" class="show" alt="세번째 퍼즐">
+							<img src="./img/intro/drag-item2-hover.png" class="puzzle-move puzzle-move3" alt="세번째 퍼즐">
+							<img src="./img/intro/drag-item2-none.png" class="puzzle-none" alt="사용한 퍼즐">
+						</div>
+						<div class="puzzle-conts puzzle1" data-number="4">
+							<img src="./img/intro/drag-item1.png" class="show" alt="네번째 퍼즐">
+							<img src="./img/intro/drag-item1-hover.png" class="puzzle-move puzzle-move4" alt="네번째 퍼즐">
+							<img src="./img/intro/drag-item1-none.png" class="puzzle-none" alt="사용한 퍼즐">
+						</div>
+					</div>
+
+					<div class="puzzle-modal puzzle-modal2">
+						<button type="button" class="btn-voice">
+							<img src="./img/intro/stage2-arr.png" alt="보이스가 나오는 문구를 가리키는 손가락">
+						</button>
+
+						<div class="text-conts">
+							<p>완성된 작품에서 무엇이 보이나요?</p>
+
+							<ul class="text-list">
+								<li class="text-list1" onclick="playMp3('./media/intro/15_lee_7-1.mp3', event)">
+									<span class="audio-message">I see a bridge in this picture.</span>
+								</li>
+								<li class="text-list2" onclick="playMp3('./media/intro/15_lee_7-2.mp3', event)" >
+									<span class="audio-message">I see a cow in this picture.</span>
+								</li>
+								<li class="text-list3" onclick="playMp3('./media/intro/15_lee_7-3.mp3', event)">
+									<span class="audio-message">
+										I see a dog in this picture.</span>
+								</li>
+								<li class="text-list4" onclick="playMp3('./media/intro/15_lee_7-4.mp3', event)" aria-label="I see an umbrella in this picture.">
+									<span class="audio-message">I see an umbrella in this picture.</span>
+								</li>
+							</ul>
+						</div>
+
+						<div class="btn-wrap">
+							<button class="btn-next show">
+								<img src="./img/intro/nextBtn.png" alt="다음">
+								<img src="./img/intro/nextBtn-hover.png" class="hover" alt="다음">
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+         </div>
+    </main>
+</div>
+
+<!-- modal -->
+<div id="startModal" class="modal fade modal-message" data-backdrop="static" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="text-center">
+                    <p class="mt20 lh1">
+						미술 작품의 빈 조각을 찾아 작품을 완성해 보세요.
+                    </p>
+
+                    <p class="mt45">
+                        <button id="btnStart" type="button" data-active="stage1" class="no-style img-button" onclick="playAudio('./media/intro/bg.mp3');">
+                            <img src="./img/intro/btn-start.png" alt="시작하기">
+                            <img class="over" src="./img/intro/btn-start-over.png" alt="시작하기">
+                        </button>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- 영상 모달 -->
+<div id="vodModal" class="modal fade modal-vod" data-backdrop="static">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <button type="button" class="icon icon-close" data-dismiss="modal">닫기</button>
+            <!-- vod button  mainVod-->
+            <button type="button" class="icon icon-vod icon-vtt">vtt</button>
+            <button type="button" class="icon icon-vod icon-script">script</button>
+            <div class="modal-body">
+                <video id="mainVod" class="video-js" controls preload="auto"  height="810" controls data-setup="{}">
+                  <source
+                    src="https://zwlkfvorupgj3657960.cdn.gov-ntruss.com/hls/~uZjyjVw5AqJ-XFY1RV2iQ__/lcms/bf0a9f9b18724444a6a97efcd270cb8a/bf0a9f9b18724444a6a97efcd270cb8a_,4000,2000,1000,k.mp4.smil/master.m3u8"
+                    type="application/x-mpegURL"
+                  />
+                  <track label="English" kind="subtitles" srclang="en" src="./media/L15_BYB.vtt" mode="hidden" default>
+                </video>
+                <article class="vod-script">
+                    <div>
+                        Think Big, Be Creative!<br>
+                        <br>
+                        There are beautiful pictures.<br>
+                        <br>
+                        But some parts are missing.<br>
+                        <br>
+                        Please find the missing parts and complete the pictures.<br>
+                        <br>
+                        Claude Monet painted this picture.<br>
+                        <br>
+                        What do you see in this picture?<br>
+                        <br>
+                        I see a bridge and a beautiful pond.<br>
+                        <br>
+                        Lee Jung Seob painted this picture.<br>
+                        <br>
+                        What do you see in this picture?<br>
+                        <br>
+                        I see a big eye.<br>
+                        <br>
+                        Georges Seurat painted this picture.<br>
+                        <br>
+                        The title is "A Sunday Afternoon on the Island of La Grande Jatte."<br>
+                        <br>
+                        What do you see in this picture?<br>
+                        <br>
+                        I see many people.<br>
+                        <br>
+                        They're enjoying a picnic by a lake.<br>
+                        <br>
+                        What do you see in these pictures?<br>
+                        <br>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 완료모달 -->
+<div id="finalModal" class="modal fade" data-backdrop="static">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="text-center">
+                    <p><img src="./img/intro/title.png" alt="각 그림 속 사람들의 여행 계획을 말해봅시다." /></p>
+                    <ul class="nav ex-list">
+                        <li class="nav-item" data-name="miso">
+                            <a data-toggle="tab" type="button" class="nav-link modal-btn" href="#ex1">
+                                <div class="img-wrp">
+                                    <img src="./img/intro/small_pic1.png" alt="Miso 그림카드">
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item" data-name="suho">
+                            <a data-toggle="tab" type="button" class="nav-link modal-btn" href="#ex2">
+                                <div class="img-wrp">
+                                    <img src="./img/intro/small_pic2.png" alt="Suho 그림카드">
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item" data-name="narae">
+                            <a data-toggle="tab" type="button" class="nav-link modal-btn" href="#ex3">
+                                <div class="img-wrp">
+                                    <img src="./img/intro/small_pic3.png" alt="Narae 그림카드">
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item" data-name="tony">
+                            <a data-toggle="tab" type="button" class="nav-link modal-btn" href="#ex4">
+                                <div class="img-wrp">
+                                    <img src="./img/intro/small_pic4.png" alt="Tony 그림카드">
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content ex-talk">
+                        <p id="ex1" class="tab-pane" data-name="miso">
+                            <button data-audio="./media/intro/15_lee_7-1.mp3" class="script-text">I see a bridge in this picture.</button>
+                        </p>
+                        <p id="ex2" class="tab-pane" data-name="suho">
+                            <button data-audio="./media/intro/15_lee_7-2.mp3" class="script-text">I see a cow in this picture.</button>
+                        </p>
+                        <p id="ex3" class="tab-pane" data-name="narae">
+                            <button data-audio="./media/intro/15_lee_7-3.mp3" class="script-text">I see a dog in this picture.</button>
+                        </p>
+                        <p id="ex4" class="tab-pane" data-name="tony">
+                            <button data-audio="./media/intro/15_lee_7-4.mp3" class="script-text">I see an umbrella in this picture.</button>
+                        </p>
+                    </div>
+
+                    <div>
+                        <button type="button" data-active="start" data-dismiss="modal" class="no-style img-button btn-reset">
+                            <img src="./common/img/btn-first.png" alt="다시하기">
+                            <img class="over" src="./common/img/btn-first-over.png" alt="다시하기">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

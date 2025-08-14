@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=1920,height=980" name="viewport" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="./common/css/common.css" />
+    <script src="./common/js/jquery.min.js"></script>
+    <script defer src="./common/js/jquery-ui.min.js"></script>
+    <script defer src="./common/js/jquery.ui.touch-punch.min.js"></script>
+    <script defer src="./common/js/bootstrap.min.js"></script>
+	<script defer src="./common/js/video-js.js"></script>
+    <script defer src="./common/js/common.js"></script>
+    <!-- 페이지별 -->
+    <link rel="stylesheet" type="text/css" href="css/intro.css" />
+    <script src="js/intro.js"></script>
+</head>
+
+<body>
+
+<div id="idg-viewer-wraper">
+    <header id="hd">
+        <p class="lesson-title">
+            <strong>Lesson 3</strong>
+            When I Grow Up
+        </p>
+        <div class="hd-btns">
+            <button type="button" data-toggleclass="muted" class="no-style icon hd-sound">sound</button>
+            <button type="button" data-active="start" class="no-style icon hd-home">home</button>
+			<button type="button" data-toggle="modal" data-target="#vodModal" class="icon hd-video">video</button>
+            <button type="button" class="no-style icon hd-close">close</button>
+        </div>
+    </header>
+
+    <main id="ct">
+        <div id="start"></div>
+
+        <div id="stage" data-count="0">
+            <!-- <div class="stage-box">밑줄 친 글자를 올바른 순서로 배열해 단어를 완성하고,<br>각 인물이 하는 일을 알아보세요.
+            </div> -->
+            <button type="button" class="btn-click"><img src="./img/intro/click.png" alt="캐릭터 클릭버튼" ></button>
+            <div class="ch-wrp">
+                <div class="stage1">
+                    <div class="baker" >
+                        <img src="./img/intro/bread2.png" alt="제빵사">
+                    </div>
+                </div>
+                <div class="stage2">
+                    <div class="singer">
+                        <img src="./img/intro/singer.png" alt="가수">
+                        <img src="./img/intro/singer2.png" class="singer-music" alt="가수" aria-hidden="true">
+                    </div>
+                    <div class="bread">
+                        <img src="./img/intro/bread.png" alt="바게트를 든 여성">
+                    </div>
+                    <div class="cat-dad">
+                        <img src="./img/intro/cat-dad.png" alt="고양이와 아이와아빠">
+						<img src="./img/intro/cat-dad2.png" class="child-arm" alt="고양이와 아이와아빠 팔" aria-hidden="true">
+                    </div>
+                </div>
+                <div class="stage3">
+                    <div class="artist">
+                        <img src="./img/intro/artist.png" alt="화가">
+                        <img src="./img/intro/artist2.png" class="art-head" alt="화가" aria-hidden="true">
+                    </div>
+                </div>
+                <div class="stage4">
+                    <div class="doctor">
+                        <img src="./img/intro/doctor.png" alt="의사">
+                        <img src="./img/intro/doctor2.png" class="doctor-arm" alt="의사" aria-hidden="true">
+                    </div>
+                </div>
+                <div class="stage5">
+                    <div class="bus">
+                        <img src="./img/intro/bus.png" alt="버스">
+                    </div>
+                    <div class="walker">
+                        <img src="./img/intro/walker.png" alt="산책하는 강아지와 사람">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 시작 모달 -->
+     <div id="startModal" class="modal fade modal-message"  aria-hidden="">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <!-- <button type="button" class="icon icon-close" data-dismiss="modal">닫기</button> -->
+                <div class="modal-body">
+                    <div class="text-center">
+                        <!-- <p><img src="./common/img/gatemodal-title.png" alt="환영합니다."></p> -->
+                        <p class="mt20" tabindex="0">
+                            밑줄 친 글자를 올바른 순서로 배열해 단어를 완성하고,<br>각 인물이 하는 일을 알아보세요.
+                        </p>
+                        <p class="mt45">
+                            <button id="btnStart" type="button" data-active="stage1" class="no-style img-button">
+                                <img src="./common/img/btn-start.png" alt="시작하기">
+                                <img class="over" src="./common/img/btn-start-over.png" alt="시작하기">
+                            </button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 스테이지 모달 -->
+    <div id="stageModal" class="stageModal">
+        <div class="bubble" tabindex="0">
+            <p class="prev-text">I'm a</p>
+            <span class="underline" data-bubble="0">bkaer</span>
+            <span class="underline" data-bubble="1">snierg</span>
+            <span class="underline" data-bubble="2">raitst</span>
+            <span class="underline" data-bubble="3">dcorot</span>
+            <span class="underline" data-bubble="4">riderv</span><span class="ml-n2">.</span>
+        </div>
+        <div id="" class="popup">
+            <div class="popup-hd font-tround text-brw" tabindex="0">밑줄 친 부분을 재배열하여 단어를 완성해 보세요.
+            </div>
+            <div class="popup-body">
+                <p tabindex="0">
+                    I'm
+                </p>
+                <p class="alphabet-val" data-alphabet="0">
+					<button type="button" class="alp-click" tabindex="1"></button>
+                    <span tabindex="0">a </span>
+                    <input type="text" data-value="b" maxlength="1"  readonly>
+					<input type="text" data-value="a" maxlength="1" readonly>
+					<input type="text" data-value="k" maxlength="1" readonly>
+					<input type="text" data-value="e" maxlength="1" readonly>
+					<input type="text" data-value="r" maxlength="1" readonly>
+                </p>
+                <p class="alphabet-val" data-alphabet="1">
+					<button type="button" class="alp-click" tabindex="1"></button>
+                    <span tabindex="0">a </span>
+                    <input type="text" data-value="s" maxlength="1"  readonly>
+                    <input type="text" data-value="i" maxlength="1" readonly>
+                    <input type="text" data-value="n" maxlength="1" readonly>
+                    <input type="text" data-value="g" maxlength="1" readonly>
+                    <input type="text" data-value="e" maxlength="1" readonly>
+                    <input type="text" data-value="r" maxlength="1" readonly>
+                </p>
+                <p class="alphabet-val" data-alphabet="2">
+					<button type="button" class="alp-click" tabindex="1"></button>
+                    <span tabindex="0">an </span>
+                    <input type="text" data-value="a" maxlength="1"  readonly>
+                    <input type="text" data-value="r" maxlength="1" readonly>
+                    <input type="text" data-value="t" maxlength="1" readonly>
+                    <input type="text" data-value="i" maxlength="1" readonly>
+                    <input type="text" data-value="s" maxlength="1" readonly>
+                    <input type="text" data-value="t" maxlength="1" readonly>
+                </p>
+                <p class="alphabet-val" data-alphabet="3">
+					<button type="button" class="alp-click" tabindex="1"></button>
+                    <span tabindex="0">a </span>
+                    <input type="text" data-value="d" maxlength="1"  readonly>
+                    <input type="text" data-value="o" maxlength="1" readonly>
+                    <input type="text" data-value="c" maxlength="1" readonly>
+                    <input type="text" data-value="t" maxlength="1" readonly>
+                    <input type="text" data-value="o" maxlength="1" readonly>
+                    <input type="text" data-value="r" maxlength="1" readonly>
+                </p>
+                <p class="alphabet-val" data-alphabet="4">
+					<button type="button" class="alp-click" tabindex="1"></button>
+                    <span tabindex="0">a bus </span>
+                    <input type="text" data-value="d" maxlength="1"  readonly>
+                    <input type="text" data-value="r" maxlength="1" readonly>
+                    <input type="text" data-value="i" maxlength="1" readonly>
+                    <input type="text" data-value="v" maxlength="1" readonly>
+                    <input type="text" data-value="e" maxlength="1" readonly>
+                    <input type="text" data-value="r" maxlength="1" readonly>
+                </p>
+                .
+                <button type="button" class="btn-hint"><img src="./img/intro/btn-hint.png" alt="힌트버튼"></button>
+            </div>
+        </div>
+    </div>
+    <!-- 스테이지 모달2  -->
+    <div id="stageModal2" class="stageModal2">
+        <div class="bubble">
+            I'm a
+            <span class="underline" data-bubble2="0">baker</span>
+            <span class="underline" data-bubble2="1">singer</span>
+            <span class="underline" data-bubble2="2">artist</span>
+            <span class="underline" data-bubble2="3">doctor</span>
+            <span class="data-4">bus</span> <span class="underline" data-bubble2="4">driver</span><span class="ml-n2">.</span>
+        </div>
+        <div class="popup popup-flex">
+			<div class="">
+				<div class="popup-hd font-tround text-brw" data-pop-hd="0" tabindex="0">그녀는 어떤 일을 하는지 말해 보세요.</div>
+            	<div class="popup-hd font-tround text-brw" data-pop-hd="1" tabindex="0">그는 어떤 일을 하는지 말해 보세요.</div>
+				<div class="popup-body">
+					<span class="audio-wrp" data-pop-cont="0">
+						<button type="button" class="btn-audio" onclick="playMp3('./media/11_lee_3-1_2.mp3')">
+							<span class="font-tround audio-message audio-message1">She bakes bread.</span>
+							<img src="./img/intro/click.png" alt="클릭하기 버튼(문장듣기)" >
+						</button>
+					</span>
+					<span class="audio-wrp" data-pop-cont="1">
+						<button type="button" class="btn-audio" onclick="playMp3('./media/11_lee_3-2_2.mp3')">
+							<span class="font-tround audio-message audio-message2">He sings a song.</span>
+							<img src="./img/intro/click.png" alt="클릭하기 버튼(문장듣기)" >
+						</button>
+					</span>
+					<span class="audio-wrp" data-pop-cont="2">
+						<button type="button" class="btn-audio" onclick="playMp3('./media/11_lee_3-3_2.mp3')">
+							<span class="font-tround audio-message audio-message3">She paints a picture.</span>
+							<img src="./img/intro/click.png" alt="클릭하기 버튼(문장듣기)" >
+						</button>
+					</span>
+					<span class="audio-wrp" data-pop-cont="3">
+						<button type="button" class="btn-audio" onclick="playMp3('./media/11_lee_3-4_2.mp3')">
+							<span class="font-tround audio-message audio-message4" >He gives medical treatment.</span>
+							<img src="./img/intro/click.png" alt="클릭하기 버튼(문장듣기)" >
+						</button>
+					</span>
+					<span class="audio-wrp" data-pop-cont="4">
+						<button type="button" class="btn-audio" onclick="playMp3('./media/11_lee_3-5_2.mp3')">
+							<span class="font-tround audio-message audio-message5">She drives a bus.</span>
+							<img src="./img/intro/click.png" alt="클릭하기 버튼(문장듣기)" >
+						</button>
+					</span>
+				</div>
+			</div>
+
+			<div class="action-btn-wrp">
+				<button type="button" class="btn-next"><img src="./img/intro/btn-next.png" alt="다음 스테이지"></button>
+				<button type="button" class="btn-back"><img src="./img/intro/btn-replay.png" alt="되돌아가기"></button>
+			</div>
+        </div>
+    </div>
+
+	<buttin class="btn-replay">
+		<img src="common/img/btn-again-over.png" alt="다시하기 버튼">
+		<img src="common/img/btn-again.png" class="hover" alt="다시하기 버튼">
+	</buttin>
+
+    <!-- 팝업 모달 -->
+    <div id="popupModal" class="popupModal">
+        <div class="btn-wrp" data-popup="0" tabindex="0">
+            <button type="button" class="" value="a">
+                <span class="pop-text font-tround">a</span>
+            </button>
+            <button type="button"   value="b">
+                <span class="pop-text font-tround" style="left: 119px;">b</span>
+            </button>
+            <button type="button"  value="e">
+                <span class="pop-text font-tround" style="left: 205px;">e</span>
+            </button>
+            <button type="button"  value="k">
+                <span class="pop-text font-tround" style="left: 296px;">k</span>
+            </button>
+            <button type="button"  value="r">
+                <span class="pop-text font-tround" style="left: 388px;">r</span>
+            </button>
+        </div>
+        <div class="btn-wrp" data-popup="1">
+            <button type="button" class="" value="e">
+                <span class="pop-text font-tround">e</span>
+            </button>
+            <button type="button"   value="g">
+                <span class="pop-text font-tround" style="left: 115px; top: -1px;">g</span>
+            </button>
+            <button type="button"  value="i">
+                <span class="pop-text font-tround" style="left: 211px;">i</span>
+            </button>
+            <button type="button"  value="n">
+                <span class="pop-text font-tround" style="left: 294px;">n</span>
+            </button>
+            <button type="button"  value="r">
+                <span class="pop-text font-tround" style="left: 388px;">r</span>
+            </button>
+            <button type="button"  value="s">
+                <span class="pop-text font-tround" style="left: 474px;">s</span>
+            </button>
+        </div>
+        <div class="btn-wrp" data-popup="2">
+            <button type="button" class="" value="a">
+                <span class="pop-text font-tround">a</span>
+            </button>
+            <button type="button"   value="i">
+                <span class="pop-text font-tround" style="left: 122px;">i</span>
+            </button>
+            <button type="button"  value="r">
+                <span class="pop-text font-tround" style="left: 210px;">r</span>
+            </button>
+            <button type="button"  value="s">
+                <span class="pop-text font-tround" style="left: 296px;">s</span>
+            </button>
+            <button type="button"  value="t">
+                <span class="pop-text font-tround" style="left: 385px;">t</span>
+            </button>
+            <button type="button"  value="t">
+                <span class="pop-text font-tround" style="left: 474px;">t</span>
+            </button>
+        </div>
+        <div class="btn-wrp" data-popup="3">
+            <button type="button" class="" value="c">
+                <span class="pop-text font-tround" style="left: 28px;">c</span>
+            </button>
+            <button type="button"   value="d">
+                <span class="pop-text font-tround" style="left: 114px;">d</span>
+            </button>
+            <button type="button"  value="o">
+                <span class="pop-text font-tround" style="left: 205px;">o</span>
+            </button>
+            <button type="button"  value="o">
+                <span class="pop-text font-tround" style="left: 294px;">o</span>
+            </button>
+            <button type="button"  value="r">
+                <span class="pop-text font-tround" style="left: 388px;">r</span>
+            </button>
+            <button type="button"  value="t">
+                <span class="pop-text font-tround" style="left: 474px;">t</span>
+            </button>
+        </div>
+        <div class="btn-wrp" data-popup="4">
+            <button type="button" class="" value="r">
+                <span class="pop-text font-tround" style="left: 31px;">r</span>
+            </button>
+            <button type="button"   value="i">
+                <span class="pop-text font-tround" style="left: 122px;">i</span>
+            </button>
+            <button type="button"  value="d">
+                <span class="pop-text font-tround" style="left: 203px;">d</span>
+            </button>
+            <button type="button"  value="e">
+                <span class="pop-text font-tround" style="left: 296px;">e</span>
+            </button>
+            <button type="button"  value="r">
+                <span class="pop-text font-tround" style="left: 388px;">r</span>
+            </button>
+            <button type="button"  value="v">
+                <span class="pop-text font-tround" style="left: 474px;">v</span>
+            </button>
+        </div>
+    </div>
+    <!-- 힌트모달 -->
+    <!-- <div id="hintModal" class="hintModal">
+        <span class="hint-text font-tround text-brw" data-hint="0">baker</span>
+        <span class="hint-text font-tround text-brw" data-hint="1">singer</span>
+        <span class="hint-text font-tround text-brw" data-hint="2">artist</span>
+        <span class="hint-text font-tround text-brw" data-hint="3">doctor</span>
+        <span class="hint-text font-tround text-brw" data-hint="4">driver</span>
+    </div> -->
+
+
+	<!-- 영상모달 -->
+	<div id="vodModal" class="modal fade modal-vod" data-backdrop="static">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<button type="button" class="icon icon-close" data-dismiss="modal">닫기</button>
+				<!-- vod button -->
+				<button type="button" class="icon icon-vod icon-vtt">vtt</button>
+				<button type="button" class="icon icon-vod icon-script">script</button>
+				<div class="modal-body">
+					<video id="mainVod" class="video-js" controls preload="auto" height="810" controls data-setup="{}" >
+						<source
+                        src="https://zwlkfvorupgj3657960.cdn.gov-ntruss.com/hls/~uZjyjVw5AqJ-XFY1RV2iQ__/lcms/eac85b3422d24a749b45420f0706c84b/eac85b3422d24a749b45420f0706c84b_,4000,2000,1000,k.mp4.smil/master.m3u8"
+                        type="application/x-mpegURL"
+                        />
+						<track label="English" kind="subtitles" srclang="en" src="./media/L11_BYB.vtt" mode="hidden" default />
+					</video>
+
+					<article class="vod-script">
+						<div>
+                            When I Grow Up<br>
+                            <br>
+                            What are the people's jobs?<br>
+                            <br>
+                            Let's meet them in the town.<br>
+                            <br>
+                            I sing songs.<br>
+                            <br>
+                            Guess my job.<br>
+                            <br>
+                            I'm a singer.<br>
+                            <br>
+                            La la la~~<br>
+                            <br>
+                            I paint pictures.<br>
+                            <br>
+                            Guess my job.<br>
+                            <br>
+                            I'm an artist.<br>
+                            <br>
+                            I take care of sick people.<br>
+                            <br>
+                            Guess my job.<br>
+                            <br>
+                            I'm a doctor.<br>
+                            <br>
+                            I bake delicious bread.<br>
+                            <br>
+                            Guess my job.<br>
+                            <br>
+                            I'm a baker.<br>
+                            <br>
+                            I take people to different places.<br>
+                            <br>
+                            Guess my job.<br>
+                            <br>
+                            I'm a bus driver.<br>
+                            <br>
+                            What do you want to be in the future?<br>
+                            <br>
+                        </div>
+					</article>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- 완료모달 -->
+<div id="finalModal" class="modal fade" data-backdrop="static">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <!-- <button type="button" class="icon icon-close" data-dismiss="modal">닫기</button> -->
+            <div class="modal-body">
+                <div class="text-center bx_modal font-tround">
+                    <!-- <p><img src="./img/intro/modal-title.png" alt="그림 속 친구들이 어떤 도움을 주었는지 확인해 보세요."></p> -->
+                    <p class="font-tround" tabindex="0">각 인물이 어떤 일을 하는지 말해 봅시다.</p>
+                    <!--
+                    active: 클릭유도
+                    is-able: 클릭이 가능, active가 실행되고 난 3초 이후 넣어지도록
+                    -->
+                    <ul class="nav ex-list">
+                        <li class="nav-item" data-name="subin" tabindex="0">
+                            <a data-toggle="tab" type="button" class="nav-link modal-btn active" href="#ex1">
+                                <div class="img-wrp">
+                                    <img src="./img/intro/bread3.png" alt="빵집 여자">
+                                </div>
+                                <!-- <span class="name">baker</span> -->
+                            </a>
+                        </li>
+                        <li class="nav-item" data-name="ben" tabindex="0">
+                            <a data-toggle="tab" type="button" class="nav-link modal-btn" href="#ex2">
+                                <div class="img-wrp">
+                                    <img src="./img/intro/singer3.png" alt="가수">
+                                </div>
+                                <!-- <span class="name">singer</span> -->
+                            </a>
+                        </li>
+                        <li class="nav-item" data-name="lucy" tabindex="0">
+                            <a data-toggle="tab" type="button" class="nav-link modal-btn" href="#ex3">
+                                <div class="img-wrp">
+                                    <img src="./img/intro/artist3.png" alt="화가">
+                                </div>
+                                <!-- <span class="name">artist</span> -->
+                            </a>
+                        </li>
+                        <li class="nav-item" data-name="minho" tabindex="0">
+                            <a data-toggle="tab" type="button" class="nav-link modal-btn" href="#ex4">
+                                <div class="img-wrp">
+                                    <img src="./img/intro/doctor3.png" alt="의사">
+                                </div>
+                                <!-- <span class="name">doctor</span> -->
+                            </a>
+                        </li>
+                        <li class="nav-item" data-name="minho" tabindex="0">
+                            <a data-toggle="tab" type="button" class="nav-link modal-btn" href="#ex5">
+                                <div class="img-wrp">
+                                    <img src="./img/intro/driver3.png" alt="버스기사">
+                                </div>
+                                <!-- <span class="name">driver</span> -->
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content ex-talk">
+                        <p id="ex1" class="tab-pane active" data-name="subin">
+                            <button onclick="playMp3('./media/11_lee_3-1.mp3')" class="font-tround script-text">
+								<span class="audio-message">I'm a baker.</span>
+                            </button>
+                        </p>
+                        <p id="ex2" class="tab-pane" data-name="ben">
+                            <button onclick="playMp3('./media/11_lee_3-2.mp3')" class="font-tround script-text">
+								<span class="audio-message">I'm a singer.</span> </button>
+                        </p>
+                        <p id="ex3" class="tab-pane" data-name="lucy">
+                            <button onclick="playMp3('./media/11_lee_3-3.mp3')" class="font-tround script-text">
+								<span class="audio-message">I'm an artist.</span></button>
+                        </p>
+                        <p id="ex4" class="tab-pane" data-name="minho">
+                            <button onclick="playMp3('./media/11_lee_3-4.mp3')" class="font-tround script-text">
+								<span class="audio-message">I'm a doctor.</span></button>
+                        </p>
+                        <p id="ex5" class="tab-pane" data-name="minho">
+                            <button onclick="playMp3('./media/11_lee_3-5.mp3')" class="font-tround script-text">
+								<span class="audio-message">I'm a bus driver.</span> </button>
+                        </p>
+                    </div>
+
+                    <div class="btn-wrap">
+                        <button type="button" data-active="start" class="no-style img-button btn-reset">
+
+                            <img src="./common/img/btn-again.png" alt="다시하기">
+                        </button>
+                        <button class="last btn-reset active" type="button" tabindex="-1">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    </main>
+
+</div>
+
+</body>
+</html>

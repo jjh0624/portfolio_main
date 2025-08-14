@@ -1,0 +1,207 @@
+@charset "utf-8";
+// 기본베이스 : 폰트, 컬러, 타이포
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/woff2/SUIT.css');
+
+:root{
+	--container-padding: 40px;
+	--hd: 108px;
+	--section-space: 200px;
+	--gap: 4px;
+
+	--basic: #333;
+	--primary: #DB0032;
+	--gray: #EFEFEF;
+	--secondary: #F9F2ED;
+
+	--gutters-margin: -12px;
+}
+
+@include media-max(xl){
+	:root{
+		--section-space: 80px;
+	}
+}
+
+@include media-max(lg){
+	:root{
+		--container-padding: 24px;
+		--gutters-margin: -6px;
+	}
+}
+
+@include media-max(md){
+	:root{
+		--container-padding: 16px;
+		--hd: 52px;
+		--section-space: 50px;
+		--gap: 2px;
+		--gutters-margin: -4px;
+	}
+}
+
+// resetg
+html{
+	font-size: 18px;
+
+	@include media-max(lg){
+		font-size: 16px;
+	}
+}
+
+body, p, span, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, th, td, form, fieldset, legend, input, textarea, button, select, label{ 
+	margin: 0;
+	padding: 0;
+	font-family: $font-sans; 
+	color: inherit;
+	outline: 0;
+}
+body{
+	color: var(--basic);
+	letter-spacing: -0.04em;
+	* {
+		box-sizing: border-box;
+	} 
+}
+a{
+	color: inherit;
+	transition: all .4s;
+	&:hover, &:focus, &:active{ 
+		color: inherit;
+		text-decoration: none;
+	}
+}
+li{
+	list-style: none
+}
+address, em{
+	font-style: normal
+}
+table{
+	width: 100%
+}
+textarea{
+	resize: none;
+	font-size: 1rem;
+	outline: 0;
+}
+u{
+	text-decoration-thickness: 1px;
+	text-underline-position: under;
+}
+
+img{
+	vertical-align: top;
+	max-width: 100%
+}
+button{
+	cursor: pointer;
+	border: 0;
+	transition: all .4s;
+	background: none;
+} 
+
+b, strong{
+	font-weight: 700;
+}
+
+
+.row{
+	margin-left: var(--gutters-margin);
+	margin-right: var(--gutters-margin);
+
+	&-gap{
+		row-gap: calc(var(--gutters-margin) * -2);
+	}
+}
+.row>[class*=col], .row>div{
+	padding-left: calc(var(--gutters-margin) * -1);
+	padding-right: calc(var(--gutters-margin) * -1)
+}
+.no-gutters{
+	--gutters-margin: 0
+}
+
+h1, h2, h3, h4, .fs-1, .fs-2, .fs-3, .fs-4, .fs-5, .fs-6, .fs-7{
+	font-weight: 700;
+	line-height: 1.5;
+	color: #000;
+	word-break: keep-all;
+}
+
+.fs-1{font-size: rem(56px);font-weight: 800;}
+.fs-2{font-size: rem(48px);}
+.fs-3{font-size: rem(40px);}
+.fs-4{font-size: rem(32px);}
+.fs-5{font-size: rem(28px);}
+.fs-6{font-size: rem(24px);}
+.fs-7{
+	font-size: rem(20px);
+	&[class*=text-]{
+		font-weight: 400;
+	}
+}
+.fbasic{font-size: 1rem;}
+.fsm{font-size: rem(16px) !important}
+
+@include media-max(lg){
+	.fs-1, .fs-2{font-size: rem(28px, $base-rem-mobile);}
+	.fs-3{font-size: rem(24px, $base-rem-mobile);}
+	.fs-4{font-size: rem(22px, $base-rem-mobile);}
+	.fs-5{font-size: rem(20px, $base-rem-mobile);}
+	.fs-6{
+		font-size: rem(20px, $base-rem-mobile);
+		&.text-primary{
+			font-size: rem(18px, $base-rem-mobile);
+		}
+	}
+	
+	.fs-7{font-size: 1rem}
+}
+
+.text-base{font-size: 1rem !important;}
+.text-body{color: $color-body !important}
+.text-primary, a.text-primary:focus, a.text-primary:hover{color: var(--primary) !important}
+.text-secondary{color: $color-secondary !important}
+.text-gray{color: $color-gray !important}
+.text-light{color: $color-light !important}
+.text-light2{color: $color-light2 !important}
+.text-dark{color: #000 !important;}
+
+.bg-light{background-color: #F6F6F6 !important}
+.bg-primary{background-color: var(--primary) !important}
+.bg-white{background-color: #fff !important}
+.bg-ylw{background-color: var(--secondary) !important}
+.bg-dark{background-color: #000 !important}
+.bg-gray {background-color: #666 !important}
+.bg-beige {background-color: #EEE5DF !important}
+
+
+.text-clamp{
+	@include text-clamp;
+}
+
+.font-mont{
+	font-family: $font-mont !important;
+	letter-spacing: 0;
+}
+
+.overflow-visible{
+	overflow: visible !important;
+}
+
+.gap-0{
+	gap: 0 !important
+}
+
+details{
+	position: relative;
+}
+summary:focus {
+    outline: none;
+}
+
+caption{
+	@include text-hide;
+}

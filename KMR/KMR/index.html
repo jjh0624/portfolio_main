@@ -1,0 +1,1983 @@
+<!DOCTYPE html>
+<html xml:lang="ko" lang="ko">
+<head>
+<title>한국경영인증원</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="Keywords" content="한국경영인증원">
+<meta name="Description" content="ISO인증, ESG, 경영평가, GHG 검증, 시상, 교육 등 종합 지식서비스 전문기관">
+<meta property="og:url" content="https://www.ikmr.co.kr/" />
+<meta property="og:image" content="/front/images/og-img.png" />
+<meta property="og:title" content="한국경영인증원" />
+<meta property="og:description" content="SO인증, ESG, 경영평가, GHG 검증, 시상, 교육 등 종합 지식서비스 전문기관" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="한국경영인증원" />
+<link rel="shortcut icon" href="/front/img/favicon.ico" type="image/x-icon" />
+<link rel="icon" href="/front/img/favicon.ico" type="image/x-icon" />
+
+<link rel="stylesheet" type="text/css" href="/front/css/bootstrap.min.css" /> 
+<link rel="stylesheet" type="text/css" href="/front/css/swiper-bundle.min.css" /> 
+<link rel="stylesheet" type="text/css" href="/front/css/aos.css">
+<link rel="stylesheet" type="text/css" href="/front/css/animate.min.css">
+<link rel="stylesheet" type="text/css" href="/front/css/style.min.css" /> 
+
+<script type="text/javascript" src="/front/js/jquery-3.7.1.min.js"></script> 
+<script type="text/javascript" src="/front/js/swiper-bundle.min.js"></script>
+<script type="text/javascript" src="/front/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="/front/js/aos.js"></script>
+<script defer type="text/javascript" src="/front/js/common.js"></script>
+
+<!-- 페이지별 -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+<script type="text/javascript" src="/front/js/jquery.counterup.min.js"></script>
+<script defer type="text/javascript" src="/front/js/main.js"></script>
+</head>
+<body>
+	
+<div id="wrap">
+    <!-- [D] topbanner 활성화 visible 클래스 추가 -->
+    <div class="topbanner visible">
+        <div class="topbanner-swiper swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href="">
+                        <!-- pc -->
+                        <div class="pc"><img src="/front/img/_temp/topbanner_pc.jpg" alt=""></div>
+                        <!-- mo -->
+                        <div class="mo"><img src="/front/img/_temp/topbanner_mo.jpg" class="mo" alt=""></div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="">
+                        <!-- pc -->
+                        <div class="pc"><img src="/front/img/_temp/topbanner_pc.jpg" alt=""></div>
+                        <!-- mo -->
+                        <div class="mo"><img src="/front/img/_temp/topbanner_mo.jpg" class="mo" alt=""></div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="">
+                        <!-- pc -->
+                        <div class="pc"><img src="/front/img/_temp/topbanner_pc.jpg" alt=""></div>
+                        <!-- mo -->
+                        <div class="mo"><img src="/front/img/_temp/topbanner_mo.jpg" class="mo" alt=""></div>
+                    </a>
+                </div>
+            </div>
+            <div class="swiper-controls">
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+        <button type="button" class="icon" onclick="$('.topbanner').removeClass('visible')">닫기</button>
+        <button type="button" class="today-close">오늘 그만 보기</button>
+        <script>
+            new Swiper(".topbanner-swiper", { 
+                observer: true,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                loop: true,
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                },
+            });
+
+            const hiddenUntil = localStorage.getItem('topbannerHiddenUntil');
+            const now = new Date();
+
+            if (hiddenUntil && new Date(hiddenUntil) > now) {
+                $('.topbanner').removeClass('visible');
+            }
+
+            // 버튼 클릭 시 오늘 하루 숨기기
+            $('.today-close').on('click', function () {
+                $('.topbanner').removeClass('visible');
+
+                const tomorrow = new Date();
+                tomorrow.setHours(24, 0, 0, 0); // 오늘 자정까지 유지
+                localStorage.setItem('topbannerHiddenUntil', tomorrow.toISOString());
+            });
+        </script> 
+    </div>
+    <!-- // topbanner -->
+
+    <header class="hd">
+        <div class="container container-fluid">
+            <h1 class="logo">
+                <a href="./index.html">
+                    <img src="/front/img/logo.svg" class="pc" alt="한국경영인증원">
+                    <img src="/front/img/logo-m.svg" class="mo" alt="한국경영인증원">
+                </a>
+            </h1>
+            <ul class="gnb">
+                <li>
+                    <a href="./01.Sub_01.ISO인증_01.인증소개-01.인증종류.html">ISO 인증</a>
+                    <div class="depth">
+                        <div class="depth-inner">
+                            <div class="container">
+                                <ul class="depth-list">
+                                    <li>
+                                        <a href="./01.Sub_01.ISO인증_01.인증소개-01.인증종류.html">인증소개</a>
+                                        <ul class="depth3">
+                                            <li><a href="./01.Sub_01.ISO인증_01.인증소개-01.인증종류.html">Overview / 인증종류</a></li>
+                                            <li><a href="./01.Sub_01.ISO인증_01.인증소개-02.인증절차.html">인증절차</a></li>
+                                            <li><a href="./01.Sub_01.ISO인증_01.인증소개-03.인증의기대.html">인증의 기대</a></li>
+                                            <li><a href="./01.Sub_01.ISO인증_01.인증소개-04.왜KMR인증을선택하는가.html">왜! KMR인증을 선택하는가</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="./01.Sub_01.ISO인증_02.인증서비스분야_00.게이트페이지.html">인증 서비스 분야</a>
+                                        <ul class="depth3">
+                                            <li><a href="./01.Sub_01.ISO인증_02.인증서비스분야_00.게이트페이지.html">전체보기</a></li>
+                                            <li><a href="./01.Sub_01.ISO인증_02.인증서비스분야_01.ISO9001품질경영시스템.html">품질경영시스템</a></li>
+                                            <li><a href="./01.Sub_01.ISO인증_02.인증서비스분야_02.ISO10002고객만족경영시스템.html">고객만족경영시스템</a></li>
+                                            <li><a href="./01.Sub_01.ISO인증_02.인증서비스분야_03.IATF16949자동차품질경영시스템.html">자동차품질경영시스템</a></li>
+                                            <li><a href="./01.Sub_01.ISO인증_02.인증서비스분야_04.ISO41001시설관리 경영시스템.html">시설관리 경영시스템</a></li>
+                                            <li><a href="./01.Sub_01.ISO인증_02.인증서비스분야_05.ISO15378의료포장재 품질경영시스템.html">의료포장재품질경영시스템</a></li>
+                                            <li><a href="./01.Sub_01.ISO인증_02.인증서비스분야_06.ISO13485의료기기품질경영시스템.html">의료기기 품질경영시스템</a></li>
+                                            <li><a href="./01.Sub_01.ISO인증_02.인증서비스분야_06.ISO14155의료기기임상시험관리기준.html">의료기기임상시험관리기준</a></li>
+                                            <li><a href="./01.Sub_01.ISO인증_02.인증서비스분야_07.ISOIEC27001정보보안경영시스템.html">정보보안시스템</a></li>
+                                            <li><a href="./01.Sub_01.ISO인증_02.인증서비스분야_08.ISOIEC27701개인정보보호경영시스템.html">개인정보보호경영시스템</a></li>
+                                            <li><a href="./01.Sub_01.ISO인증_02.인증서비스분야_09.ISO28000공급망사슬보안경영시스템.html">공급망사슬보안경영시스템</a></li>
+                                            <li><a href="./01.Sub_01.ISO인증_02.인증서비스분야_10.ISOIEC27017클라우드서비스정보보호통제지침.html">클라우드서비스 정보보호 통제지침</a></li>
+                                            <li><a href="./01.Sub_01.ISO인증_02.인증서비스분야_11.ISOIEC27018공공클라우드개인정보보호통제지침.html">공공 클라우드 개인정보보호 통제지침</a></li>
+                                            <li><a href="./01.Sub_01.ISO인증_02.인증서비스분야_11.ISOIEC27799보건의료정보보호관리기준.html">보건의료 정보보호관리기준</a></li>
+                                            <li><a href="./01.Sub_01.ISO인증_02.인증서비스분야_12.ISOIEC 20000 IT서비스관리시스템.html">IT 서비스관리시스템</a></li>
+                                            <li><a href="./01.Sub_01.ISO인증_02.인증서비스분야_12.ISOIEC42001인공지능경영시스템.html">인공지능경영시스템</a></li>
+                                            <li><a href="./01.Sub_01.ISO인증_02.인증서비스분야_13.IOS14001환경경영시스템.html">환경경영시스템</a></li>
+                                            <li><a href="./01.Sub_01.ISO인증_02.인증서비스분야_14.ISO50001에너지경영시스템.html">에너지경영시스템</a></li>
+                                            <li><a href="./01.Sub_01.ISO인증_02.인증서비스분야_15.ISO45001안전보건경영시스템.html">안전보건경영시스템</a></li>
+                                            <li><a href="./01.Sub_01.ISO인증_02.인증서비스분야_16.ISO 22301 비즈니스연속성경영시스템.html">비즈니스연속성경영시스템</a></li>
+                                            <li><a href="./01.Sub_01.ISO인증_02.인증서비스분야_17.ISO39001도로교통안전경영시스템.html">도로교통안전경영시스템</a></li>
+                                            <li><a href="./01.Sub_01.ISO인증_02.인증서비스분야_18.ISO22000식품안전경영시스템.html">식품안전경영시스템</a></li>
+                                            <li><a href="./01.Sub_01.ISO인증_02.인증서비스분야_19.FSSC22000식품안전시스템.html">식품안전시스템</a></li>
+                                            <li><a href="./01.Sub_01.ISO인증_02.인증서비스분야_20.ISO22716화장품우수제조관리기준.html">화장품 우수제조관리기준</a></li>
+                                            <li><a href="./01.Sub_01.ISO인증_02.인증서비스분야_21.ISO10015교육훈련경영시스템.html">교육훈련경영시스템</a></li>
+                                            <li><a href="./01.Sub_01.ISO인증_02.인증서비스분야_22.ISO21001교육기관경영시스템.html">교육기관경영시스템</a></li>
+                                            <li><a href="./01.Sub_01.ISO인증_02.인증서비스분야_23.ISO37001부패방지경영시스템.html">부패방지경영시스템</a></li>
+                                            <li><a href="./01.Sub_01.ISO인증_02.인증서비스분야_24.ISO37301규범준수경영시스템.html">규범준수경영시스템</a></li>
+                                            <li><a href="./01.Sub_01.ISO인증_02.인증서비스분야_25.ISO45003심리사회적위험관리시스템.html">심리사회적 위험관리시스템</a></li>
+                                            <li><a href="./01.Sub_01.ISO인증_02.인증서비스분야_25.ISO30301기록경영시스템.html">기록경영시스템</a></li>
+                                            <li><a href="./01.Sub_01.ISO인증_02.인증서비스분야_26.ISO15489-1문헌정보 기록관리시스템.html">문헌정보 기록관리시스템</a></li>
+                                            <li><a href="./01.Sub_01.ISO인증_02.인증서비스분야_28.ISO20121지속가능이벤트경영시스템.html">지속가능이벤트경영시스템</a></li>
+                                            <li><a href="./01.Sub_01.ISO인증_02.인증서비스분야_29.ISO44001협업비즈니스관계경영시스템.html">협업비즈니스관계경영시스템</a></li>
+                                            <li><a href="./01.Sub_01.ISO인증_02.인증서비스분야_30.ISO31000리스크관리경영시스템.html">리스크관리경영시스템</a></li>
+                                            <li><a href="./01.Sub_01.ISO인증_02.인증서비스분야_31.ISO55001자산경영시스템.html">자산경영시스템</a></li>
+                                            <li><a href="./01.Sub_01.ISO인증_02.인증서비스분야_31.ISO26000사회적책임수준진단_01.ISO26000.html">사회적책임 수준진단</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="./01.Sub_01.ISO인증_03.인증로고및홍보물.html">인증로고 및 홍보물</a></li>
+                                    <li>
+                                        <a href="" target="_blank" title="새창열림">인증상담<i class="icon icon-link">&nbsp;</i></a>
+                                        <a href="" target="_blank" title="새창열림">인증신청<i class="icon icon-link">&nbsp;</i></a>
+                                    </li>
+                                </ul>
+                                <a href="" class="depth-banner">
+                                    <img src="/front/img/gnb1.png" alt="">
+                                    <div class="inner">
+                                        <strong class="text-primary">ISO 인증이란?</strong>
+                                        <p>기업 또는 조직이 관련 국제표준화 기구에서 제정한 인증 규격 또는 특정 경영시스템을 구축 및 이행하고 있음을 KMR에서 객관적으로 평가하여 적합함을 실증하고 인증을 부여합니다.</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="">인증·검증·평가</a>
+                    <div class="depth">
+                        <div class="depth-inner">
+                            <div class="container">
+                                <ul class="depth-list">
+                                    <li>
+                                        <a href="./01.Sub_02.인증·검증·평가_01.탄소중립_00.gate.html">탄소중립</a>
+                                        <ul>
+                                            <li><a href="./01.Sub_02.인증·검증·평가_01.탄소중립_00.gate.html">Overview</a></li>
+                                            <li><a href="./01.Sub_02.인증·검증·평가_01.탄소중립_01.환경부검증_01.배출권거래제.html">환경부 검증</a></li>
+                                            <li><a href="./01.Sub_02.인증·검증·평가_01.탄소중립_02.산림청검증_01.산림탄소흡수량검증.html">산림청 검증</a></li>
+                                            <li><a href="./01.Sub_02.인증·검증·평가_01.탄소중립_03.ISO검증_ISO 14064-1.html">ISO 검증</a></li>
+                                            <li><a href="./01.Sub_02.인증·검증·평가_01.탄소중립_05.글로벌규제검증_01.CDP검증.html">글로벌 규제 검증</a></li>
+                                            <li><a href="./01.Sub_02.인증·검증·평가_01.탄소중립_06.탄소플랫폼인증.html">탄소플랫폼 인증</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="">사회적 가치</a>
+                                        <ul>
+                                            <li><a href="./01.Sub_02.인증·검증·평가_02.사회적가치윤리_01.인권경영시스템 인증_01.인증개요.html">인권경영시스템 인증</a></li>
+                                            <li><a href="./01.Sub_02.인증·검증·평가_02.사회적가치윤리_02.노사관계우수기업인증_01.인증개요.html">노사관계우수기업 인증</a></li>
+                                            <li><a href="./01.Sub_02.인증·검증·평가_02.사회적가치윤리_03.상생경영우수기업인증_01.인증개요.html">상생경영 우수기업 인증</a></li>
+                                            <li><a href="./01.Sub_02.인증·검증·평가_02.사회적가치윤리_04.재해경감우수기업인증.html">재해경감우수기업 인증</a></li>
+                                            <li><a href="./01.Sub_02.인증·검증·평가_02.사회적가치윤리_05.부패청렴도평가_01.서비스개요.html">부패·청렴도평가</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="">조직문화</a>
+                                        <ul>
+                                            <li><a href="./01.Sub_02.인증·검증·평가_03.조직문화_01.공정채용우수기관인증_01.인증개요.html">공정채용우수기관 인증</a></li>
+                                            <li><a href="./01.Sub_02.인증·검증·평가_03.조직문화_02.일하고싶은기업(GC)인증_01.인증개요.html">일하고 싶은 기업(GC) 인증</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="">브랜드 가치</a>
+                                        <ul>
+                                            <li><a href="./01.Sub_02.인증·검증·평가_04.브랜드가치_01.이노스타인증.html">이노스타 인증</a></li>
+                                            <li><a href="./01.Sub_02.인증·검증·평가_04.브랜드가치_02.그린스타인증.html">그린스타 인증</a></li>
+                                            <li><a href="./01.Sub_02.인증·검증·평가_04.브랜드가치_03.MyAi인증.html">My, AI 인증</a></li>
+                                            <li><a href="./01.Sub_02.인증·검증·평가_04.브랜드가치_04.MyPet인증.html">제도명 미정</a></li>
+                                            <li><a href="./01.Sub_02.인증·검증·평가_04.브랜드가치_05.웰빙인증.html">웰빙 인증</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="./01.Sub_02.인증·검증·평가_05.CE인증.html">CE 인증</a>
+                                    </li>
+                                </ul>
+                                <a href="" class="depth-banner">
+                                    <img src="/front/img/gnb2.png" alt="">
+                                    <div class="inner">
+                                        <strong class="text-primary">탄소중립</strong>
+                                        <p>제품의 기획부터 생산, 유통, 폐기까지 전 과정을 아우르는 탄소 배출 관리와 감축 활동을 통해, 국제인증기준에 맞춘 지속 가능한 기업 운영을 실현합니다.</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="">ESG 경영</a>
+                    <div class="depth">
+                        <div class="depth-inner">
+                            <div class="container">
+                                <ul class="depth-list">
+                                    <li>
+                                        <a href="./01.Sub_03.ESG경영_01.overview.html">Overview</a>
+                                    </li>
+                                    <li>
+                                        <a href="./01.Sub_03.ESG경영_02.수준진단및전략수립_1.ISO26000.html">수준진단 및 전략수립</a>
+                                        <ul>
+                                            <li><a href="./01.Sub_03.ESG경영_02.수준진단및전략수립_1.ISO26000.html">ISO 26000</a></li>
+                                            <li><a href="./01.Sub_03.ESG경영_02.수준진단및전략수립_2.ESG전략수립.html">ESG전략수립</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="./01.Sub_03.ESG경영_03.지속가능경영보고서_01.발간서비스.html">지속가능경영보고서</a>
+                                        <ul>
+                                            <li><a href="./01.Sub_03.ESG경영_03.지속가능경영보고서_01.발간서비스.html">발간서비스</a></li>
+                                            <li><a href="./01.Sub_03.ESG경영_03.지속가능경영보고서_02.검증서비스.html">검증서비스</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="./01.Sub_03.ESG경영_04.평가대응_01.ESG지수.html">평가대응</a>
+                                        <ul>
+                                            <li><a href="./01.Sub_03.ESG경영_04.평가대응_01.ESG지수.html">ESG지수</a></li>
+                                            <li><a href="./01.Sub_03.ESG경영_04.평가대응_02.EcoVadisSAQ.html">EcoVadis, SAQ</a></li>
+                                            <li><a href="./01.Sub_03.ESG경영_04.평가대응_03.RBA.html">RBA</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="./01.Sub_03.ESG경영_05.협력사 ESG평가.html">협력사ESG평가</a>
+                                    </li>
+                                </ul>
+                                <a href="" class="depth-banner">
+                                    <img src="/front/img/gnb3.png" alt="">
+                                    <div class="inner">
+                                        <strong class="text-primary">ESG 경영</strong>
+                                        <p>ESG 경영은 기업의 장기적인 가치 창출과 지속가능한 발전을 위한 중요한 요소로 인식되고 있습니다. 전문지식을 바탕으로 조직이 필요한 범위에 맞춤형 용역을 제공하고 있습니다.</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="">교육</a>
+                    <div class="depth">
+                        <div class="depth-inner">
+                            <div class="container">
+                                <ul class="depth-list">
+                                    <li><a href="./SUB_04.교육_01.공개교육.html">공개교육</a></li>
+                                    <li><a href="./SUB_04.교육_02.기업교육.html">기업교육</a></li>
+                                    <li><a href="./SUB_04.교육_03.이러닝.html">이러닝</a></li>
+                                    <li><a href="./SUB_04.교육_04.자격시험.html">자격시험</a></li>
+                                </ul>
+                                <a href="" class="depth-banner">
+                                    <img src="/front/img/gnb4.png" alt="">
+                                    <div class="inner">
+                                        <strong class="text-primary">공개교육</strong>
+                                        <p>KMR 공개교육은 인증기관의 전문성과 실무 경험을 바탕으로 구성된 교육 과정입니다. 현장에서 바로 적용 가능한 지식과 실질적인 역량 강화를 목표로, 체계적인 커리큘럼을 제공합니다.</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="">정부 프로젝트</a>
+                    <div class="depth">
+                        <div class="depth-inner">
+                            <div class="container">
+                                <ul class="depth-list">
+                                    <li><a href="./SUB_05.정부프로젝트_01.가족친화인증.html">가족친화인증</a></li>
+                                    <li><a href="./SUB_05.정부프로젝트_02.관광활성화지원사업.html">관광 활성화 지원 사업</a></li>
+                                    <li><a href="./SUB_05.정부프로젝트_03.제대군인고용우수기업인증.html">제대군인고용우수기업 인증</a></li>
+                                    <li><a href="./SUB_05.정부프로젝트_04.미래내일 일경험.html">미래내일 일경험</a></li>
+                                    <li><a href="./SUB_05.정부프로젝트_05.새싹일자리.html">새싹 일자리</a></li>
+                                    <li>
+                                        <a href="./SUB_05.정부프로젝트_07.무료생애설계지원서비스_01.재취업지원서비스.html">새싹일자리 연계프로그램</a>
+                                        <ul>
+                                            <li><a href="./SUB_05.정부프로젝트_07.무료생애설계지원서비스_01.재취업지원서비스.html">재취업 지원 서비스</a></li>
+                                            <li><a href="./SUB_05.정부프로젝트_07.무료생애설계지원서비스_01.재취업지원서비스.html">커리어플래닝바우처서비스</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="./SUB_05.정부프로젝트_06.주요프로젝트실적.html">주요 프로젝트 실적</a></li>
+                                </ul>
+                                <a href="" class="depth-banner">
+                                    <img src="/front/img/gnb5.png" alt="">
+                                    <div class="inner">
+                                        <strong class="text-primary">미래내일일경험</strong>
+                                        <p>수시·경력직 채용경향 심화에 대응하여  직무경험이 필요한 청년에게 민·관 협업 기반으로 양질의 일경험 기회를 제공합니다.</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="">Service & Insight</a>
+                    <div class="depth">
+                        <div class="depth-inner">
+                            <div class="container">
+                                <ul class="depth-list">
+                                    <li>
+                                        <a href="">글로벌스탠더드경영대상</a>
+                                        <ul>
+                                            <li><a href="01.Sub_06.ServiceInsight_01.글로벌스탠더드경영대상_01.GSMA 소개.html">시상제도 소개</a></li>
+                                            <li><a href="./01.Sub_06.ServiceInsight_01.글로벌스탠더드경영대상_02.시상테마및역대수상사.html">시상 테마 및 역대 수상사</a></li>
+                                            <li><a href="./01.Sub_06.ServiceInsight_01.글로벌스탠더드경영대상_03.심사 프로세스 및 일정.html">심사 프로세스 및 일정</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="./01.Sub_06.ServiceInsight_02.세미나컨퍼런스.html">세미나·컨퍼런스 </a></li>
+                                    <li><a href="./01.Sub_06.ServiceInsight_03.인사이트_01.html">인사이트</a></li>
+                                    <li><a href="./01.Sub_06.ServiceInsight_04.KMRnews.html">News·Media</a></li>
+                                </ul>
+                                <a href="" class="depth-banner">
+                                    <img src="/front/img/gnb6.png" alt="">
+                                    <div class="inner">
+                                        <strong class="text-primary">글로벌스탠다드경영대상</strong>
+                                        <p>국내·외 산업계와 정부로부터 인정받는 시상제도로 2023년부터 고객분들께 받은 감사함을 보다 가치 있게 보답하기 위하여 모든 고객들을 대상으로 우수 사례를 직접 찾아 선정하는 무료 시상제도로 확대 개편하여 시행하고 있습니다.</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <nav class="util-links">
+                <a href="./01.Sub_07.KMR소개_01.CEO인사말.html">KMR소개</a>
+                <i></i>
+                <a href="./01.Sub_08.고객지원_01.고객상담.html">고객지원</a>
+                <i></i>
+                <a href="./01.Sub_09.채용_01.KMR Team_2.html">채용</a>
+            </nav>
+            <div class="hd-side">
+                <button type="button" class="bt bt-srch"><i class="icon icon-srch">검색</i></button>
+                <button type="button" class="bt"><i class="icon icon-lang">언어</i></button>
+                <button type="button" class="bt bt-sitemap text-hide">전체메뉴</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 검색 -->
+    <div id="head-srch" class="head-srch">
+		<div class="head-srch-inner">
+			<form action="">
+				<div class="input-group srch-group" data-aos="fade-up">
+                    <input type="text" placeholder="검색어를 입력해주세요." title="검색어 입력">
+                    <button class="btn-circle bg-primary"><i class="icon icon-srch">검색</i></button>
+                </div>
+                <div class="keyword">
+                    <strong>인기 키워드</strong>
+                    <div class="tags">
+                        <a href="" class="badge gray"># ESG</a>
+                        <a href="" class="badge gray"># ESG</a>
+                        <a href="" class="badge gray"># ESG</a>
+                        <a href="" class="badge gray"># ESG</a>
+                        <a href="" class="badge gray"># ESG</a>
+                    </div>
+                </div>
+			</form>
+		</div>
+	</div>
+    <!-- //검색 -->
+
+    <div id="sitemap">
+        <div class="container container-fluid">
+            <nav class="util-links">
+                <a href="./01.Sub_07.KMR소개_01.CEO인사말.html">KMR소개</a>
+                <i></i>
+                <a href="./01.Sub_08.고객지원_01.고객상담.html">고객지원</a>
+                <i></i>
+                <a href="./01.Sub_09.채용_01.KMR Team_2.html">채용</a>
+            </nav>
+            <ul class="sitemap">
+                <li>
+                    <a href="./01.Sub_01.ISO인증_01.인증소개-01.인증종류.html">ISO 인증</a>
+                    <ul class="sitemap-depth">
+                        <li>
+                            <a href="./01.Sub_01.ISO인증_01.인증소개-01.인증종류.html">인증소개</a>
+                            <ul class="depth3">
+                                <li><a href="">Overview / 인증종류</a></li>
+                                <li><a href="">인증절차</a></li>
+                                <li><a href="">인증의 기대</a></li>
+                                <li><a href="">왜! KMR인증을 선택하는가</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">인증 서비스 분야</a>
+                            <ul class="depth3">
+                                <li><a href="">인증 서비스 분야</a></li>
+                                <li>
+                                    <a href="">품질/고객만족</a>
+                                    <ul class="depth4">
+                                        <li><a href="">ISO 9001 품질경영시스템</a></li>
+                                        <li><a href="">ISO 10002 고객만족경영시스템</a></li>
+                                        <li><a href="">IATF16949 자동차품질경영시스템</a></li>
+                                        <li><a href="">ISO 41001 시설관리 경영시스템</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="">의료기기/의약품</a>
+                                    <ul class="depth4">
+                                        <li><a href="">ISO 15378 의료포장재품질경영시스템</a></li>
+                                        <li><a href="">ISO 13485 의료기기 품질경영시스템</a></li>
+                                        <li><a href="">ISO 14155 의료기기임상시험관리기준</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="">정보보안/정보기술</a>
+                                    <ul class="depth4">
+                                        <li><a href="">ISO/IEC 27001 정보보안시스템</a></li>
+                                        <li><a href="">ISO/IEC 27701 개인정보보호경영시스템</a></li>
+                                        <li><a href="">ISO 28000 공급망사슬보안경영시스템</a></li>
+                                        <li><a href="">ISO/IEC 27017 클라우드서비스 정보보호 통제지침</a></li>
+                                        <li><a href="">ISO/IEC 27018 공공 클라우드 개인정보보호 통제지침</a></li>
+                                        <li><a href="">ISO/IEC 27799 보건의료 정보보호관리기준</a></li>
+                                        <li><a href="">ISO/IEC 20000 IT 서비스관리시스템</a></li>
+                                        <li><a href="">ISO/IEC 42001 인공지능경영시스템</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="">환경/에너지</a>
+                                    <ul class="depth4">
+                                        <li><a href="">ISO 14001 환경경영시스템</a></li>
+                                        <li><a href="">ISO 50001 에너지경영시스템</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="">안전/재난</a>
+                                    <ul class="depth4">
+                                        <li><a href="">ISO 45001 안전보건경영시스템</a></li>
+                                        <li><a href="">ISO 22301 비즈니스연속성경영시스템</a></li>
+                                        <li><a href="">ISO 39001 도로교통안전경영시스템</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="">식품/화장품</a>
+                                    <ul class="depth4">
+                                        <li><a href="">ISO 22000 식품안전경영시스템</a></li>
+                                        <li><a href="">FSSC 22000 식품안전시스템</a></li>
+                                        <li><a href="">ISO 22716 화장품 우수제조관리기준</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="">교육훈련</a>
+                                    <ul class="depth4">
+                                        <li><a href="">ISO 10015 교육훈련경영시스템</a></li>
+                                        <li><a href="">ISO 21001 교육기관경영시스템</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="">윤리/인권</a>
+                                    <ul class="depth4">
+                                        <li><a href="">ISO 37001 부패방지경영시스템</a></li>
+                                        <li><a href="">ISO 37301 규범준수경영시스템</a></li>
+                                        <li><a href="">ISO 45003 심리사회적 위험관리시스템</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="">기록</a>
+                                    <ul class="depth4">
+                                        <li><a href="">ISO 30301 기록경영시스템</a></li>
+                                        <li><a href="">ISO 15489-1 문헌정보 기록관리시스템</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="">지속가능/협력</a>
+                                    <ul class="depth4">
+                                        <li><a href="">ISO 20121 지속가능이벤트경영시스템</a></li>
+                                        <li><a href="">ISO 44001 협업비즈니스관계경영시스템</a></li>
+                                        <li><a href="">ISO 31000 리스크관리경영시스템</a></li>
+                                        <li><a href="">ISO 55001 자산경영시스템</a></li>
+                                        <li><a href="">ISO 26000 사회적책임 수준진단</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="">인증로고 및 홍보물</a></li>
+                        <li><a href="" target="_blank" title="새창열림">인증상담<i class="icon icon-link">&nbsp;</i></a></li>
+                        <li><a href="" target="_blank" title="새창열림">인증신청<i class="icon icon-link">&nbsp;</i></a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="">인증·검증·평가</a>
+                    <ul class="sitemap-depth">
+                        <li>
+                            <a href="./01.Sub_02.인증·검증·평가_01.탄소중립_00.gate.html">탄소중립</a>
+                            <ul class="depth3">
+                                <li><a href="./01.Sub_03.ESG경영_01.overview.html">Overview</a></li>
+                                <li>
+                                    <a href="">환경부 검증</a>
+                                    <ul class="depth4">
+                                        <li><a href="">배출권거래제</a></li>
+                                        <li><a href="">목표관리제</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="">자발적 배출량 검증</a></li>
+                                <li><a href="">배출 감축 검증</a></li>
+                                <li><a href="">탄소발자국 검증</a></li>
+                                <li>
+                                    <a href="">글로벌 규제 검증</a>
+                                    <ul class="depth4">
+                                        <li><a href="">CDP 검증</a></li>
+                                        <li><a href="">EU CBAM </a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="">탄소중립 인증</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">사회적 가치</a>
+                            <ul>
+                                <li>
+                                    <a href="">인권경영시스템 인증</a>
+                                    <ul class="depth4">
+                                        <li><a href="">인증개요</a></li>
+                                        <li><a href="">인권영향평가</a></li>
+                                        <li><a href="">인권경영교육</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="">노사관계우수기업 인증</a>
+                                    <ul class="depth4">
+                                        <li><a href="">인증개요</a></li>
+                                        <li><a href="">진단·평가</a></li>
+                                        <li><a href="">교육</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="">상생경영 우수기업 인증</a>
+                                    <ul class="depth4">
+                                        <li><a href="">인증개요</a></li>
+                                        <li><a href="">지역사회 상생</a></li>
+                                        <li><a href="">협력사 상생</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="">재해경감우수기업 인증</a>
+                                    <ul class="depth4">
+                                        <li><a href="">인증개요</a></li>
+                                        <li><a href="">재해경감 성숙도 평가</a></li>
+                                        <li><a href="">재난관리시스템 구축교육</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="">부패·청렴도평가</a>
+                                    <ul class="depth4">
+                                        <li><a href="">서비스개요</a></li>
+                                        <li><a href="">내외부청렴도평가</a></li>
+                                        <li><a href="">고위공직자부패위험성진단</a></li>
+                                        <li><a href="">KMR부패인식수준조사</a></li>
+                                        <li><a href="">갑질실태조사</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">조직문화</a>
+                            <ul class="depth3">
+                                <li>
+                                    <a href="">공정채용우수기관 인증</a>
+                                    <ul class="depth4">
+                                        <li><a href="">인증개요</a></li>
+                                        <li><a href="">진단·평가</a></li>
+                                        <li><a href="">교육</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="">일하고 싶은 기업(GC) 인증</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">브랜드 가치</a>
+                            <ul class="depth3">
+                                <li><a href="">이노스타 인증</a></li>
+                                <li><a href="">그린스타 인증</a></li>
+                                <li><a href="">My, AI 인증</a></li>
+                                <li><a href="">제도명 미정</a></li>
+                                <li><a href="">웰빙 인증</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">CE 인증</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="">ESG 경영</a>
+                    <ul class="sitemap-depth">
+                        <li>
+                            <a href="./01.Sub_03.ESG경영_01.overview.html">Overview</a>
+                        </li>
+                        <li>
+                            <a href="">수준진단 및 전략수립</a>
+                            <ul class="depth3">
+                                <li><a href="">ISO 26000</a></li>
+                                <li><a href="">ESG전략수립</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">지속가능경영보고서</a>
+                            <ul class="depth3">
+                                <li><a href="">발간서비스</a></li>
+                                <li><a href="">검증서비스</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">평가대응</a>
+                            <ul class="depth3">
+                                <li><a href="">ESG지수</a></li>
+                                <li><a href="">EcoVadis, SAQ</a></li>
+                                <li><a href="">RBA</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">협력사ESG평가</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="">교육</a>
+                    <ul class="sitemap-depth">
+                        <li><a href="">공개교육</a></li>
+                        <li><a href="">기업교육</a></li>
+                        <li><a href="">이러닝</a></li>
+                        <li><a href="">자격시험</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="">정부 프로젝트</a>
+                    <ul class="sitemap-depth">
+                        <li><a href="">가족친화인증</a></li>
+                        <li><a href="">관광 활성화 지원 사업</a></li>
+                        <li><a href="">미래내일 일경험</a></li>
+                        <li><a href="">새싹 일자리</a></li>
+                        <li><a href="">주요 프로젝트 실적</a></li>
+                        <li>
+                            <a href="">무료생애설계지원서비스</a>
+                            <ul class="depth3">
+                                <li><a href="">재취업 지원 서비스</a></li>
+                                <li><a href="">커리어플래닝바우처서비스</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="">Service & Insight</a>
+                    <ul class="sitemap-depth">
+                        <li>
+                            <a href="">글로벌스탠더드경영대상</a>
+                            <ul class="depth3">
+                                <li><a href="01.Sub_06.ServiceInsight_01.글로벌스탠더드경영대상_01.GSMA 소개.html">시상제도 소개</a></li>
+                                <li><a href="">시상 테마 및 역대 수상사</a></li>
+                                <li><a href="">심사 프로세스 및 일정</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">세미나·컨퍼런스 </a></li>
+                        <li><a href="">인사이트</a></li>
+                        <li><a href="">News·Media</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <main id="ct"> 
+<!-- 페이지 -->
+<section class="main-top container container-fluid">
+    <div class="main-top-visual" data-aos="fade-in">
+        <div class="embed-responsive embed-responsive-16by9">
+            <video src="/front/img/index/video.mp4" class="embed-responsive-item" muted playsinline autoplay loop></video>
+        </div>
+        <div class="main-top-text">
+            <strong>New Days, New Value</strong>
+            <p>매일 더 나은 가치, 한국경영인증원</p>
+        </div>
+    </div>
+    <div class="main-top-side">
+        <a href="" class="top-link" data-aos-delay="100" data-aos="fade-left">
+            <small class="text-primary fsm">교육의 가치</small>
+            <div>
+                <strong class="fs-6">KMR 교육센터</strong>
+                <i class="icon icon-more">&nbsp;</i>
+            </div>
+        </a>
+        <a href="#contactModal" class="top-link" data-aos-delay="150" data-aos="fade-left" data-toggle="modal">
+            <small class="text-primary fsm">다양한 지원</small>
+            <div>
+                <strong class="fs-6">업무별 연락처</strong>
+                <i class="icon icon-more">&nbsp;</i>
+            </div>
+        </a>
+
+        <div id="contactModal" class="modal fade" tabindex="-1" aria-labelledby="sampleModal" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-md">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="fs-6">업무별 연락처</h5>
+                        <button type="button" class="icon icon-modal-close" data-dismiss="modal">닫기</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="table-responsive" data-aos="fade-up">
+                            <table class="tb">
+                                <thead>
+                                    <tr>
+                                        <th colspan="2">담당업무</th>
+                                        <th>전화번호</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td rowspan="3">ISO 인증</td>
+                                        <td>신규 인증상담, 신청</td>
+                                        <td>(기업) 02-6309-9009<br>(공공기관) 02-6309-9064</td>
+                                    </tr>
+                                    <tr>
+                                        <td>심사운영, 인증서</td>
+                                        <td>(IATF) 02-6309-9012<br>(ISO) 02-6309-9023<br>(ISO 13485) 02)6309-9054</td>
+                                    </tr>
+                                    <tr>
+                                        <td>인증심사원</td>
+                                        <td>02-6309-9035</td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="8">사회적가치<br>인증∙평가</td>
+                                        <td>가족친화인증</td>
+                                        <td>02-6309-9042~3, 9034</td>
+                                    </tr>
+                                    <tr>
+                                        <td>공정채용우수기관 인증</td>
+                                        <td>02-6309-9048</td>
+                                    </tr>
+                                    <tr>
+                                        <td>인권경영시스템 인증</td>
+                                        <td>02-6309-9083</td>
+                                    </tr>
+                                    <tr>
+                                        <td>노사관계우수기업 인증</td>
+                                        <td>02-6309-9084</td>
+                                    </tr>
+                                    <tr>
+                                        <td>일하고싶은기업 인증(GC)</td>
+                                        <td>02-6309-9055</td>
+                                    </tr>
+                                    <tr>
+                                        <td>재해경감우수기업 인증</td>
+                                        <td>(신규상담) 02-6309-9026 <br>(인증운영) 02-6309-9032</td>
+                                    </tr>
+                                    <tr>
+                                        <td>인권영향평가·부패청렴도 평가</td>
+                                        <td>(기업) 02-6309-9033 <br>(공공기관) 02-6309-9022 / 9083</td>
+                                    </tr>
+                                    <tr>
+                                        <td>제대군인고용우수기업 인증</td>
+                                        <td>02-6309-9055</td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="2">제품인증</td>
+                                        <td>이노스타, 그린스타 인증<br>웰빙,웰라이프,그린어스 인증</td>
+                                        <td>02-6309-9046</td>
+                                    </tr>
+                                    <tr>
+                                        <td>CE인증</td>
+                                        <td>02-6309-9046</td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="4">ESG경영</td>
+                                        <td>지속가능경영보고서 발간</td>
+                                        <td>02-6309-9044, 9082</td>
+                                    </tr>
+                                    <tr>
+                                        <td>지속가능경영보고서 검증</td>
+                                        <td>02-6309-9017, 9021</td>
+                                    </tr>
+                                    <tr>
+                                        <td>ISO26000 및 ESG수준진단<br>ESG지표대응</td>
+                                        <td>02-6309-9044</td>
+                                    </tr>
+                                    <tr>
+                                        <td>ESG공급망(협력사) 심사(평가) 대행<br>EcoVadis, RBA 등 글로벌 공급망 ESG평가 대응 지원</td>
+                                        <td>02-6309-9017</td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="1">온실가스 검증</td>
+                                        <td>배출권거래제, 목표관리제 검증<br>산림탄소흡수량 검증</td>
+                                        <td>02-6309-9049, 9091</td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="1">시상</td>
+                                        <td>글로벌스탠더드경영대상 (GSMA)</td>
+                                        <td>02-6309-9067</td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="3">교육훈련</td>
+                                        <td>ISO 인증 교육, 직무교육<br>공개∙사내교육</td>
+                                        <td>02-6309-9020</td>
+                                    </tr>
+                                    <tr>
+                                        <td>의료기기 교육</td>
+                                        <td>02-6309-9020</td>
+                                    </tr>
+                                    <tr>
+                                        <td>새싹 일자리 연계 프로그램</td>
+                                        <td>02-6309-9072</td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="4">기타</td>
+                                        <td>4차산업 지원, 스마트팩토리</td>
+                                        <td>02-6309-9063</td>
+                                    </tr>
+                                    <tr>
+                                        <td>관광문화 진단∙평가</td>
+                                        <td>02-6309-9080</td>
+                                    </tr>
+                                    <tr>
+                                        <td>전사 홍보</td>
+                                        <td>02-6309-9067</td>
+                                    </tr>
+                                    <tr>
+                                        <td>인사총무∙회계</td>
+                                        <td>02-6309-9081</td>
+                                    </tr>
+                                </tbody>
+							</table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="top-search" data-aos-delay="200" data-aos="fade-left">
+            <strong class="fs-6 text-white">통합검색</strong>
+            <div class="bg"><a href="#certificationPop" class="btn btn-sm" data-toggle="modal">인증 찾기<i class="icon icon-arr">&nbsp;</i></a></div>
+            <div class="top-search-body">
+                <div class="tags">
+                    <a href="" class="badge text-primary">#최근 인증서</a>
+                    <a href="" class="badge text-primary">#내 기업에 맞는 인증서</a>
+                    <a href="" class="badge text-primary">#인기 키워드가 표시됩니다</a>
+                    <a href="" class="badge text-primary">#최근 인증서</a>
+                    <a href="" class="badge text-primary">#지금 위치까지 표시</a>
+                </div>
+                <form>
+                    <div class="input-group">
+                        <input type="text" placeholder="검색어를 입력해주세요." title="검색어 입력">
+                        <button type="button"><i class="icon icon-srch">검색</i></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- 인증찾기 -->
+        <div id="certificationPop" class="modal fade certification-pop" tabindex="-1" aria-labelledby="sampleModal" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div id="findIntro" class="modal-content">
+                    <div class="modal-body">
+                        <img src="/front/img/index/kmr.svg" alt="">
+                        <div class="my-auto">
+                            <strong class="fs-6 text-primary">인증찾기</strong>
+                            <h4 class="fs-1 mt-8">필요한 인증이 무엇인지 <br>고민 중이신가요?</h4>
+                        </div>
+                        <button type="button" class="btn find-start mb-auto">우리 기업에 맞는 인증 찾기<i class="icon icon-arr"></i></button>
+                    </div>
+                    <button type="button" class="icon icon-modal-close" data-dismiss="modal">닫기</button>
+
+                    <img src="/front/img/index/obj1.png" alt="" class="obj1">
+                    <img src="/front/img/index/obj2.png" alt="" class="obj2">
+                    <img src="/front/img/index/obj3.png" alt="" class="obj3">
+                    <img src="/front/img/index/obj4.png" alt="" class="obj4">
+                </div>
+                <div id="findCont" class="modal-content" style="display: none;">
+                    <div class="modal-header">
+                        <div class="find-title media">
+                            <img src="/front/img/index/kmr.svg" alt="">
+                            <div class="media-body">
+                                <strong class="fs-6">인증찾기</strong>
+                                <p>우리 기업 및 기관이 받으면 좋을 인증 및 검증을 추천해드리고, 관련 담당자를 알려드려요.</p>
+                            </div>
+                        </div>
+                        <button type="button" class="icon icon-modal-close" data-dismiss="modal">닫기</button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="step1" class="findstep active">
+                            <div class="q">
+                                <b class="fsm font-mont text-primary">01</b>
+                                <p class="fs-4">무엇을 인증 받고 싶으신가요?</p>
+                            </div>
+                            <div class="a d-flex">
+                                <label>
+                                    <input type="radio" name="q1" value="시스템" class="sr-only" data-target="#step2-1">
+                                    <span>‘시스템’ 또는 ‘역량’</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="q1" value="제품" class="sr-only" data-target="#step2-2">
+                                    <span>‘제품’ 또는 ‘브랜드’</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div id="step2-1" class="findstep" data-prev="#step1">
+                            <div class="q">
+                                <b class="fsm font-mont text-primary">02</b>
+                                <p class="fs-4">현재 주력하고 있는 회사 경영방침이나 경영트렌드는?</p>
+                            </div>
+                            <div class="a">
+                                <label>
+                                    <input type="radio" name="q2" value="품질경영·고객만족" class="sr-only" data-target="#step3-1">
+                                    <span>품질경영·고객만족</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="q2" value="환경·에너지" class="sr-only">
+                                    <span>환경·에너지</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="q2" value="안전·재난관리" class="sr-only" data-target="#step3-2">
+                                    <span>안전·재난관리</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="q2" value="정보보안·개인정보보호" class="sr-only">
+                                    <span>정보보안·개인정보보호</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="q2" value="인공지능·IT" class="sr-only">
+                                    <span>인공지능·IT</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="q2" value="탄소중립·기후대응" class="sr-only" data-target="#step3-3">
+                                    <span>탄소중립·기후대응</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="q2" value="윤리·준법·인권" class="sr-only">
+                                    <span>윤리·준법·인권</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="q2" value="노사·상생" class="sr-only">
+                                    <span>노사·상생</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="q2" value="조직문화·공정채용" class="sr-only">
+                                    <span>조직문화·공정채용</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="q2" value="교육·기록관리" class="sr-only">
+                                    <span>교육·기록관리</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="q2" value="지속가능·협력" class="sr-only">
+                                    <span>지속가능·협력</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div id="step2-2" class="findstep" data-prev="#step1">
+                            <div class="q">
+                                <b class="fsm font-mont text-primary">02</b>
+                                <p class="fs-4">귀사의 제품이나 브랜드에서 강조하고 싶거나 경쟁력이 있는 부분은? </p>
+                            </div>
+                            <div class="a">
+                                <label>
+                                    <input type="radio" name="q2" value="혁신성·제품 차별화" class="sr-only">
+                                    <span>혁신성·제품 차별화</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="q2" value="친환경성" class="sr-only">
+                                    <span>친환경성</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="q2" value="기능성·안전성" class="sr-only">
+                                    <span>기능성·안전성</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="q2" value="인공지능" class="sr-only">
+                                    <span>인공지능</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="q2" value="반려동물 친화성" class="sr-only">
+                                    <span>반려동물 친화성</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="q2" value="탄소중립·기후대응" class="sr-only" data-target="#step3-4">
+                                    <span>탄소중립·기후대응</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div id="step3-1" class="findstep" data-prev="#step2-1">
+                            <div class="q">
+                                <b class="fsm font-mont text-primary">03</b>
+                                <p class="fs-4">업종은 무엇인가요?</p>
+                            </div>
+                            <div class="a">
+                                <label>
+                                    <input type="radio" name="q3" value="자동차 부품 제조" class="sr-only">
+                                    <span>자동차 부품 제조</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="q3" value="시설 관리" class="sr-only">
+                                    <span>시설 관리</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="q3" value="고객상담 및 컨텍 센터" class="sr-only">
+                                    <span>고객상담 및 컨텍 센터</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="q3" value="의료기기/의약품 제조" class="sr-only">
+                                    <span>의료기기/의약품 제조</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="q3" value="화장품 제조" class="sr-only">
+                                    <span>화장품 제조</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="q3" value="그 외 업종" class="sr-only" data-target="#step3-4">
+                                    <span>그 외 업종</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div id="step3-2" class="findstep" data-prev="#step2-1">
+                            <div class="q">
+                                <b class="fsm font-mont text-primary">03</b>
+                                <p class="fs-4">업종은 무엇인가요?</p>
+                            </div>
+                            <div class="a">
+                                <label>
+                                    <input type="radio" name="q3" value="식품제조업" class="sr-only">
+                                    <span>식품제조업</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="q3" value="교통관련업" class="sr-only">
+                                    <span>교통관련업</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="q3" value="그 외 업종" class="sr-only">
+                                    <span>그 외 업종</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div id="step3-3" class="findstep" data-prev="#step2-1">
+                            <div class="q">
+                                <b class="fsm font-mont text-primary">03</b>
+                                <p class="fs-4">인증, 혹은 검증을 받고 자하는 대상이 무엇인가요? </p>
+                            </div>
+                            <div class="a">
+                                <label>
+                                    <input type="radio" name="q3" value="사업장" class="sr-only">
+                                    <span>사업장</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="q3" value="감축 성과" class="sr-only">
+                                    <span>감축 성과</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="q3" value="탄소중립 선언" class="sr-only">
+                                    <span>탄소중립 선언</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="q3" value="탄소플랫폼" class="sr-only">
+                                    <span>탄소플랫폼</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div id="step3-4" class="findstep" data-prev="#step2-2">
+                            <div class="q">
+                                <b class="fsm font-mont text-primary">03</b>
+                                <p class="fs-4">글로벌 규제 검증이 필요하신가요?</p>
+                            </div>
+                            <div class="a d-flex">
+                                <label>
+                                    <input type="radio" name="q3" value="예" class="sr-only">
+                                    <span>예</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="q3" value="아니오" class="sr-only">
+                                    <span>아니오</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="find-prev"><i class="icon"></i>이전 단계</button>
+                        <button type="button" class="find-next">다음 단계<i class="icon"></i></button>
+                    </div>
+                </div>
+                <div id="findResult" class="modal-content" style="display: none;">
+                    <div class="modal-header">
+                        <div class="find-title media">
+                            <img src="/front/img/index/kmr.svg" alt="">
+                            <div class="media-body">
+                                <strong class="fs-6">인증찾기</strong>
+                                <p>우리 기업 및 기관이 받으면 좋을 인증 및 검증을 추천해드리고, 관련 담당자를 알려드려요.</p>
+                            </div>
+                        </div>
+                        <button type="button" class="icon icon-modal-close" data-dismiss="modal">닫기</button>
+                    </div>
+                    <div class="modal-body">
+                        <b class="fsm text-primary">인증 찾기 완료!</b>
+                        <p class="fs-4">지금 필요한 인증/검증과 담당자 정보를 확인해보세요.</p>
+                        <ul class="find-result">
+                            <li>
+                                <strong>품질경영시스템 인증</strong>
+                                <div class="fsm"><div>민간기업</div><div>기업지원센터 02-6309-9009</div></div>
+                                <div class="fsm"><div >공공기관</div><div>공공지원센터 02-6309-9086</div></div>
+                            </li>
+                            <li>
+                                <strong>자동차품질경영시스템 인증</strong>
+                                <div class="fsm"><div>인증운영센터 02-6309-9074</div></div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-primary find-reset">다시 찾기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //인증찾기 -->
+    </div>
+</section>
+
+<section class="main-project sect container container-fluid">
+    <div class="sect-hd" data-aos="fade-up">
+        <div class="sect-title">
+            <strong class="text-primary">Our project</strong>
+            <h2>KMR의 다양한 프로젝트</h2>
+        </div>
+        <div class="side">
+            <nav class="nav nav-pills" data-aos="fade-up">
+                <a href="" class="nav-link active">일하고 싶은 기업</a>
+                <a href="" class="nav-link">공정채용</a>
+                <a href="" class="nav-link">세미나</a>
+                <a href="" class="nav-link">제품인증</a>
+                <a href="" class="nav-link">노사관계</a>
+                <a href="" class="nav-link">미래내일경험</a>
+                <a href="" class="nav-link">교육</a>
+            </nav>
+        </div>
+    </div>
+    <div class="swiper project-swiper overflow-visible" data-aos="fade-up">
+        <div class="marquee-swiper">
+            <ul class="swiper-wrapper marquee">
+                <li class="swiper-slide">
+                    <a href="" class="project-card">
+                        <div class="inner">
+                            <div class="cate">
+                                <span class="badge text-primary"><img src="/front/img/project/company.svg" alt="">일하고 싶은 기업</span>
+                                <span class="badge">프로젝트에 대한 자유 영역</span>
+                            </div>
+                            <h3 class="fs-4">
+                                [설명회]일하고 싶은 기업 (GC) 인증제도 온라인 설명회 프로젝트 제목이 세 줄까지 들어가도록 설정이 되어 있습니다
+                            </h3>
+                            <div class="font-mont text-primary fsm text-right mt-auto">2025.01.07 ~ 2025.12.31</div>
+                        </div>
+                        <div class="project-img">
+                            <img src="/front/img/_temp/project.jpg" alt="">
+                        </div>
+                    </a>
+                </li>
+                <li class="swiper-slide">
+                    <a href="" class="project-card">
+                        <div class="inner">
+                            <div class="cate">
+                                <span class="badge text-primary"><img src="/front/img/project/seminar.svg" alt="">세미나</span>
+                                <span class="badge">프로젝트에 대한 자유 영역</span>
+                            </div>
+                            <h3 class="fs-4">
+                                2025년도 OKR 성과관리 공개교육 (3/26,수)
+                            </h3>
+                            <div class="font-mont text-primary fsm text-right mt-auto">2025.01.07 ~ 2025.12.31</div>
+                        </div>
+                        <div class="project-img">
+                            <img src="/front/img/_temp/project.jpg" alt="">
+                        </div>
+                    </a>
+                </li>
+                <li class="swiper-slide">
+                    <a href="" class="project-card">
+                        <div class="inner">
+                            <div class="cate">
+                                <span class="badge text-primary"><img src="/front/img/project/fair.svg" alt="">공정채용</span>
+                                <span class="badge">프로젝트에 대한 자유 영역</span>
+                            </div>
+                            <h3 class="fs-4">
+                                [설명회]일하고 싶은 기업 (GC) 인증제도 온라인 설명회 프로젝트 제목이 세 줄까지 들어가도록 설정이 되어 있습니다
+                            </h3>
+                            <div class="font-mont text-primary fsm text-right mt-auto">2025.01.07 ~ 2025.12.31</div>
+                        </div>
+                        <div class="project-img">
+                            <img src="/front/img/_temp/project.jpg" alt="">
+                        </div>
+                    </a>
+                </li>
+                <li class="swiper-slide">
+                    <a href="" class="project-card">
+                        <div class="inner">
+                            <div class="cate">
+                                <span class="badge text-primary"><img src="/front/img/project/product.svg" alt="">제품인증</span>
+                                <span class="badge">프로젝트에 대한 자유 영역</span>
+                            </div>
+                            <h3 class="fs-4">
+                                [설명회]일하고 싶은 기업 (GC) 인증제도 온라인 설명회 프로젝트 제목이 세 줄까지 들어가도록 설정이 되어 있습니다
+                            </h3>
+                            <div class="font-mont text-primary fsm text-right mt-auto">2025.01.07 ~ 2025.12.31</div>
+                        </div>
+                        <div class="project-img">
+                            <img src="/front/img/_temp/project.jpg" alt="">
+                        </div>
+                    </a>
+                </li>
+                <li class="swiper-slide">
+                    <a href="" class="project-card">
+                        <div class="inner">
+                            <div class="cate">
+                                <span class="badge text-primary"><img src="/front/img/project/labor.svg" alt="">노사관계</span>
+                                <span class="badge">프로젝트에 대한 자유 영역</span>
+                            </div>
+                            <h3 class="fs-4">
+                                [설명회]일하고 싶은 기업 (GC) 인증제도 온라인 설명회 프로젝트 제목이 세 줄까지 들어가도록 설정이 되어 있습니다
+                            </h3>
+                            <div class="font-mont text-primary fsm text-right mt-auto">2025.01.07 ~ 2025.12.31</div>
+                        </div>
+                        <div class="project-img">
+                            <img src="/front/img/_temp/project.jpg" alt="">
+                        </div>
+                    </a>
+                </li>
+                <li class="swiper-slide">
+                    <a href="" class="project-card">
+                        <div class="inner">
+                            <div class="cate">
+                                <span class="badge text-primary"><img src="/front/img/project/future.svg" alt="">미래내일경험</span>
+                                <span class="badge">프로젝트에 대한 자유 영역</span>
+                            </div>
+                            <h3 class="fs-4">
+                                [설명회]일하고 싶은 기업 (GC) 인증제도 온라인 설명회 프로젝트 제목이 세 줄까지 들어가도록 설정이 되어 있습니다
+                            </h3>
+                            <div class="font-mont text-primary fsm text-right mt-auto">2025.01.07 ~ 2025.12.31</div>
+                        </div>
+                        <div class="project-img">
+                            <img src="/front/img/_temp/project.jpg" alt="">
+                        </div>
+                    </a>
+                </li>
+                <li class="swiper-slide">
+                    <a href="" class="project-card">
+                        <div class="inner">
+                            <div class="cate">
+                                <span class="badge text-primary"><img src="/front/img/project/edu.svg" alt="">교육</span>
+                                <span class="badge">프로젝트에 대한 자유 영역</span>
+                            </div>
+                            <h3 class="fs-4">
+                                [설명회]일하고 싶은 기업 (GC) 인증제도 온라인 설명회 프로젝트 제목이 세 줄까지 들어가도록 설정이 되어 있습니다
+                            </h3>
+                            <div class="font-mont text-primary fsm text-right mt-auto">2025.01.07 ~ 2025.12.31</div>
+                        </div>
+                        <div class="project-img">
+                            <img src="/front/img/_temp/project.jpg" alt="">
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        $(function(){
+            initMarqueeSwiper(); // [D] 카테고리 클릭시마다 재호출 필요
+        });
+    </script>
+</section>
+
+<section class="sect container container-fluid">
+    <div class="sect-hd" data-aos="fade-up">
+        <div class="sect-title">
+            <strong class="text-primary">For your business</strong>
+            <h2>인증부터 시상까지 All-in-One으로</h2>
+        </div>
+    </div>
+    <div class="main-business" data-aos="fade-up">
+        <ul class="nav">
+            <li><button type="button" class="active" data-toggle="tab" data-target="#business1"><small class="font-mont">Step 01</small><span class="fs-6">인증</span></button></li>
+            <li><button type="button" data-toggle="tab" data-target="#business2"><small class="font-mont">Step 02</small><span class="fs-6">진단평가</span></button></li>
+            <li><button type="button" data-toggle="tab" data-target="#business3"><small class="font-mont">Step 03</small><span class="fs-6">교육</span></button></li>
+            <li><button type="button" data-toggle="tab" data-target="#business4"><small class="font-mont">Step 04</small><span class="fs-6">시상·서비스</span></button></li>
+        </ul>
+        <div class="tab-content">
+            <div id="business1" class="tab-pane active">
+                <div class="col-left">
+                    <h3 class="fs-2">인증</h3>
+                    <p>기업의 신뢰성을 객관적이고 독립적이게 <br>인정받을 수 있도록 합니다.</p>
+                    <div class="text-center text-xl-left"><a href="" class="btn btn-outline btn-sm">more<i class="icon icon-plus">&nbsp;</i></a></div>
+                    <div class="swiper-controls d-none d-xl-flex">
+                        <div class="swiper-button-prev wh"></div>
+                        <div class="swiper-button-next wh"></div>
+                    </div>
+                </div>
+                <div class="col-right animate__animated animate__fadeInRight">
+                    <div class="swiper business-swiper overflow-visible">
+                        <ul class="swiper-wrapper">
+                            <li class="swiper-slide">
+                                <div class="business-card">
+                                    <img src="/front/img/index/business1-1.png" alt="">
+                                    <dl class="inner">
+                                        <dt class="fs-6">ISO 경영시스템 인증</dt>
+                                        <dd>KMR에서 객관적으로 평가하여 적합함을 실증하고 인증을 부여합니다.</dd>
+                                    </dl>
+                                </div>
+                            </li>
+                            <li class="swiper-slide">
+                                <div class="business-card">
+                                    <img src="/front/img/index/business1-2.png" alt="">
+                                    <dl class="inner">
+                                        <dt class="fs-6">사회적 가치 인증</dt>
+                                        <dd>공정채용 · 인권경영 · 재해경감  · 일하고 싶은 기업 · 노사관계 · 상생경영</dd>
+                                    </dl>
+                                </div>
+                            </li>
+                            <li class="swiper-slide">
+                                <div class="business-card">
+                                    <img src="/front/img/index/business1-3.png" alt="">
+                                    <dl class="inner">
+                                        <dt class="fs-6">브랜드 인증</dt>
+                                        <dd>이노스타 · 그린스타 · My,AI · My,Pet</dd>
+                                    </dl>
+                                </div>
+                            </li>
+                            <li class="swiper-slide">
+                                <div class="business-card">
+                                    <img src="/front/img/index/business1-4.png" alt="">
+                                    <dl class="inner">
+                                        <dt class="fs-6">탄소중립 인·검증</dt>
+                                        <dd>온실가스검증 · 탄소발자국 · 자발적 검증 · CDP 검증 · 산림탄소흡수량 검증</dd>
+                                    </dl>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="swiper-pagination d-xl-none bg-white"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="business2" class="tab-pane">
+                <div class="col-left">
+                    <h3 class="fs-2">진단평가</h3>
+                    <p>기업의 현황을 체크하고 발전하기 위한 <br>방향을 찾을 수 있도록 합니다.</p>
+                    <div class="text-center text-xl-left"><a href="" class="btn btn-outline btn-sm">more<i class="icon icon-plus">&nbsp;</i></a></div>
+                    <div class="swiper-controls d-none d-xl-flex">
+                        <div class="swiper-button-prev wh"></div>
+                        <div class="swiper-button-next wh"></div>
+                    </div>
+                </div>
+                <div class="col-right animate__animated animate__fadeInRight">
+                    <div class="swiper business-swiper overflow-visible">
+                        <ul class="swiper-wrapper">
+                            <li class="swiper-slide">
+                                <div class="business-card">
+                                    <img src="/front/img/index/business2-1.png" alt="">
+                                    <dl class="inner">
+                                        <dt class="fs-6">ESG 평가대응</dt>
+                                        <dd>ISO 26000, ESG 평가 대응 지원</dd>
+                                    </dl>
+                                </div>
+                            </li>
+                            <li class="swiper-slide">
+                                <div class="business-card">
+                                    <img src="/front/img/index/business2-2.png" alt="">
+                                    <dl class="inner">
+                                        <dt class="fs-6">인권영향평가</dt>
+                                        <dd>인권 경영 시스템 인증</dd>
+                                    </dl>
+                                </div>
+                            </li>
+                            <li class="swiper-slide">
+                                <div class="business-card">
+                                    <img src="/front/img/index/business2-3.png" alt="">
+                                    <dl class="inner">
+                                        <dt class="fs-6">관광분야진단평가</dt>
+                                        <dd>지역·상품·기업·인프라 등을 대상으로 정책 방향에 부합한 진단 평가 서비스</dd>
+                                    </dl>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="swiper-pagination d-xl-none bg-white"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="business3" class="tab-pane">
+                <div class="col-left">
+                    <h3 class="fs-2">교육</h3>
+                    <p>부족한 부분을 채우는 지식·노하우를 <br>얻을 수 있도록 합니다.</p>
+                    <div class="text-center text-xl-left"><a href="" class="btn btn-outline btn-sm">more<i class="icon icon-plus">&nbsp;</i></a></div>
+                    <div class="swiper-controls d-none d-xl-flex">
+                        <div class="swiper-button-prev wh"></div>
+                        <div class="swiper-button-next wh"></div>
+                    </div>
+                </div>
+                <div class="col-right animate__animated animate__fadeInRight">
+                    <div class="swiper business-swiper overflow-visible">
+                        <ul class="swiper-wrapper">
+                            <li class="swiper-slide">
+                                <a href="" class="business-card">
+                                    <img src="/front/img/index/business3-1.png" alt="">
+                                    <div class="inner">
+                                        <strong class="fs-6">공개교육</strong>
+                                        <i class="icon icon-more">&nbsp;</i>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="" class="business-card">
+                                    <img src="/front/img/index/business3-2.png" alt="">
+                                    <div class="inner">
+                                        <strong class="fs-6">기업교육</strong>
+                                        <i class="icon icon-more">&nbsp;</i>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="" class="business-card">
+                                    <img src="/front/img/index/business3-3.png" alt="">
+                                    <div class="inner">
+                                        <strong class="fs-6">이러닝</strong>
+                                        <i class="icon icon-more">&nbsp;</i>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="" class="business-card">
+                                    <img src="/front/img/index/business3-4.png" alt="">
+                                    <div class="inner">
+                                        <strong class="fs-6">자격시험</strong>
+                                        <i class="icon icon-more">&nbsp;</i>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="" class="business-card">
+                                    <img src="/front/img/index/business3-5.png" alt="">
+                                    <div class="inner">
+                                        <strong class="fs-6">미래내일 일경험</strong>
+                                        <i class="icon icon-more">&nbsp;</i>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="" class="business-card">
+                                    <img src="/front/img/index/business3-6.png" alt="">
+                                    <div class="inner">
+                                        <strong class="fs-6">새싹 일자리</strong>
+                                        <i class="icon icon-more">&nbsp;</i>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="" class="business-card">
+                                    <img src="/front/img/index/business3-7.png" alt="">
+                                    <div class="inner">
+                                        <strong class="fs-6">재취업교육</strong>
+                                        <i class="icon icon-more">&nbsp;</i>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="swiper-pagination d-xl-none bg-white"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="business4" class="tab-pane">
+                <div class="col-left">
+                    <h3 class="fs-2">시상·서비스</h3>
+                    <p>지속적인 성장을 위한 경쟁력을 <br>갖출 수 있도록 합니다.</p>
+                    <div class="text-center text-xl-left"><a href="" class="btn btn-outline btn-sm">more<i class="icon icon-plus">&nbsp;</i></a></div>
+                </div>
+                <div class="col-right">
+                    <div class="business-awards">
+                        <h4 class="fs-4 text-white font-mont animate__animated animate__fadeInUp">Global Standard Management Awards</h4>
+                        <strong class="fs-6 text-white animate__animated animate__fadeInUp">글로벌 스탠더드경영대상</strong>
+                        <p class="animate__animated animate__fadeInUp">GSMA는 2002년부터 매년 개최되어 온 시상제도로 <br>국제표준이 있는 경영테마에서 우리 산업계의 경쟁력을 향상시키고 <br>지속가능한 성장을 하도록 지원하고 있습니다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="main-value sect">
+    <p class="text font-mont">KMR's values</p>
+    <div class="container container-fluid">
+        <div class="sect-hd" data-aos="fade-up">
+            <div class="sect-title">
+                <strong class="text-primary">Creating Value</strong>
+                <h2 class="text-white">오늘도 고객의 삶을 <br class="d-sm-none">가치 있게 합니다.</h2>
+            </div>
+        </div>
+        <ul class="values">
+            <li>
+                <div class="circle">
+                    <div>
+                        <dl>
+                            <dt class="fs-6 text-white">인증건수</dt>
+                            <dd><span class="font-mont counter">5,900</span> 건</dd>
+                        </dl>
+                        <p class="fsm">2025년 1월 기준</p>
+                    </div>
+                    <svg viewBox="0 0 360 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle class="animated-circle" cx="180" cy="180" r="179" stroke="#DB0032" stroke-width="2" transform="rotate(-90 180 180)" />
+                    </svg>
+                </div>
+            </li>
+            <li>
+                <div class="circle">
+                    <div>
+                        <dl>
+                            <dt class="fs-6 text-white">평가·시상</dt>
+                            <dd><span class="font-mont counter">7,400</span> 건</dd>
+                        </dl>
+                        <p class="fsm">2025년 1월 기준</p>
+                    </div>
+                    <svg viewBox="0 0 360 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle class="animated-circle" cx="180" cy="180" r="179" stroke="#DB0032" stroke-width="2" transform="rotate(-90 180 180)" />
+                    </svg>
+                </div>
+            </li>
+            <li>
+                <div class="circle">
+                    <div>
+                        <dl>
+                            <dt class="fs-6 text-white">교육수료</dt>
+                            <dd><span class="font-mont counter">10,100</span> 명</dd>
+                        </dl>
+                        <p class="fsm">2025년 1월 기준</p>
+                    </div>
+                    <svg viewBox="0 0 360 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle class="animated-circle" cx="180" cy="180" r="179" stroke="#DB0032" stroke-width="2" transform="rotate(-90 180 180)" />
+                    </svg>
+                </div>
+            </li>
+            <li>
+                <div class="circle">
+                    <div>
+                        <dl>
+                            <dt class="fs-6 text-white">국무총리·장관 표창</dt>
+                            <dd>총 <span class="font-mont counter">5</span>회</dd>
+                        </dl>
+                        <p class="fsm">2025년 1월 기준</p>
+                    </div>
+                    <svg viewBox="0 0 360 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle class="animated-circle" cx="180" cy="180" r="179" stroke="#DB0032" stroke-width="2" transform="rotate(-90 180 180)" />
+                    </svg>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<section class="main-news sect container container-fluid">
+    <div class="main-grid">
+        <div class="grid-left" data-aos="fade-up">
+            <div class="sect-hd">
+                <div class="sect-title">
+                    <strong class="text-primary">Notice & News</strong>
+                    <h2>KMR의 소식을 <br>전합니다.</h2>
+                </div>
+                <a href="" class="btn">View all<i class="icon icon-plus">&nbsp;</i></a>
+            </div>
+            <div class="swiper-controls d-none d-lg-flex">
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+        <div class="grid-right" data-aos="fade-left">
+            <div class="ytb-news">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/mqOBx8bT1eA?rel=0" allowfullscreen></iframe>
+                </div>
+                <div class="inner">
+                    <span class="badge text-primary">미디어</span>
+                    <h3 class="fs-4 text-clamp">
+                        [KMR] 스마트 제조혁신을 위한 빅데이터 분석 및 활용 세미나
+                    </h3>
+                    <p class="mt-16">제조 빅데이터 분석을 위한 지능형솔루션의 개념 및 사례공유를 통하여 미래 지능형공장 구축의 로드맵을 제시합니다.</p>
+                    <div class="text-primary fsm mt-auto">2025.02.25</div>
+                </div>
+            </div>
+            <div class="swiper news-swiper">
+                <ul class="swiper-wrapper">
+                    <li class="swiper-slide">
+                        <a href="" class="news-card">
+                            <div class="inner">
+                                <div class="media">
+                                    <span class="badge text-primary">공지사항</span>
+                                    <h3 class="fs-4 media-body">[온라인/모집중] 2025년도 공정채용 우수기관 인증제도 온라인 설명회 개최 (3/26, 수)</h3>
+                                </div>
+                                <div class="text-primary fsm mt-auto">2025.02.25</div>
+                            </div>
+                            <div class="img"><img src="/front/img/_temp/news.png" alt=""></div>
+                        </a>
+                    </li>
+                    <li class="swiper-slide">
+                        <a href="" class="news-card">
+                            <div class="inner">
+                                <div class="media">
+                                    <span class="badge text-primary">공지사항</span>
+                                    <h3 class="fs-4 media-body">[온라인/모집중] 2025년도 공정채용 우수기관 인증제도 온라인 설명회 개최 (3/26, 수)</h3>
+                                </div>
+                                <div class="text-primary fsm mt-auto">2025.02.25</div>
+                            </div>
+                            <div class="img"><img src="/front/img/_temp/news.png" alt=""></div>
+                        </a>
+                    </li>
+                </ul>
+                <div class="swiper-pagination d-xl-none"></div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom" data-aos="fade-up">
+        <a href="" class="btn">View all<i class="icon icon-plus">&nbsp;</i></a>
+    </div>
+</section>
+
+<section class="main-client sect">
+    <div class="container container-fluid">
+        <div class="main-grid">
+            <div class="grid-left" data-aos="fade-up">
+                <div class="sect-hd">
+                    <div class="sect-title">
+                        <strong class="text-primary">KMR <span class="text-dark">Special Client</span></strong>
+                        <h2>미래를 선도하는 <br class="d-none d-xl-block">KMR의 고객들</h2>
+                    </div>
+                    <p>소비자들이 직접 가치 있다고 선택한 <br>이노스타 그린스타 인증 브랜드를 소개합니다.</p>
+                    <a href="" class="btn">View all<i class="icon icon-plus">&nbsp;</i></a>
+                </div>
+                <div class="swiper-controls d-none d-xl-flex">
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+            <div class="grid-right" data-aos="fade-left">
+                <div class="wrap">
+                    <div class="swiper client-swiper overflow-visible">
+                        <ul class="swiper-wrapper">
+                            <li class="swiper-slide">
+                                <a href="" class="client-card">
+                                    <div class="inner">
+                                        <span class="badge gray"><img src="/front/img/index/client.svg" alt="">이노스타</span>
+                                        <strong class="fs-4">코웨이 <br>비렉스 페블체어</strong>
+                                    </div>
+                                    <div class="img"><img src="/front/img/_temp/client.png" alt=""></div>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="" class="client-card">
+                                    <div class="inner">
+                                        <span class="badge gray"><img src="/front/img/index/client.svg" alt="">그린스타</span>
+                                        <strong class="fs-4">린백 <br>사무용 의자</strong>
+                                    </div>
+                                    <div class="img"><img src="/front/img/_temp/client.png" alt=""></div>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="" class="client-card">
+                                    <div class="inner">
+                                        <span class="badge gray"><img src="/front/img/index/client.svg" alt="">그린스타</span>
+                                        <strong class="fs-4">코웨이 <br>비렉스 페블체어</strong>
+                                    </div>
+                                    <div class="img"><img src="/front/img/_temp/client.png" alt=""></div>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="" class="client-card">
+                                    <div class="inner">
+                                        <span class="badge gray"><img src="/front/img/index/client.svg" alt="">이노스타</span>
+                                        <strong class="fs-4">코웨이 <br>비렉스 페블체어</strong>
+                                    </div>
+                                    <div class="img"><img src="/front/img/_temp/client.png" alt=""></div>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="swiper-pagination d-xl-none"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom d-xl-none" data-aos="fade-up">
+            <a href="" class="btn">View all<i class="icon icon-plus">&nbsp;</i></a>
+        </div>
+    </div>
+</section>
+
+<section class="main-search sect container container-fluid">
+    <div class="main-grid">
+        <div class="grid-left" data-aos="fade-up">
+            <div class="sect-hd">
+                <div class="sect-title">
+                    <strong class="text-primary">Search</strong>
+                    <h2>필요한 정보를 쉽고 <br>빠르게 찾아드립니다.</h2>
+                </div>
+            </div>
+        </div>
+        <div class="grid-right" data-aos="fade-left">
+            <div class="box-wrap">
+                <div class="box bg-primary">
+                    <h3 class="fs-4 text-white">찾고 싶으신 것이 있으신가요?</h3>
+                    <p>통합 검색으로 궁금한 정보를 바로 찾아보세요.</p>
+                    <div class="input-group srch-group mt-auto">
+                        <input type="text" placeholder="검색어를 입력해주세요." title="검색어 입력">
+                        <button class="btn-circle"><i class="icon icon-srch">검색</i></button>
+                    </div>
+                </div>
+                <div class="box bg">
+                    <h3 class="fs-4 text-white">인증 찾기</h3>
+                    <p>우리 기업 현 상황에 꼭 필요한 인증을 찾아드립니다.</p>
+                    <div class="text-right mt-auto">
+                        <a href="https://skmr.co.kr/iso/request/" target="_blank" title="새창열림" class="btn btn-sm btn-wh">바로가기<i class="icon icon-arr">&nbsp;</i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="main-link sect container container-fluid">
+    <div class="sect-hd" data-aos="fade-up">
+        <div class="sect-title">
+            <h2 class="text-primary">Family Link</h2>
+        </div>
+    </div>
+    <nav class="link-box-wrap" data-aos="fade-up">
+        <a href="https://edu.ikmr.co.kr/web/index.do" target="_blank" title="새창열림" class="link-box">교육센터<i class="icon icon-more red">&nbsp;</i></a>
+        <a href="https://www.ikmr-esg.co.kr" target="_blank" title="새창열림" class="link-box">ESG인증포털<i class="icon icon-more red">&nbsp;</i></a>
+        <a href="http://www.ikmr-lab.co.kr/" target="_blank" title="새창열림" class="link-box">브랜드전략연구소<i class="icon icon-more red">&nbsp;</i></a>
+    </nav>
+</section>
+<!-- //페이지 -->
+    </main>
+    
+    <footer id="ft" class="ft">
+        <div class="container container-fluid">
+            <ul class="ft-sitemap">
+                <li>
+                    <a href="">ISO인증</a>
+                    <ul>
+                        <li><a href="./01.Sub_01.ISO인증_01.인증소개-01.인증종류.html">인증소개</a></li>
+                        <li><a href="">인증 서비스 분야</a></li>
+                        <li><a href="">인증홍보물</a></li>
+                        <li><a href="" target="_blank" title="새창열림">인증상담<i class="icon icon-link">&nbsp;</i></a></li>
+                        <li><a href="" target="_blank" title="새창열림">인증신청<i class="icon icon-link">&nbsp;</i></a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="">인증·검증·평가</a>
+                    <ul>
+                        <li><a href="">사회적 가치 윤리</a></li>
+                        <li><a href="./01.Sub_02.인증·검증·평가_01.탄소중립_00.gate.html">탄소중립</a></li>
+                        <li><a href="">조직문화</a></li>
+                        <li><a href="">브랜드 가치</a></li>
+                        <li><a href="">관광 활성화</a></li>
+                        <li><a href="">CE 인증</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="">지원사업</a>
+                    <ul>
+                        <li><a href="">가족친화인증</a></li>
+                        <li><a href="">제대군인고용우수기업 인증</a></li>
+                        <li><a href="">미래내일 일경험</a></li>
+                        <li><a href="">새싹 일자리</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="">KMR 소개</a>
+                    <ul>
+                        <li><a href="">KMR Story</a></li>
+                        <li><a href="">CEO 인사말</a></li>
+                        <li><a href="">연혁</a></li>
+                        <li><a href="">CI</a>
+                <a href="">AI·캐릭터</a></li>
+                        <li><a href="">오시는 길</a></li>
+                        <li><a href="">협약기관</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="">ESG 경영</a>
+                    <ul>
+                        <li><a href="./01.Sub_03.ESG경영_01.overview.html">Overview</a></li>
+                        <li><a href="">수준진단 및 전략수립</a></li>
+                        <li><a href="">지속가능경영보고서</a></li>
+                        <li><a href="">평가대응</a></li>
+                        <li><a href="">협력사ESG평가</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="">교육</a>
+                    <ul>
+                        <li><a href="">공개교육</a></li>
+                        <li><a href="">기업교육</a></li>
+                        <li><a href="">이러닝</a></li>
+                        <li><a href="">평가대응</a></li>
+                        <li><a href="">자격시험</a></li>
+                        <li><a href="">재취업 교육</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="">Service & Insight</a>
+                    <ul>
+                        <li><a href="">글로벌스탠더드경영대상</a></li>
+                        <li><a href="">인사이트</a></li>
+                        <li><a href="">미디어</a></li>
+                        <li><a href="">KMR News</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="">고객지원</a>
+                    <ul>
+                        <li><a href="">자주하는 질문</a></li>
+                        <li><a href="">문의하기</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="">채용</a>
+                    <ul>
+                        <li><a href="">인재상</a></li>
+                        <li><a href="">캠알人인터뷰</a></li>
+                        <li><a href="">채용정보</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <div class="ft-btm">
+                <div class="ft-menu">
+                    <img src="/front/img/logo-wh.svg" alt="KMR">
+                    <nav class="fnb">
+                        <a href="">이용약관</a>
+                        <a href="">개인정보취급방침</a>
+                        <a href="">공평성 선언문</a>
+                        <a href="">이메일무단수집거부</a>
+                    </nav>
+                </div>
+                <div class="ft-side">
+                    <div class="ft-info">
+                        <div>
+                            <span><b>기업명</b> (주)한국경영인증원</span>
+                            <span><b>대표이사</b> 황은주</span><div class="space"></div>
+                            <span><b>사업자등록번호</b> 105-86-32572</span><div class="space"></div>
+                            <span><b>통신판매업신고번호</b> 2012-서울영등포-0315</span>
+                        </div>
+                        <div>서울특별시 영등포구 경인로 775 (문래동3가) 에이스하이테크시티 1동 1204호 (우)07299</div>
+                        <div>
+                            <span><b>대표번호</b> 02-6309-9000</span>
+                            <span><b>팩스번호</b> 02-6309-9004</span>
+                        </div>
+                    </div>
+                    <p class="copy">Copyright(c) KMR All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="floating">
+        <button type="button" class="btn btn-sm btn-cs">고객센터<i class="icon icon-cs">&nbsp;</i></button>
+        <div id="cs">
+            <div class="text-right"><button type="button" class="icon icon-close btn-cs">닫기</button></div>
+            <div class="wrap">
+                <button type="button" class="collapsed" data-toggle="collapse" data-target="#kmrNews">
+                    KMR 소식<span class="num">2</span>
+                </button>
+                <div id="kmrNews" class="collapse">
+                    <ul class="inner">
+                        <li>
+                            <a href="">
+                                <div class="text-primary">캠알TV</div>    
+                                <div class="text-clamp">[전문가 모집중]2025년 스마트공장 재직자 장기심화과정 전문가 모집 안내(4.9~4.15)</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="text-primary">보도홈</div>    
+                                <div class="text-clamp">[전문가 모집중]2025년 스마트공장 재직자 장기심화과정 전문가 모집 안내(4.9~4.15)</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="text-primary">캠알TV</div>    
+                                <div class="text-clamp">[전문가 모집중]2025년 스마트공장 재직자 장기심화과정 전문가 모집 안내(4.9~4.15)</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="text-primary">보도홈</div>    
+                                <div class="text-clamp">[전문가 모집중]2025년 스마트공장 재직자 장기심화과정 전문가 모집 안내(4.9~4.15)</div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="wrap">
+                <nav class="cs-quick">
+                    <a href=""><i class="icon icon-quick1">&nbsp;</i>1:1 문의</a>
+                    <a href=""><i class="icon icon-quick2">&nbsp;</i>실시간 채팅</a>
+                </nav>
+                <ul class="cs-links">
+                    <li>
+                        <a href="">인증로고 통합 다운로드<i class="icon icon-download">&nbsp;</i></a>
+                    </li>
+                    <li>
+                        <a href="">회사소개서 다운로드<i class="icon icon-doc">&nbsp;</i></a>
+                    </li>
+                </ul>
+                <a href="" class="btn btn-wh btn-sm">ISO 인증상담 요청<i class="icon icon-more">&nbsp;</i></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 팝업 -->
+<div class="popup" style="display: none;">
+    <div class="popup-body">
+        <a href=""><img src="/front/img/_temp/report.png" alt=""></a>
+    </div>
+    <div class="popup-ft">
+        <button type="button" class="pop-cookie">오늘 그만보기</button>
+        <button type="button" class="pop-close">닫기</button>
+    </div>
+</div>
+
+<div class="popup" style="display: none;">
+    <div class="popup-body">
+        <a href=""><img src="/front/img/intro/story-slide4.jpg" alt=""></a>
+    </div>
+    <div class="popup-ft">
+        <button type="button" class="pop-cookie">오늘 그만보기</button>
+        <button type="button" class="pop-close">닫기</button>
+    </div>
+</div>
+
+</body>
+</html>

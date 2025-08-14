@@ -1,0 +1,39 @@
+.customer{
+    .fs-1{
+        margin-top: rem(40px);
+    }
+    .cont{
+        display: flex;
+        flex-direction: column;
+        margin-top: rem(40px);
+        gap: rem(24px);
+        align-items: flex-start;
+
+        .bx-gray{
+            width: 100%;
+            display: flex;
+            gap: rem(16px);
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .fs-7{
+            margin-right: auto;
+        }
+    }
+}
+
+.sample-field{
+    .text-blue{
+        color: #006ECD !important;
+    }   
+
+    div.form-control{
+        padding: rem(32px);
+        height: auto;
+
+        @include media-max(sm){
+            padding: rem(24px);
+        }
+    }
+}

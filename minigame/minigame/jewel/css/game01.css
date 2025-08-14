@@ -1,0 +1,910 @@
+@charset "utf-8";
+
+html{
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+:lang(zh),:lang(zh-CN) {word-break: break-all !important;}
+
+
+.btn:hover,
+.btn:focus,
+.btn:active{box-shadow: none;}
+
+input, button{outline: none;}
+.game-wrp { background: linear-gradient(to bottom, #3d1c97,#6f1977) }
+/* .icon-close { background-color: #FFC700 } */
+/* .icon-home { background-color: #FFC700; box-shadow: 2px 2px #E48C25 }; #life { background: #E6DBFF; box-shadow: 8px 8px #341490 } */
+#life i { background-image: url(../img/game01/icon-star.png) }
+#life i.off { background-image: url(../img/game01/icon-star-off.png) }
+
+/* 버튼 */
+.noneClick{display: none !important; pointer-events: none;}
+/* .btn span{text-indent: -9999px; width: 0; height: 0; font-size: 0; overflow: hidden;} */
+
+.btn-start{font-size: 50px; color: #fff; position: absolute;left: 50%;bottom: 60px !important;left: 50%;transform: translateX(-50%); transition:transform .45s; width: 260px; height: 60px; background: url(../img/game01/start-btn01.png) no-repeat center / contain; }
+.btn-start:hover{background-image: url(../img/game01/start-btn02.png);}
+.btn-start:active{background-image: url(../img/game01/start-btn03.png);}
+.btn-start:disabled{background-image: url(../img/game01/start-disable.png); pointer-events: none; color: rgba(255, 255, 255, 0.5);}
+.btn-start span{font-size: 28px;    position: relative;
+    top: -20px;}
+.next-stage .btn-complete{display: none;}
+.btn-complete{width: 70px; height: 70px; position:absolute; right: 10px; right: 10px; background: url(../img/game01/btn-com01.png) no-repeat center / contain; position: absolute; top: 50%; right: 28px; transform: translateY(-50%); transition: .5s;}
+.btn-complete:hover{background-image: url(../img/game01/btn-com02.png);}
+.btn-complete:active{background-image: url(../img/game01/btn-com03.png);}
+.btn-complete:disabled{pointer-events: none; cursor: default; background-image: url(../img/game01/btn-com-disable.png);}
+.btn-complete.delete{background-image: url(../img/game01/delete01.png);}
+.btn-complete.delete:hover{background-image: url(../img/game01/delete02.png);}
+.btn-complete.delete:active{background-image: url(../img/game01/delete03.png);}
+
+/* .next-stage .btn-next{display: block;}
+.btn-next{width: 70px; height: 70px; background: url(../img/game01/btn-next01.png) no-repeat center / contain; display: none; position: absolute; top: 50%; right: 28px; transform: translateY(-50%); transition: .5s;}
+.btn-next:hover{background-image: url(../img/game01/btn-next02.png);}
+.btn-next:active{background-image: url(../img/game01/btn-next03.png);}
+.btn-next:disabled{background-image: url(../img/game01/btn-next-disable.png);} */
+
+.answer-retry .btn-delete{display: block;}
+.btn-delete{width: 70px; height: 70px; background: url(../img/game01/btn-re01.png) no-repeat center / contain; display: none; position: absolute; top: 150%; left: 50%; transform: translateX(-50%); transition: .5s;}
+.btn-delete:hover{background-image: url(../img/game01/btn-re02.png);}
+.btn-delete:active{background-image: url(../img/game01/btn-re03.png);}
+.btn-delete:disabled{background-image: url(../img/game01/btn-re-disable.png);}
+
+.game-stage > .btn-reset{position: absolute; right: 30px; bottom: 30px; transition:transform .45s;     width: 260px;
+    height: 60px; background: url(../img/game01/retry01.png) no-repeat center / contain; opacity: 1; pointer-events: all; cursor: pointer; z-index: 100; display: flex; align-items: center; justify-content: center; color: #fff;}
+.game-stage > .btn-reset::before{display: none;}
+.game-stage > .btn-reset span{text-indent: 0px; width: auto !important; height: auto !important; font-size: 28px !important;}
+.btn-reset:hover{background-image: url(../img/game01/retry02.png);}
+.btn-reset:active{background-image: url(../img/game01/retry03.png);}
+.btn-reset:disabled{background-image: url(../img/game01/retry_disable.png); pointer-events: none; color: rgba(255, 255, 255, 0.5);}
+.icon-retry{width: 36px; height: 43px;background: url(../img/game01/icon-retry.png) no-repeat center / contain;}
+.btn-reset:hover .icon-retry{background-image: url(../img/game01/icon-retry02.png);}
+.btn-reset:active .icon-retry{background-image: url(../img/game01/icon-retry03.png);}
+.btn-reset:disabled .icon-retry{background-image: url(../img/game01/icon-retry04.png);}
+
+.btn-cmp span{font-size: 28px;}
+.btn-cmp span{font-size: 28px;}
+#fail.game-stage > .btn-reset { bottom: 30px; }
+
+/* 팝업 */
+.modal-title { color: #5E33D9 }
+.guide-item .num { background: #42C6FF }
+#modal-guide .modal-dialog { max-width: 967px }
+#modal-guide .icon-close { background-color: #5E33D9 }
+
+.progress-wrap { position: absolute; display: flex; align-items: center; border-radius: 16px; overflow: hidden; position: absolute; z-index: 2; left: 1039px !important; top: 82px; min-width: 200px; background: #E6E6E6; }
+.progress-label { background: #c66488; padding: 8px 16px; border-radius: 16px; font-size: 20px; font-weight: 700; z-index: 1; }
+.progress-value { color: #570000; padding: 8px 0; border-top-right-radius: 16px; border-bottom-right-radius: 16px; font-size: 20px; font-weight: 700; margin: 0 5px; text-align: center; width: 72px; }
+.progress-label span { color: #fff; }
+.progress-bar-wrp { position: absolute; top:652px; left: 160px; }
+
+
+/* home */
+#home .home-title { width: 965px; margin: -3px 2px; z-index: 0 !important; }
+.lang { height: 48px; }
+/* help */
+/* .guide-open #act .char-help { opacity: 0; transition: none }
+.game-wrp:not(.guide-open) .char-help { transition: .5s }
+#act .char-help { left: 26px; bottom: 10px; z-index: 10; opacity: 1; transform: none; transition: .5s .5s }
+#act .char-help .char-sub { transform: rotate(-45deg); animation: flying-ani02 3s linear 0s infinite alternate }
+.help-balloon { position: absolute; transform: translateX(-50%); left: 50%; bottom: 135%; display: inline-block; padding: 11px 21px; background: #2F2255; border-radius: 30px; font-size: 18px; line-height: 1.3; white-space: nowrap; color: #E1D7FF; transition: .5s }
+.help-balloon.off { opacity: 0 }
+.help-balloon::after { content: ''; transform: translateX(-50%); display: block; position: absolute; top: 90%; left: 50%; width: 28px; height: 20px; background: url(../img/game01/help-tail.svg)no-repeat center / 100% }
+.help-balloon i { position: absolute; left: 8px; bottom: 77%; display: flex; justify-content: center; align-items: center; width: 30px; height: 30px; background: #AA8CFF; border-radius: 50% }
+.help img { position: absolute; top: 377px; left: 97px; }
+.help-open .help img { animation: twinkle .75s ease-in-out forwards; animation-iteration-count:3 }
+[data-page] .help img { display:none; width: 456px; opacity: 1 }
+[data-page="1"] .help .page01, [data-page="2"] .help .page02, [data-page="3"] .help .page03 { display: block }
+[data-page="2"] .help img { width: 222px; top: 379px; left: 249px; }
+[data-page="3"] .help img { width: 379px; left: 143px; top: 460px; } */
+
+/* 배경오브제 */
+.bg-obj01 { bottom: 0px; width: 1290px; z-index: -3;}
+.bg-obj04 { bottom: 0px; width: 1290px; z-index: -3;}
+.gauge{position: absolute; top: 26px; left: 73%;z-index: 21;}
+.strength-arm{position: absolute;top: 50%;transform: translateY(-50%);left: -60px;z-index: 1;}
+.gauge-bar{position: absolute; z-index: 0; left: -10px; border-radius: 20px; top: 52%; transform: translateY(-50%); height: 29px; width: 100%; background: linear-gradient(180deg, #F427C5 0%, #E63A00 100%);box-shadow: 0px 10px 0px 0px rgba(255, 255, 255, 0.25) inset, 0px -1px 0px 0px rgba(255, 255, 255, 0.80) inset, 0px 1px 0px 0px #9D0C}
+
+
+.btn-cmp{width: 120px; height: 70px; background: url(../img/game01/ok-btn01.png) no-repeat; position: absolute; bottom: -81px; right: 4px; font-size: 28px; color: #fff; background-size: 100% 100%;}
+.btn-cmp:hover{background-image: url(../img/game01/ok-btn02.png);}
+.btn-cmp:active{background-image: url(../img/game01/ok-btn03.png);}
+.btn-cmp:disabled{background-image: url(../img/game01/ok-btn-disable.png); color: rgba(255, 255, 255, 0.5);}
+
+
+/* -------언어 선택 --------- */
+#lang { background: linear-gradient(180deg, #7D3558 0%, #4F012F 100%); }
+.lang { background: linear-gradient(180deg, #FCE573 0%, #FFCD51 100%); box-shadow: 0px 4px 4px 0px rgba(255, 255, 255, 0.80) inset, 0px -5px 5px 0px #EC962F inset; }
+.lang:focus { color: #71264B !important }
+
+.lang-wrap { position: relative; /* 자식 .lang-list 의 절대위치를 기준으로 삼습니다 */
+ display: inline-block; top: 5%; left: 82% !important; z-index: 3; }
+
+.lang-list { position: absolute; top: 100%; left: 0; margin: 4px 0 0; padding: 0; list-style: none; border: 5px solid blue; width: 100%; }
+.lang-list li { padding: 8px 12px; cursor: pointer; }
+
+
+/* intro */
+.game-stage > .intro-char{ position: absolute;width: 432px; top: 344px; left: 861px; z-index: 6; transform: unset;}
+.fail-stage > .intro-char{transform: scaleX(-1);}
+#intro .step-bx,
+.act-stage01 .step-bx,
+.fail-stage .step-bx {position: relative; width: 600px; min-height: 140px; border-radius: 25px;
+background: #9D0C0C;box-shadow: 0px 4px 0px 0px rgba(255, 255, 255, 0.10) inset, 0px -4px 0px 0px rgba(0, 0, 0, 0.25) inset; bottom: 0; display: flex; align-items: center; padding: 10px;}
+.step-wrp{bottom: 100px; transform: unset !important; left: 220px !important; z-index: 5;}
+.step-wrp1{bottom: 100px; transform: unset !important; left: 220px !important; z-index: 5;}
+.step-wrp2{bottom: 100px; transform: unset !important; left: 220px !important; z-index: 5;}
+.step-bx h3{max-width: 580px; word-break: keep-all;}
+.step-bx .bx{padding: 20px; width:100%; height: 100%; border-radius: 20px;background: #FEF9E5;box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.50), 0px -6px 2px 0px rgba(0, 0, 0, 0.25) inset, 0px 6px 2px 0px #FFF inset;}
+:lang(en) .step-bx h3, :lang(vi) .step-bx h3,:lang(ja) .step-bx h3{font-size: 24px;}
+
+/* act01~02 */
+.question_2 { margin-left: 10px; }
+.act-stage01.no-touch { pointer-events: none; }
+.pick_jewels { position: relative; z-index: 1; pointer-events: none; }
+.pick_jewels.active { pointer-events: all; }
+.pick_jewel { position: absolute; width: 175px; height: 175px;cursor: pointer; }
+.pick_jewel.active { display: block; }
+.click-here { position: absolute; display: inline-block; width: 26px; height: 26px; background: url("../img/game01/place-pin.png") no-repeat center center / contain; left: 50%; top: -52px; transform: translate(-50%, 0); opacity: 0; pointer-events: none; animation: click-here 1.2s linear infinite; }
+
+@keyframes click-here {
+    0% { opacity: 1; transform: translate(-50%, 0); }
+    100% { opacity: 0; transform: translate(-50%, 24px); }
+}
+
+
+.pick_jewel01 { top: 265px;left: 340px; }
+.pick_jewel01::before{ content: ''; position: absolute; top: 24px; left: 30px; width: 30px; height: 30px; background: url(../img/game01/twinkle.png) no-repeat center / contain; animation: orbit1 3s linear infinite; }
+.pick_jewel01::after { content: ''; position: absolute; top: -16px; left: 100px; width: 50px; height: 50px; background: url(../img/game01/twinkle_12.png) no-repeat center / contain; animation: orbit2 5s linear infinite; }
+
+.pick_jewel02{top: 413px;left: 273px; }
+.pick_jewel02::before{ content: ''; position: absolute; top: 0px; left: 20px; width: 30px; height: 30px; background: url(../img/game01/twinkle.png) no-repeat center / contain; animation: orbitFast 4s linear infinite; }
+.pick_jewel02::after { content: ''; position: absolute; top: 16px; left: 60px; width: 25px; height: 25px; background: url(../img/game01/twinkle.png) no-repeat center / contain; animation: orbitWide 1s linear infinite; }
+
+.pick_jewel03{top: 403px;left: 524px;}
+.pick_jewel03::before{ content: ''; position: absolute; top: -20px; left: 80px; width: 30px; height: 30px; background: url(../img/game01/twinkle.png) no-repeat center / contain; animation: orbitPulse 4s linear infinite; }
+.pick_jewel03::after { content: ''; position: absolute; top: 16px; left: 45px; width: 40px; height: 40px; background: url(../img/game01/twinkle.png) no-repeat center / contain; animation: orbit1 1s linear infinite; }
+
+.pick_jewel04{top: 206px;left: 586px; }
+.pick_jewel04::before{ content: ''; position: absolute; top: -20px; left: 80px; width: 30px; height: 30px; background: url(../img/game01/twinkle_2.png) no-repeat center / contain; animation: orbitNarrow 4s linear infinite; }
+.pick_jewel04::after { content: ''; position: absolute; top: 16px; left: 45px; width: 30px; height: 30px; background: url(../img/game01/twinkle_12.png) no-repeat center / contain; animation: orbitBounce 1s linear infinite; }
+
+.pick_jewel05{top: 343px;left: 746px; }
+.pick_jewel05::before{ content: ''; position: absolute; top: 0px; left: 63px; width: 50px; height: 50px; background: url(../img/game01/twinkle_2.png) no-repeat center / contain; animation: orbitNarrow 2s linear infinite; }
+.pick_jewel05::after { content: ''; position: absolute; top: 46px; left: 60px; width: 20px; height: 20px; background: url(../img/game01/twinkle.png) no-repeat center / contain; animation: orbitReverse 5s linear infinite; }
+
+.pick_jewel06{top: 407px;left: 903px;}
+.pick_jewel06::before{ content: ''; position: absolute; top: -20px; left: 80px; width: 50px; height: 50px; background: url(../img/game01/twinkle.png) no-repeat center / contain; animation: orbitFast 2s linear infinite; }
+.pick_jewel06::after { content: ''; position: absolute; top: 16px; left: 25px; width: 30px; height: 30px; background: url(../img/game01/twinkle.png) no-repeat center / contain; animation: orbitWide 5s linear infinite; }
+
+.game-stage > .pick { width: 300px; position: absolute; left: 0px;top: 0px; transition: .3s; z-index: 5;transform: rotate(62deg); }
+.fade-in { opacity: 1; display: block; }
+.fade-out { opacity: 0; display: none; }
+.pick-animation { animation: pickAnimation .5s ease 1 backwards; }
+
+.jewel01 { animation: jewel01 6s ease 1 forwards; }
+.jewel02 { animation: jewel02 6s ease 1 forwards; }
+.jewel03 { animation: jewel03 6s ease 1 forwards; }
+.jewel04 { animation: jewel04 6s ease 1 forwards; }
+.jewel05 { animation: jewel05 6s ease 1 forwards; }
+.jewel06 { animation: jewel06 6s ease 1 forwards; }
+
+@keyframes pickAnimation {
+	0%{rotate: 0deg; transform: translate(-61px, 95px);}
+	100%{rotate: 0deg;}
+}
+
+/* 보석 애니메이션 */
+@keyframes jewel01 { 
+	0% { top: 265px;
+		opacity: 1;
+	}
+	100% { top: 200px; pointer-events: none; opacity: 0; }
+}
+
+@keyframes jewel02 { 
+	0% { top: 413px;
+		opacity: 1;
+	}
+	100% { top: 340px; pointer-events: none; opacity: 0; }
+}
+
+@keyframes jewel03 { 
+	0% { top: 403px;
+		opacity: 1;
+	}
+	100% { top: 313px; pointer-events: none; opacity: 0; }
+}
+
+@keyframes jewel04 { 
+	0% { top: 206px;
+		opacity: 1;
+	}
+	100% { top: 126px; pointer-events: none; opacity: 0; }
+}
+
+@keyframes jewel05 { 
+	0% { top: 343px;
+		opacity: 1;
+	}
+	100% { top: 243px; pointer-events: none; opacity: 0; }
+}
+
+@keyframes jewel06 { 
+	0% { top: 407px;
+		opacity: 1;
+	}
+	100% { top: 307px; pointer-events: none; opacity: 0; }
+}
+
+/* 동일 애니메이션 */
+.game-stage > .cart { position: absolute; left: 0%; top: 18px; width: 100%; }
+.game-stage > .cart.moveCart { animation: moveCart 3s ease-in-out 1 forwards; }
+.game-stage > .cart.moveCartOut { animation: moveCartOut 3s ease-in-out 1 forwards; }
+
+@keyframes moveCart { 
+	0% { left: 20%; }
+	100% { left: 82%; transform: translateX(-50%); }
+}
+
+@keyframes moveCartOut { 
+	0% { left: 82%; transform: translateX(-50%); }
+	100% { left: 150%; }
+}
+
+/* 문제 */
+.drop-rock{position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 1000px; z-index: 10; opacity: 0; transition: .3s;}
+.drop-rock.active{opacity: 1; animation: drop_rock 2s ease 3 backwards;}
+.game-stage > .bg-obj03.active{
+	animation: move_bg 0.7s both infinite;
+}
+
+/* 돌 떨어지는 모션 */
+@keyframes drop_rock {
+	0%{left: 49%;}
+	100%{left: 50%;}
+	50%{left: 51%;}
+}
+
+@keyframes move_bg {
+
+        0%   { transform: translateX(-50%); }
+        25%  { transform: translateX(-47%); }
+        50%  { transform: translateX(-50%); }
+        75%  { transform: translateX(-53%); }
+        100%  { transform: translateX(-50%); }
+
+
+
+}
+
+.game-stage>.base{position: static; transform: unset;}
+.base > img{position: absolute;}
+.left-rock01{bottom: 0; left: 0; width: 410px; z-index: 3;}
+.left-rock02{bottom: 0; left: 0; width: 274px; z-index: 6;}
+.right-rock01{bottom: 35px; right: 0; width: 300px; z-index: 3;}
+.right-rock02{right: 0; bottom: 0; width: 500px; z-index: 3;}
+.answer-jewel { position: absolute; opacity: 0; transition: .5s; }
+
+.answer-jewel01 {width: 104px; left: 139px; bottom: 198px; z-index: 4;}
+.answer-jewel02 {width: 125px; right: 38px; bottom: 59px; z-index: 5;}
+.answer-jewel03 {bottom: 186px; z-index: 5; width: 85px; left: 0;}
+.answer-jewel04 {bottom: 49px; z-index: 5; width: 85px; left: 151px;}
+.answer-jewel05 {bottom: 2px; z-index: 5; width: 48px; left: 881px;}
+.answer-jewel06 {bottom: 236px; z-index: 5; width: 85px; right: 28px;}
+
+.answer-jewel.active { opacity: 1; }
+
+/* 기본 반짝이는 효과 */
+.answer-jewel.active::before { content:  ''; position: absolute; width: 30px; height: 30px; background: url(../img/game01/twinkle.png) no-repeat center / contain; animation: orbit1 3s linear infinite; pointer-events: none; z-index: 6; transform-origin: center center; }
+.answer-jewel.active::after { content:  ''; position: absolute; width: 30px; height: 30px; background: url(../img/game01/twinkle_1.png) no-repeat center / contain; animation: orbit2 4s linear infinite; pointer-events: none; z-index: 6; transform-origin: center center; }
+
+/* 보석별 특수 효과 */
+.answer-jewel01.active::before { top: 15px; left: -9px; background: url(../img/game01/twinkle_6.png) no-repeat center / contain; animation: orbitFast 2s linear infinite; }
+.answer-jewel01.active::after { top: 50px; left: 48px; background: url(../img/game01/twinkle_11.png) no-repeat center / contain; animation: orbitSlow 5s linear infinite; }
+.answer-jewel02.active::before { top: 34px; right: 90px; background: url(../img/game01/twinkle_8.png) no-repeat center / contain; animation: orbitWide 4s linear infinite; }
+.answer-jewel02.active::after { top: 10px; right: 10px; background: url(../img/game01/twinkle_2.png) no-repeat center / contain; animation: orbitNarrow 3s linear infinite; }
+.answer-jewel03.active::before { top: 20px; left: 10px; background: url(../img/game01/twinkle.png) no-repeat center / contain; animation: orbitEllipse 3s linear infinite; }
+.answer-jewel03.active::after { top: 45px; left: 49px; background: url(../img/game01/twinkle_5.png) no-repeat center / contain; animation: orbitReverse 4s linear infinite; }
+.answer-jewel04.active::before { top: -8px; left: 65px; background: url(../img/game01/twinkle_11.png) no-repeat center / contain; animation: orbitPulse 3s linear infinite; }
+.answer-jewel04.active::after { top: 14px; left: -4px; background: url(../img/game01/twinkle_8.png) no-repeat center / contain; animation: orbitBounce 4s linear infinite; }
+
+.work-jewel::after { content: ''; position: absolute; width: 100px; height: 100px; background: url(../img/game01/twinkle_1.png) no-repeat center / contain; top: 0; left: 0; }
+.work-jewel::before { content:  ''; position: absolute; width: 100px; height: 100px; background: url(../img/game01/twinkle_14.png) no-repeat center / contain; animation: orbitFast 2s linear infinite; }
+
+.work-jewel.work-jewel01::after { top: 15px; left: -5px; width: 40px; height: 40px; background: url(../img/game01/twinkle_5.png) no-repeat center / contain; animation: orbitWide 3s linear infinite; }
+.work-jewel.work-jewel01::before { top: -10px; left: 74px; background: url(../img/game01/twinkle_4.png) no-repeat center / contain; animation: orbit1 5s linear infinite; }
+.work-jewel.work-jewel02::after { top: -24px; left: -5px; background: url(../img/game01/twinkle_6.png) no-repeat center / contain; animation: orbit2 3s linear infinite; }
+.work-jewel.work-jewel02::before { top: -18px; left: 87px; width: 40px; height: 40px    ; background: url(../img/game01/twinkle_4.png) no-repeat center / contain; animation: orbitBounce 5s linear infinite; }
+.work-jewel.work-jewel03::after { top: -24px; left: 28px; background: url(../img/game01/twinkle_7.png) no-repeat center / contain; animation: orbitNarrow 3s linear infinite; }
+.work-jewel.work-jewel03::before { content: none; }
+.work-jewel.work-jewel04::after { top: -14px; left: 103px; width: 30px; height: 30px; background: url(../img/game01/twinkle_1.png) no-repeat center / contain; animation: orbit2 3s linear infinite; }
+.work-jewel.work-jewel04::before { top: 31px; left: 30px; width: 65px; height: 65px; background: url(../img/game01/twinkle_5.png) no-repeat center / contain; animation: orbitBounce 5s linear infinite; }
+.work-jewel.work-jewel05::after { top: -14px; left: 81px; width: 40px; height: 40px; background: url(../img/game01/twinkle_1.png) no-repeat center / contain; animation: orbit2 3s linear infinite; }
+.work-jewel.work-jewel05::before { top: 65px; left: 75px; width: 20px; height: 20px; background: url(../img/game01/twinkle_1.png) no-repeat center / contain; animation: orbitBounce 5s linear infinite; }
+.work-jewel.work-jewel06::after { top: -14px; left: 30px; width: 80px; height: 80px; background: url(../img/game01/twinkle_9.png) no-repeat center / contain; animation: orbitPulse 3s linear infinite; }
+.work-jewel.work-jewel06::before { content: none; }
+.ending-jewel::after { content:  ''; position: absolute; width: 60px; height: 60px; background: url(../img/game01/twinkle_10.png) no-repeat center / contain; top: 20px; left: 0; animation: orbitPulse 3s linear infinite; }
+.ending-jewel::before { content:  ''; position: absolute; width: 30px; height: 30px; background: url(../img/game01/twinkle_10.png) no-repeat center / contain; top: 50px; left: 100px; animation: orbitPulse 3s linear infinite; }
+
+.ending-jewel.ending-jewel02::after { top: 20px; left: 0; width: 20px; height: 20px; background: url(../img/game01/twinkle_11.png) no-repeat center / contain; animation: orbitSlow 3s linear infinite; }
+.ending-jewel.ending-jewel02::before { top: 50px; left: 100px; width: 30px; height: 30px; background: url(../img/game01/twinkle_6.png) no-repeat center / contain; animation: orbitFast 3s linear infinite; }
+.ending-jewel.ending-jewel03::after { top: 20px; left: 0; width: 50px; height: 50px; background: url(../img/game01/twinkle_11.png) no-repeat center / contain; animation: orbitReverse 2s linear infinite; }
+.ending-jewel.ending-jewel03::before { top: 50px; left: 100px; background: url(../img/game01/twinkle_14.png) no-repeat center / contain; animation: orbitBounce 3s linear infinite; }
+.ending-jewel.ending-jewel04::after { top: 20px; left: -10px; width: 20px; height: 20px; background: url(../img/game01/twinkle_2.png) no-repeat center / contain; animation: orbitReverse 3s linear infinite; }
+.ending-jewel.ending-jewel04::before { top: 50px; left: 60px; width: 60px; height: 60px; background: url(../img/game01/twinkle_8.png) no-repeat center / contain; animation: orbitBounce 3s linear infinite; }
+.ending-jewel.ending-jewel05::after { top: 20px; left: -10px; width: 70px; height: 70px; background: url(../img/game01/twinkle_13.png) no-repeat center / contain; animation: orbitFast 3s linear infinite; }
+.ending-jewel.ending-jewel05::before { top: 50px; left: 60px; width: 50px; height: 50px; background: url(../img/game01/twinkle_4.png) no-repeat center / contain; animation: orbitEllipse 4s linear infinite; }
+.ending-jewel.ending-jewel06::after { top: 20px; left: -10px; width: 30px; height: 30px; background: url(../img/game01/twinkle_7.png) no-repeat center / contain; animation: orbitWide 3s linear infinite; }
+ .ending-jewel.ending-jewel06::before { top: 30px; left: 55px; width: 70px; height: 70px; background: url(../img/game01/twinkle_11.png) no-repeat center / contain; animation: orbit1 4s linear infinite; }
+
+
+/* 다양한 애니메이션 효과 */
+@keyframes orbit1 {
+    0% { transform: rotate(0deg) translate(5px, 0); opacity: 0.5; }
+    25% { transform: rotate(90deg) translate(5px, 5px); opacity: 0.7; }
+    50% { transform: rotate(180deg) translate(5px, 0); opacity: 1; }
+    75% { transform: rotate(270deg) translate(5px, -5px); opacity: 0.7; }
+    100% { transform: rotate(360deg) translate(5px, 0); opacity: 0.5; }
+}
+
+@keyframes orbit2 {
+    0% { transform: rotate(0deg) translate(10px, 0); opacity: 0.5; }
+    25% { transform: rotate(90deg) translate(10px, 5px); opacity: 0.7; }
+    50% { transform: rotate(180deg) translate(10px, 0); opacity: 1; }
+    75% { transform: rotate(270deg) translate(10px, -5px); opacity: 0.7; }
+    100% { transform: rotate(360deg) translate(10px, 0); opacity: 0.5; }
+}
+
+@keyframes orbitFast {
+    0% { transform: rotate(0deg) translate(6px, 0); opacity: 0.5; }
+    25% { transform: rotate(90deg) translate(6px, 3px); opacity: 0.7; }
+    50% { transform: rotate(180deg) translate(6px, 0); opacity: 1; }
+    75% { transform: rotate(270deg) translate(6px, -3px); opacity: 0.7; }
+    100% { transform: rotate(360deg) translate(6px, 0); opacity: 0.5; }
+}
+
+@keyframes orbitSlow {
+    0% { transform: rotate(0deg) translate(5px, 0); opacity: 0.5; }
+    25% { transform: rotate(90deg) translate(5px, 3px); opacity: 0.7; }
+    50% { transform: rotate(180deg) translate(5px, 0); opacity: 1; }
+    75% { transform: rotate(270deg) translate(5px, -3px); opacity: 0.7; }
+    100% { transform: rotate(360deg) translate(5px, 0); opacity: 0.5; }
+}
+
+@keyframes orbitWide {
+    0% { transform: rotate(0deg) translate(0px, 0); opacity: 0.5; }
+    25% { transform: rotate(0deg) translate(5px, 5px); opacity: 0.7; }
+    50% { transform: rotate(0deg) translate(0px, 0); opacity: 1; }
+    75% { transform: rotate(0deg) translate(5px, -5px); opacity: 0.7; }
+    100% { transform: rotate(0deg) translate(0px, 0); opacity: 0.5; }
+}
+
+@keyframes orbitNarrow {
+    0% { transform: rotate(0deg) translate(5px, 0); opacity: 0.5; }
+    25% { transform: rotate(0deg) translate(5px, 4px); opacity: 0.7; }
+    50% { transform: rotate(0deg) translate(5px, 0); opacity: 1; }
+    75% { transform: rotate(0deg) translate(5px, -4px); opacity: 0.7; }
+    100% { transform: rotate(0deg) translate(5px, 0); opacity: 0.5; }
+}
+
+@keyframes orbitEllipse {
+    0% { transform: rotate(0deg) translate(10px, 0); opacity: 0.5; }
+    25% { transform: rotate(90deg) translate(10px, 10px); opacity: 0.7; }
+    50% { transform: rotate(180deg) translate(10px, 0); opacity: 1; }
+    75% { transform: rotate(270deg) translate(10px, -10px); opacity: 0.7; }
+    100% { transform: rotate(360deg) translate(10px, 0); opacity: 0.5; }
+}
+
+@keyframes orbitReverse {
+    0% { transform: rotate(0deg) translate(6px, 0); opacity: 0.5; }
+    25% { transform: rotate(-90deg) translate(6px, 3px); opacity: 0.7; }
+    50% { transform: rotate(-180deg) translate(6px, 0); opacity: 1; }
+    75% { transform: rotate(-270deg) translate(6px, -3px); opacity: 0.7; }
+    100% { transform: rotate(-360deg) translate(6px, 0); opacity: 0.5; }
+}
+
+@keyframes orbitPulse {
+    0% { transform: rotate(0deg) translate(10px, 0) scale(0.8); opacity: 0.5; }
+    25% { transform: rotate(0deg) translate(10px, 8px) scale(1.1); opacity: 0.7; }
+    50% { transform: rotate(0deg) translate(10px, 0) scale(1.2); opacity: 1; }
+    75% { transform: rotate(0deg) translate(10px, -8px) scale(1.1); opacity: 0.7; }
+    100% { transform: rotate(0deg) translate(10px, 0) scale(0.8); opacity: 0.5; }
+}
+
+@keyframes orbitBounce {
+    0% { transform: rotate(0deg) translate(0, 0); opacity: 0.7; }
+    25% { transform: rotate(0deg) translate(0, 4px); opacity: 0.8; }
+    50% { transform: rotate(0deg) translate(0, 0); opacity: 1; }
+    75% { transform: rotate(0deg) translate(0, -4px); opacity: 0.8; }
+    100% { transform: rotate(0deg) translate(0,0); opacity: 0.7; }
+}
+
+.text-box{
+    display: flex;width: 66%;height: 125px;justify-content: center;align-items: center;gap: 20px;flex-shrink: 0;border-radius: 20px;background: #FFF7D2;box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.50), 0px -6px 2px 0px rgba(0, 0, 0, 0.25) inset, 0px 6px 2px 0px #FFF inset;bottom: 184px;z-index: 4; transition: .5s;
+}
+.correct .text-box{background-color: #D3EDFF;}
+.false .text-box{background-color: rgba(255, 221, 222, 1);}
+.stage-text{display: flex; align-items: center; display: none;}
+.stage-text.show{display: flex;}
+.answer-text{display: flex; align-items: center; gap: 10px; position: relative;}
+.answer-text > p{width: 50px; height: 55px; position: relative; display: flex; align-items: center; justify-content: center;}
+#stage_md .answer-text > p{width: auto; height: auto; position: relative; display: flex; align-items: center; justify-content: center;}
+#stage_top .answer-text > p{min-width: 100px; width: auto; padding: 0 10px; height: 55px; position: relative; display: flex; align-items: center; justify-content: center;}
+.answer-text > p::before{content: ""; display: block; position: absolute; bottom: 0; height: 2px; width: 100%; background-color: #000;}
+#stage_md .answer-text > p::before{display: none;}
+.false .answer-text > p{color: rgba(219, 13, 17, 1);}
+.answer-text::after{content: "";display: none; position: absolute;width: 350px; height: 118px;background: url(../img/game01/answer01.png) no-repeat center / contain; bottom: -122px; left: 50%; transform: translateX(-50%);}
+/* .false .answer-text.active::after{display: block;} */
+
+/* 답안 클릭 버튼 */
+.answer-retry .choice-box{display: none;}
+.choice-box{position: absolute; bottom: 60px; z-index: 20;}
+.choice-list{display: none; align-items: center; gap: 10px;}
+.choice-list.show{display: flex;}
+.choice-list > li{display: flex;height: 80px;min-width: 80px;padding: 0px 20px;justify-content: center;align-items: center; border-radius: 25px;background: linear-gradient(180deg, #FFE35B 0%, #FABE28 100%);box-shadow: 0px 4px 4px 0px rgba(255, 255, 255, 0.80) inset, 0px -5px 5px 0px #EC962F inset; cursor: pointer;}
+.choice-list > li:hover,
+.choice-list > li:active{background: linear-gradient(180deg, #FF962D 0%, #EE5011 100%);box-shadow: 0px -5px 5px 0px #BE2C00 inset, 0px 4px 4px 0px #FFBC75 inset;}
+.choice-list > li.disabled{border-radius: 25px;background: linear-gradient(180deg, #FF7100 0%, #CC1B00 100%);	box-shadow: 0px 4px 4px 0px #FF9831 inset, 0px -5px 5px 0px #7A1D00 inset;}
+.noneClick .choice-list > li.disabled{ background: linear-gradient(180deg, #FFE35B 0%, #FABE28 100%);box-shadow: 0px 4px 4px 0px rgba(255, 255, 255, 0.80) inset, 0px -5px 5px 0px #EC962F inset; }
+
+/* ending */
+.game-stage > .ending-char{width: 438px; position: absolute; bottom: -238px; left: 151px;}
+
+.ending-jewels{position: relative;}
+.ending-jewel{width: 140px; position: absolute; display: none;}
+.ending-jewel.active{display: block;}
+.ending-jewel01{top: 163px;left: 485px;}
+.ending-jewel02{left: 854px;top: 328px;}
+.ending-jewel03{top: 311px;left: 550px;width: 100px;}
+.ending-jewel04{top: 175px;left: 685px; width: 100px;}
+.ending-jewel05{top: 312px; left: 700px;}
+.ending-jewel06{top: 182px;left: 871px;width: 110px;}
+
+.game-stage > .ending-bubble{font-size: 35px; width: 330px; height: 300px;text-align: center; background: url(../img/game01/bubble.png) no-repeat center / contain; display: flex; align-items: center; justify-content: center; padding-left: 5px; position: absolute;bottom: 116px;left: 230px;transform: unset;}
+
+.game-stage > .ending-bubble:lang(vi){font-size: 28px;}
+.game-stage > .ending-bubble:lang(zh-CN){font-size: 32px;}
+
+/* 실패 */
+
+
+/* ending */
+/* #ending .bx { width: 600px; padding: 58px 40px; border-color: #FFC7CA; box-shadow: 8px 8px #EA7080 } */
+
+
+
+/* ending */
+/* .ending-bg .bg-obj01 { width: 265px; top: -44px }
+.ending-bg .bg-obj02 { opacity: 1; top: 183px; right: 158px }
+.ending-bg .bg-obj03 { opacity: 0 }
+.bg-ending { bottom: 0 }
+.ending-obj01 { bottom: 136px; z-index: 2; }
+.ped-shadow { display: block; position: absolute; bottom: 123px; left: 50%; transform: translateX(-50%); width: 360px; height: 64px; border-radius: 50%; background: #000; opacity: .5; z-index: 1; }
+#ending [class^=spotlight-wrap] { transform: none }
+#ending [class^=spotlight-wrap] .light { position: absolute; max-width: none; width: 409px; height: 370px; top: 21px; left: 31px }
+#ending .spotlight-wrap-1 { left: 135px; animation: ani-light01 2.5s linear .25s infinite alternate }
+#ending .spotlight-wrap-2 { left: 404px; animation: ani-light01 2.5s linear .25s infinite alternate }
+#ending .spotlight-wrap-2 .light { width: 223px; height: 427px; left: 17px; top: 35px }
+#ending .spotlight-wrap-3 { left: 50%; transform: translateX(-50%) }
+#ending .spotlight-wrap-4 { right: 404px; left: auto; transform: scale(-1,1); animation: ani-light02 2.5s linear .25s infinite alternate }
+#ending .spotlight-wrap-4 .light { width: 223px; height: 427px; left: 17px; top: 35px }
+#ending .spotlight-wrap-5 { right: 135px; left: auto; transform: scale(-1,1); animation: ani-light02 2.5s linear .25s infinite alternate }
+#ending [class*=star0] { animation: twinkle .5s ease-in-out infinite alternate }
+#ending .star01 { top: 119px; left: 464px; transform: none }
+#ending .star02 { top: 222px; left: 462px; transform: none; animation-delay: .3s }
+#ending .star03 { top: 190px; left: 400px; transform: none; animation-delay: .5s }
+#ending .star04 { top: 220px; left: 801px; transform: none; animation-delay: .5s }
+#ending .star05 { top: 186px; left: 800px; transform: none; animation-delay: .5s }
+#ending .done-car { top: 458px; left: 602px; width: 566px; height: 169px; z-index: 3; } */
+/* .done-car i { display: block; width: 100%; height: 100%; background: url(../img/game01/done-car.png) no-repeat center / auto 100%; top: -45px; position: absolute; } */
+/* .dance-char-2 { top: 369px; left: 266px!important; transform: none!important; width: 131px; height: 210px }
+.dance-char-2 i { display: block; width: 100%; height: 100%; background: url(../img/game01/char-sub-2.svg) no-repeat center bottom / auto }
+.dance-char-2.on i { background-image: url(../img/game01/char-sub-3.svg) }
+.dance-char-2::before,
+.dance-char-3::before { content: ''; display: block; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 105px; height: 12px; border-radius: 50%; background: #000; opacity: .5; }
+.dance-char-3::before { width: 58px; }
+.dance-char-2.on::before { left: 60%; }
+.dance-char-3.on::before { left: 40%; }
+.dance-char-3 { top: 369px; right: 225px; left: auto!important; transform: none!important; width: 193px; height: 202px }
+.dance-char-3 i { display: block; width: 100%; height: 100%; background: url(../img/game01/char-sub02.svg) no-repeat center / auto 100% }
+.dance-char-3.on i { background-image: url(../img/game01/char-sub02-2.svg) } */
+
+@keyframes flying-ani01 { 50% { transform: translateY(-20px) }
+ }
+@keyframes flying-ani02 { 50% { transform: translateY(-20px) rotate(-45deg); }
+ }
+.ai01, .ai03 { animation: rolling-ani01 2.5s linear .25s infinite alternate }
+.ai02, .ai04 { animation: rolling-ani02 2s linear .5s infinite alternate }
+.ai03, .ai04, .ai07 { z-index:2 }
+.ai03 { animation-delay: .5s }
+.ai04 { animation-delay: .75s }
+.ai01 { top: 44px; left: 132px }
+.ai02 { top: 53px; left: 89px }
+.ai03 { left: 185px; top: 175px }
+.ai04 { left: 135px; top: 188px }
+.ai05 { left: 41px; top: 68px }
+.ai06 { left: 0px; top: 159px }
+.ai07 { left: 344px; top: 175px }
+.intro-ai .ai03 { left: 239px; top: 219px }
+.intro-ai .ai04 { left: 195px; top: 229px }
+.intro-ai .ai06 { left: 37px; top: 182px }
+.intro-ai .ai07 { left: 365px; top: 222px }
+
+#ending .bg-obj01 { top: 323px; left: 226px }
+#ending .bg-obj02 { left: 135px; top: 388px }
+#ending .bg-obj03 { left: 984px; top: 289px }
+#ending .bg-obj04 { left: 1045px; top: 370px }
+
+
+.guide-list .guide-item:nth-child(5) { padding-right:50px; }
+
+@keyframes estrela {
+ 0% { box-shadow: 0 0 10px 0px rgba(255, 255, 255, 0.05); }
+ 50% { box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.4); }
+ 100% { box-shadow: 0 0 10px 0px rgba(255, 255, 255, 0.05); }
+ }
+
+@keyframes estrelaDestacada {
+ 0% { background-color: #FFFFFF; box-shadow: 0 0 10px 0px rgba(255, 255, 255, 1); }
+ 20% { background-color: #FFC4C4; box-shadow: 0 0 10px 0px rgb(255, 196, 196, 1); }
+ 80% { background-color: #C4CFFF; box-shadow: 0 0 10px 0px rgb(196, 207, 255, 1); }
+ 100% { background-color: #FFFFFF; box-shadow: 0 0 10px 0px rgba(255, 255, 255, 0.2); }
+ }
+@keyframes twinkle {
+ 0% { opacity: 0 }
+ 100% { opacity: 1 }
+ }
+@keyframes sad01 {
+ 0% { transform: rotate(0) translate(0,0) }
+ 100% { transform: rotate(-31deg) translate(-4px,5px) }
+ }
+@keyframes sad02 {
+ 0% { transform: rotate(0) translate(0,0) }
+ 100% { transform: rotate(31deg) translate(4px,5px) }
+ }
+@keyframes tear {
+ 0% { opacity: 0; transform: translateY(0) }
+ 100% { opacity: 1; transform: translateY(25%) }
+ }
+
+@keyframes rolling-ani01 { 50% { transform: translate(-2px, 6px) rotate(-11deg); }
+ }
+@keyframes rolling-ani02 { 50% { transform: translate(0, -4px) rotate(12deg) }
+ }
+@keyframes ani-light01 {
+ 0% { transform: rotate(0) }
+ 100% { transform: rotate(-10deg) }
+ }
+@keyframes ani-light02 {
+ 0% { transform: rotate(0) scale(-1,1) }
+ 100% { transform: rotate(-10deg) scale(-1,1) }
+ }
+
+
+ .page01 .result-ai.wrong p, [data-page="1"] .result-ai.wrong p { bottom: 180px; left: 180px; transform: rotate(8deg); }
+ .page01 .result-ai.correct p, [data-page="1"] .result-ai.correct p { bottom: 197px; left: 195px; transform: rotate(9deg); }
+ .page02 .result-ai.correct p, [data-page="2"] .result-ai.correct p { bottom: 205px; left: 186px; }
+ .page02 .result-ai.wrong p, [data-page="2"] .result-ai.wrong p { bottom: 182px; left: 178px; }
+ .page03 .result-ai.wrong p, [data-page="3"] .result-ai.wrong p { bottom: 184px; left: 187px; }
+ .page03 .result-ai.correct p, [data-page="3"] .result-ai.correct p { bottom: 207px; left: 200px; }
+
+ .quizpad{position: absolute; bottom: 10px; left: 60px; width: 385px; height: 325px; background: url(../img/game01/quizpad.png) no-repeat center / contain;opacity: 0;}
+ .quizpad.on{opacity: 1; transition: 1s;}
+
+/* 돌 떨어지는 모션 */
+.falling-stone { position: absolute; top: -100px; z-index: 5;
+    opacity: 0; pointer-events: none; }
+
+/* 작은 돌 효과들 */
+.falling-stone.small.fade { animation: fallSmallStoneFade 2.5s ease-in forwards; }
+.falling-stone.small.spin { animation: fallSmallStoneSpin 2.5s ease-in forwards; }
+.falling-stone.small.bounce { animation: fallSmallStoneBounce 2.5s ease-in forwards; }
+
+/* 중간 돌 효과들 */
+.falling-stone.medium.fade { animation: fallMediumStoneFade 2s ease-in forwards; }
+.falling-stone.medium.spin { animation: fallMediumStoneSpin 2s ease-in forwards; }
+.falling-stone.medium.bounce { animation: fallMediumStoneBounce 2s ease-in forwards; }
+
+/* 큰 돌 효과들 */
+.falling-stone.large.fade { animation: fallLargeStoneFade 1.5s ease-in forwards; }
+.falling-stone.large.spin { animation: fallLargeStoneSpin 1.5s ease-in forwards; }
+.falling-stone.large.bounce { animation: fallLargeStoneBounce 1.5s ease-in forwards; }
+
+.rope-wrp,.intro-effect { position: relative; top: 0px; left: 0px; width: 100%; height: 100%; }
+.intro-effect img { position: absolute; }
+
+.rope1 { position: absolute; top: 0px; left: 125px; max-width: 100%; height: 125px; transform-origin: top center; animation: swing1 3s ease-in-out infinite; }
+.rope2 { position: absolute; top: 0px; left: 910px; max-width: 100%; height: 52px; transform-origin: top center; animation: swing2 2.5s ease-in-out infinite; }
+.rope3 { position: absolute; top: 0px; left: 920px; max-width: 100%; height: 152px; transform-origin: top center; animation: swing3 3.5s ease-in-out infinite; }
+
+/* 왼쪽 돌맹이 애니메이션 */
+#intro.show .intro-effect img:nth-child(1),
+#round.show .intro-effect img:nth-child(1) { top: -100px; left: 200px; animation: stoneFall1 4s ease-in-out infinite; }
+
+#intro.show .intro-effect img:nth-child(2),
+#round.show .intro-effect img:nth-child(2) { top: -100px; left: 120px; animation: stoneFall2 5s ease-in-out infinite; }
+
+#intro.show .intro-effect img:nth-child(3),
+#round.show .intro-effect img:nth-child(3) { top: -100px; left: 90px; animation: stoneFall3 6s ease-in-out infinite; }
+
+#intro.show .intro-effect img:nth-child(4),
+#round.show .intro-effect img:nth-child(4) { top: -100px; left: 150px; animation: stoneFall4 4.5s ease-in-out infinite; }
+
+#intro.show .intro-effect img:nth-child(5),
+#round.show .intro-effect img:nth-child(5) { top: -100px; left: 180px; animation: stoneFall5 5.5s ease-in-out infinite; }
+
+#intro.show .intro-effect img:nth-child(6),
+#round.show .intro-effect img:nth-child(6) { top: -100px; right: 180px; animation: stoneFall6 4.8s ease-in-out infinite; }
+
+#intro.show .intro-effect img:nth-child(7),
+#round.show .intro-effect img:nth-child(7) { top: -100px; right: 100px; animation: stoneFall7 5.2s ease-in-out infinite; }
+
+#intro.show .intro-effect img:nth-child(8),
+#round.show .intro-effect img:nth-child(8) { top: -100px; right: 100px; animation: stoneFall8 6.2s ease-in-out infinite; }
+
+@keyframes stoneFall1 {
+    0% {
+        transform: translateY(-100%) translateX(0) scale(0.5) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: .1;
+    }
+    100% {
+        transform: translateY(500px) translateX(20px) scale(0.5) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes stoneFall2 {
+    0% {
+        transform: translateY(-100%) translateX(0) scale(0.5) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: .1;
+    }
+    100% {
+        transform: translateY(500px) translateX(-15px) scale(0.5) rotate(-360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes stoneFall3 {
+    0% {
+        transform: translateY(-100%) translateX(0) scale(0.5) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: .1;
+    }
+    100% {
+        transform: translateY(500px) translateX(30px) scale(0.5) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+@keyframes stoneFall4 {
+    0% {
+        transform: translateY(-100%) translateX(0) scale(0.5) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: .1;
+    }
+    100% {
+        transform: translateY(500px) translateX(-25px) scale(0.5) rotate(-540deg);
+        opacity: 0;
+    }
+}
+
+@keyframes stoneFall5 {
+    0% {
+        transform: translateY(-100%) translateX(0) scale(0.5) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: .1;
+    }
+    100% {
+        transform: translateY(500px) translateX(15px) scale(0.5) rotate(450deg);
+        opacity: 0;
+    }
+}
+
+@keyframes stoneFall6 {
+    0% {
+        transform: translateY(-100%) translateX(0) scale(0.5) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: .1;
+    }
+    100% {
+        transform: translateY(500px) translateX(-20px) scale(0.5) rotate(-630deg);
+        opacity: 0;
+    }
+}
+
+@keyframes stoneFall7 {
+    0% {
+        transform: translateY(-100%) translateX(0) scale(0.5) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: .1;
+    }
+    100% {
+        transform: translateY(500px) translateX(25px) scale(0.5) rotate(540deg);
+        opacity: 0;
+    }
+}
+
+@keyframes stoneFall8 {
+    0% {
+        transform: translateY(-100%) translateX(0) scale(0.5) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: .1;
+    }
+    100% {
+        transform: translateY(500px) translateX(-30px) scale(0.5) rotate(-720deg);
+        opacity: 0;
+    }
+}
+
+/* 작은 돌 애니메이션 */
+@keyframes fallSmallStoneFade {
+    0% {
+        opacity: 1;
+        transform: translateY(0) scale(1) rotate(0deg);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(600px) scale(0.5) rotate(180deg);
+    }
+}
+
+@keyframes fallSmallStoneSpin {
+    0% {
+        opacity: 1;
+        transform: translateY(0) scale(1) rotate(0deg);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(600px) scale(0.5) rotate(360deg);
+    }
+}
+
+@keyframes fallSmallStoneBounce {
+    0% {
+        opacity: 1;
+        transform: translateY(0) scale(1) rotate(0deg);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(600px) scale(0.5) rotate(180deg);
+    }
+}
+
+/* 중간 돌 애니메이션 */
+@keyframes fallMediumStoneFade {
+    0% {
+        opacity: 1;
+        transform: translateY(0) scale(1) rotate(0deg);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(600px) scale(0.5) rotate(180deg);
+    }
+}
+
+@keyframes fallMediumStoneSpin {
+    0% {
+        opacity: 1;
+        transform: translateY(0) scale(1) rotate(0deg);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(600px) scale(0.5) rotate(360deg);
+    }
+}
+
+@keyframes fallMediumStoneBounce {
+    0% {
+        opacity: 1;
+        transform: translateY(0) scale(1) rotate(0deg);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(600px) scale(0.5) rotate(180deg);
+    }
+}
+
+/* 큰 돌 애니메이션 */
+@keyframes fallLargeStoneFade {
+    0% {
+        opacity: 1;
+        transform: translateY(0) scale(1) rotate(0deg);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(600px) scale(0.5) rotate(180deg);
+    }
+}
+
+@keyframes fallLargeStoneSpin {
+    0% {
+        opacity: 1;
+        transform: translateY(0) scale(1) rotate(0deg);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(600px) scale(0.5) rotate(360deg);
+    }
+}
+
+@keyframes fallLargeStoneBounce {
+    0% {
+        opacity: 1;
+        transform: translateY(0) scale(1) rotate(0deg);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(600px) scale(0.5) rotate(180deg);
+    }
+}
+
+@keyframes swing1 {
+    0%, 100% {
+        transform: translateX(-10px);
+    }
+    50% {
+        transform: translateX(10px);
+    }
+}
+
+@keyframes swing2 {
+    0%, 100% {
+        transform: translateX(-8px);
+    }
+    50% {
+        transform: translateX(8px);
+    }
+}
+
+@keyframes swing3 {
+    0%, 100% {
+        transform: translateX(-10px);
+    }
+    50% {
+        transform: translateX(10px);
+    }
+}
+*:focus-visible {outline: 3px solid #0d6efd !important;outline-offset: 2px;box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, .25) !important; border-radius: 4px;}

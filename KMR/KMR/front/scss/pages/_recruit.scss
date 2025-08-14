@@ -1,0 +1,174 @@
+.recruit{
+    .media-state{
+        margin-top: rem(40px);
+        &>.badge{
+            min-width: 0;
+            padding-left: rem(12px);
+            padding-right: rem(12px);
+        }
+    }
+
+    &-process{
+        .circle-process{
+            margin-top: rem(40px);
+
+            @include media-min(lg){
+                --gap: 32px;
+                &-item:not(:last-child)::after{
+                    --size: 16px;
+                }
+            }
+
+            &-item{
+                max-width: 193px;
+            }
+        }
+
+        margin: rem(24px) 0 rem(65px);
+
+        @include media-max(md){
+            margin-bottom: rem(24px);
+        }
+    }
+}
+
+//kmr 채용
+.kmr-team{
+    @include media-min(xl){
+        .flex-wrp{
+            .aside{
+                flex-basis: 400px;
+                max-width: 400px;
+            }
+            .desc{
+                max-width: 760px;
+            }
+        }
+    }
+}
+
+.work-way{
+    &>li{
+        margin-bottom: rem(24px);
+        
+    }
+
+    .bx-gray{
+        padding: 48px 56px;
+
+        @include media-max(xl){
+            padding: rem(24px);
+        }
+    }
+
+    .list-box{
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        font-weight: 500;
+        @include media-max(md){
+            flex-direction: column;
+            align-items: flex-start;
+
+            img{
+                margin-top: 20px;
+                margin-left: auto;
+            }
+        }
+    }
+}
+
+.kmr-team-swiper, .kmr-team-swiper2{
+    .swiper-slide{
+        border-radius: 16px;
+        overflow: hidden;
+        cursor: pointer;
+    }
+}
+
+.kmr-team-swiper .swiper-slide {
+    opacity: 0.4;
+    aspect-ratio: 1/1;
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    &.swiper-slide-thumb-active {
+        opacity: 1;
+    }
+}
+
+.kmr-team-swiper{
+    @include media-max(xl){
+        display: none;
+    }
+}
+
+.kmr-team-swiper2{
+    height: 500px;
+    .swiper-slide{
+        width: 100% !important;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    @include media-max(xl){
+        height: 300px;
+    }
+}
+
+.work-controls{
+    margin: rem(68px) 0 rem(24px);
+    align-items: center;
+    .swiper-pagination.swiper-pagination-fraction.swiper-pagination-horizontal{
+        span{
+            width: 7px;
+            font-family: $font-mont;
+            font-weight: 600;
+        }
+    }
+    .swiper-pagination-fraction {
+        position:static;
+        bottom: 0px;
+        left: 0;
+        width: 50px;
+        display: flex;
+        margin-right: 24px;
+        gap: 12px;
+        color: #0000003d;
+        .swiper-pagination-current{
+            color: #000;
+        }
+    }
+}
+
+.benefit{
+    &>section:not(:first-child){
+        margin-top: rem(80px);
+        padding-top: rem(80px);
+        border-top: 1px solid #E5E5E5;
+
+        @include media-max(md){
+            margin-top: rem(50px);
+            padding-top: rem(50px);
+        }
+    }
+
+    @include media-min(md){
+        .intro-card{
+            min-height: rem(180px);
+        }
+    }
+
+    .intro-card-content{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        p{
+            margin-top: auto;
+        }
+    }
+}

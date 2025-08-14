@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="ko">
+<head>
+	<meta charset="utf-8" />
+	<meta content="width=1280,height=720" name="viewport" />
+	<title></title>
+	<script src="../common/js/jquery.min.js"></script>
+	<script src="../common/js/jquery-ui.min.js"></script>
+	<script src="../common/js/jquery.ui.touch-punch.min.js"></script>
+	<script src="../common/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../common/css/minigame.css" />
+	<link rel="stylesheet" type="text/css" href="../css/game01.css" />
+	<script src="../common/js/lang-translate.js"></script> <!-- 언어 번역 xAPI-->
+
+	<!-- 반응형 스케일 조정 -->
+	<link rel="stylesheet" type="text/css" href="../common/css/scale_responsive.css" />
+	<script src="../common/js/scale_responsive.js"></script>
+</head>
+<body>
+
+	<div id="wrap" class="step wrapper" data-level="normal">
+		<ul class="util-menu">
+			<li id="lang" class="active">
+				<button type="button" class="lang"><i class="icon-ko"></i>한국어<i class="icon-arrow-up"></i></button>
+				<ul class="lang-item">
+					<li><button type="button"><i class="icon-jp"></i>日本語</button></li>
+					<li><button type="button"><i class="icon-en"></i>English</button></li>
+					<li><button type="button"><i class="icon-ch"></i>中文</button></li>
+				</ul>
+			</li>
+			<li class="active">
+				<button type="button" class="icon-speaker" data-bgm="../lesson01/media/bgm.mp3">
+					<i class="icon-spk disabled">배경음</i>
+				</button>
+			</li>
+			<li class="active">
+				<!-- <button type="button" class="icon-close" onclick="window.close();window.parent.close();">닫기</button> -->
+			</li>
+		</ul>
+		<div class="game-wrp begin-bg" id="stage_md">
+			<button type="button" class="icon-home d-none" data-role="reset">첫 화면</button>
+			<div class="game-body" data-page="1">
+				<!-- 배경 -->
+				<img src="../img/game01/bg-obj02.jpg" aria-hidden="true" alt="" class="bg">
+				<div class="gauge">
+					<img src="../img/game01/strength-arm.png" class="strength-arm" width="70" alt="">
+					<img src="../img/game01/strength.png" width="240" alt="">
+					<span class="gauge-bar" style="width: 96%;"></span>
+				</div>
+				<!-- <div class="bg-obj">
+					<img src="../img/game01/bg-obj02.png" alt="" class="bg-obj02">
+					<img src="../img/game01/bg-obj03.png" alt="" class="bg-obj03">
+				</div> -->
+				<!-- 배경 -->
+
+				<!-- 홈 -->
+				<div class="game-stage" id="home">
+					<!-- <p class="level-title">Level 2</p> -->
+					<img src="../img/game01/level2.png" alt="난이도 중" class="level-title" >
+					<img src="../img/game01/intro-title.png" alt="보석을 캐자!" class="home-title" style="top: 95px">
+					<img src="../img/game01/char.png" class="start-char" aria-hidden="true" alt="">
+					<!-- <img src="../img/game01/bg-obj01.png" class="start-obj" aria-hidden="true" alt=""> -->
+					<img src="../img/game01/bg-obj01.jpg" alt="보석을 캐자!" class="bg-obj01">
+
+					<button type="button" class="btn btn-start" data-role="init"><span data-translate>시작하기</span></button>
+					<!-- <button type="button" class="btn btn-circle" data-role="guide">
+						<span class="home-balloon">놀이 방법</span>
+					</button> -->
+				</div>
+				<!-- 인트로 -->
+				<div class="game-stage intro-stage" id="intro">
+					<img src="../img/game01/char.png" alt="" class="intro-char">
+					<div class="pages">
+
+					</div>
+					<div class="step-wrp">
+						<div class="step-bx bx">
+							<div class="bx">
+								<h3 data-translate>여긴 보물 사냥터야. 힘 없이는 아무것도 못 하지! 문제를 맞힐수록 힘이 유지되고, 틀릴수록 줄어들어. 집중해서 풀어야 보물까지 갈 수 있을 거야!</h3>
+							</div>
+							<button type="button" class="btn btn-cmp" data-role="start"><span data-translate>확인</span></button>
+						</div>
+					</div>
+				</div>
+				<!-- // 인트로 -->
+
+				<!-- 문제 -->
+				<div class="game-stage question-stage" id="round" data-nowStage="" data-answer="">
+
+                    <div class="progress-wrap">
+						<div class="progress-label text-nowrap">
+							<span  data-translate>남은 문제</span>
+						</div>
+						<div class="progress-value">
+							<span class="progress-current">6</span>
+							<span style="display: inline-block; width: 10px; text-align: center;">/</span>
+							<span class="progress-total">6</span>
+						</div>
+					</div>
+					<!-- <img src="../img/game01/drop-rock.png" class="drop-rock" alt=""> -->
+					<img src="../img/game01/bg-obj03.jpg" alt="동굴 배경" class="bg-obj03" width="1280">
+					<div class="rope-wrp">
+						<img src="../img/game01/rope1.png" alt="" class="rope1">
+						<img src="../img/game01/rope2.png" alt="" class="rope2">
+						<img src="../img/game01/rope3.png" alt="" class="rope3">
+						<div class="intro-effect">
+							<img src="../img/game01/drop-stone-26.png" alt="">
+							<img src="../img/game01/drop-stone-25.png" alt="">
+							<img src="../img/game01/drop-stone-14.png" alt="">
+							<img src="../img/game01/drop-stone-15.png" alt="">
+
+							<img src="../img/game01/drop-stone-12.png" alt="">
+							<img src="../img/game01/drop-stone-17.png" alt="">
+							<img src="../img/game01/drop-stone-18.png" alt="">
+							<img src="../img/game01/drop-stone-13.png" alt="">
+						</div>
+					</div>
+					<div class="base">
+						<span class="answer-jewel answer-jewel01"><img src="../img/game01/jewel01.png" alt=""></span>
+						<img src="../img/game01/left-rock01.png" class="left-rock01" alt="">
+
+						<img src="../img/game01/left-rock02.png" class="left-rock02" alt="">
+
+						<span class="answer-jewel answer-jewel03"><img src="../img/game01/jewel03.png" alt=""></span>
+						<span class="answer-jewel answer-jewel04"><img src="../img/game01/jewel04.png" alt=""></span>
+
+						<img src="../img/game01/right-rock01.png" class="right-rock01" alt="">
+						<span class="answer-jewel answer-jewel02"><img src="../img/game01/jewel02.png" alt=""></span>
+						<img src="../img/game01/right-rock02.png" class="right-rock02" alt="">
+					</div>
+
+					<div class="cart">
+						<div class="img-wrp">
+							<img src="../img/game01/cart.png" width="500" alt="보석 수레">
+							<div class="quizpad" role="region" aria-label="문제 이미지" tabindex="-1"></div>
+						</div>
+					</div>
+
+					<div class="text-box noneClick" role="region" aria-label="문제 영역">
+						<div class="stage-text stage01 show">
+							<!-- <p></p> -->
+							&nbsp;
+							<div class="answer-text answer-text01">
+								<p></p>
+								<p></p>
+								<p></p>
+							</div>
+							<button class="btn btn-next" type="button" tabindex="-1">
+								<span class="sr-only">다음 스테이지로</span>
+							</button>
+
+							<button class="btn btn-complete" disabled type="button">
+								<span class="sr-only">정답 확인하기</span>
+							</button>
+
+							<button class="btn btn-delete" type="button">
+								<span class="sr-only">알파벳 지우고 다시하기</span>
+							</button>
+						</div>
+
+						<div class="stage-text stage02" tabindex="-1">
+							<!-- <p>Can I eat the</p> -->
+							&nbsp;
+							<div class="answer-text answer-text02">
+								<p></p>
+								<p></p>
+								<p></p>
+							</div>
+
+							<button class="btn btn-next" type="button" tabindex="-1">
+								<span class="sr-only">다음 스테이지로</span>
+							</button>
+
+							<button class="btn btn-complete" disabled type="button">
+								<span class="sr-only">정답 확인하기</span>
+							</button>
+
+							<button class="btn btn-delete" type="button">
+								<span class="sr-only">알파벳 지우고 다시하기</span>
+							</button>
+						</div>
+
+						<div class="stage-text stage03" tabindex="-1">
+							<!-- <p>Can I set the</p> -->
+							&nbsp;
+							<div class="answer-text answer-text02">
+								<p></p>
+								<p></p>
+								<p></p>
+							</div>
+
+							<button class="btn btn-next" type="button" tabindex="-1">
+								<span class="sr-only">다음 스테이지로</span>
+							</button>
+
+							<button class="btn btn-complete" disabled type="button">
+								<span class="sr-only">정답 확인하기</span>
+							</button>
+
+							<button class="btn btn-delete" type="button">
+								<span class="sr-only">알파벳 지우고 다시하기</span>
+							</button>
+						</div>
+
+						<div class="stage-text stage04" tabindex="-1">
+							<!-- <p>Can I pick a</p> -->
+							&nbsp;
+							<div class="answer-text answer-text02">
+								<p></p>
+								<p></p>
+								<p></p>
+							</div>
+
+							<button class="btn btn-next" type="button" tabindex="-1">
+								<span class="sr-only">다음 스테이지로</span>
+							</button>
+
+							<button class="btn btn-complete" disabled type="button">
+								<span class="sr-only">정답 확인하기</span>
+							</button>
+
+							<button class="btn btn-delete" type="button">
+								<span class="sr-only">알파벳 지우고 다시하기</span>
+							</button>
+						</div>
+
+						<div class="stage-text stage05" tabindex="-1">
+							<!-- <p>Can I use the</p> -->
+							&nbsp;
+							<div class="answer-text answer-text02">
+								<p></p>
+								<p></p>
+								<p></p>
+							</div>
+
+							<button class="btn btn-next" type="button" tabindex="-1">
+								<span class="sr-only">다음 스테이지로</span>
+							</button>
+
+							<button class="btn btn-complete" disabled type="button">
+								<span class="sr-only">정답 확인하기</span>
+							</button>
+
+							<button class="btn btn-delete" type="button">
+								<span class="sr-only">알파벳 지우고 다시하기</span>
+							</button>
+						</div>
+
+						<div class="stage-text stage06" tabindex="-1">
+							<!-- <p>Can I drink</p> -->
+							&nbsp;
+							<div class="answer-text answer-text02">
+								<p></p>
+								<p></p>
+								<p></p>
+							</div>
+
+							<button class="btn btn-next" type="button" tabindex="-1">
+								<span class="sr-only">다음 스테이지로</span>
+							</button>
+
+							<button class="btn btn-complete" disabled type="button">
+								<span class="sr-only">정답 확인하기</span>
+							</button>
+
+							<button class="btn btn-delete" type="button">
+								<span class="sr-only">알파벳 지우고 다시하기</span>
+							</button>
+						</div>
+					</div>
+
+					<div class="choice-box noneClick">
+						<ul class="choice-list choice-list01 show">
+							<li type="button">use</li>
+							<li type="button">the phone?</li>
+							<li type="button">Can I</li>
+						</ul>
+
+						<ul class="choice-list choice-list02">
+							<li type="button">Can I</li>
+							<li type="button">set</li>
+							<li type="button">the phone?</li>
+						</ul>
+
+						<ul class="choice-list choice-list03">
+							<li type="button">Can I</li>
+							<li type="button">eat</li>
+							<li type="button">the phone?</li>
+						</ul>
+
+						<ul class="choice-list choice-list04">
+							<li type="button">Can I</li>
+							<li type="button">move</li>
+							<li type="button">the phone?</li>
+						</ul>
+
+						<ul class="choice-list choice-list05">
+							<li type="button">Can I</li>
+							<li type="button">handed</li>
+							<li type="button">the phone?</li>
+						</ul>
+
+						<ul class="choice-list choice-list06">
+							<li type="button">Can I</li>
+							<li type="button">make</li>
+							<li type="button">the phone?</li>
+						</ul>
+					</div>
+				</div>
+				<!-- // 문제 -->
+
+				<!-- 활동 -->
+				<div class="game-stage act-stage01" id="act">
+					<img src="../img/game01/bg-obj04.jpg" alt="" class="bg-obj04">
+					<img src="../img/game01/char.png" alt="" class="intro-char">
+
+					<ul class="pick_jewels">
+						<li class="pick_jewel pick_jewel01 active">
+							<img src="../img/game01/work-jewel01_01.png" alt="">
+						</li>
+						<li class="pick_jewel pick_jewel02 active">
+							<img src="../img/game01/work-jewel02_01.png" alt="">
+						</li>
+						<li class="pick_jewel pick_jewel03 active">
+							<img src="../img/game01/work-jewel03_01.png" alt="">
+						</li>
+						<li class="pick_jewel pick_jewel04 active">
+							<img src="../img/game01/work-jewel04_01.png" alt="">
+						</li>
+						<li class="pick_jewel pick_jewel05 active">
+							<img src="../img/game01/work-jewel05_01.png" alt="">
+						</li>
+						<li class="pick_jewel pick_jewel06 active">
+							<img src="../img/game01/work-jewel06_01.png" alt="">
+						</li>
+					</ul>
+
+					<div class="pick fade-out">
+						<img src="../img/game01/pick.png" alt="">
+					</div>
+
+					<div class="step-wrp1">
+						<div class="step-bx bx">
+							<div class="bx">
+								<h3 data-translate>
+									힘이 남은 만큼만 보석을 캘 수 있어.<br>
+									자, 캐러 가자!
+								</h3>
+							</div>
+							<button type="button" class="btn btn-cmp" data-role="start"><span data-translate>확인</span></button>
+						</div>
+					</div>
+				</div>
+				<!-- // 활동 -->
+
+				<!-- 성공 -->
+				<div class="game-stage ending-page" id="ending">
+					<img src="../img/game01/ending-bg.jpg" class="ending-bg">
+					<img src="../img/game01/char2.png" class="ending-char" alt="">
+					<span class="ending-bubble" data-translate>대단한 걸?<br>고생했어!</span>
+
+					<ul class="ending-jewels">
+						<li class="ending-jewel ending-jewel01">
+							<img src="../img/game01/ending-jewel01.png" alt="">
+						</li>
+						<li class="ending-jewel ending-jewel02">
+							<img src="../img/game01/ending-jewel02.png" alt="">
+						</li>
+						<li class="ending-jewel ending-jewel03">
+							<img src="../img/game01/ending-jewel03.png" alt="">
+						</li>
+						<li class="ending-jewel ending-jewel04">
+							<img src="../img/game01/ending-jewel04.png" alt="">
+						</li>
+						<li class="ending-jewel ending-jewel05">
+							<img src="../img/game01/ending-jewel05.png" alt="">
+						</li>
+						<li class="ending-jewel ending-jewel06">
+							<img src="../img/game01/ending-jewel06.png" alt="">
+						</li>
+					</ul>
+
+					<button type="button" class="btn  btn-reset"><span data-translate>다시 하기</span></button>
+				</div>
+				<!-- // 성공 -->
+
+				<!-- 실패 -->
+				<div class="game-stage fail-stage" id="ending">
+					<img src="../img/game01/char3.png" alt="" class="intro-char">
+					<img src="../img/game01/bg-obj05.jpg" alt="동굴 배경" class="bg-obj05" width="1280">
+					<div class="step-wrp2">
+						<div class="step-bx bx">
+							<div class="bx">
+								<h3 data-translate>힘이 바닥났네.<br>
+									잠시 쉬고 다시 도전해 봐.
+									</h3>
+							</div>
+						</div>
+					</div>
+
+					<button type="button" class="btn  btn-reset"><span data-translate>다시 하기</span></button>
+				</div>
+				<!-- // 실패패 -->
+			</div>
+		</div>
+	</div>
+
+	<script src="../common/js/minigame01.js"></script>
+	<script src="data/game01.data.js"></script>
+	<script src="../js/game02.js"></script>
+	<script>
+		gameInit('01', mg01_a); // 게임 타입, 데이터 변수명, *사회면 social * 수학/과학은 차시.단원.주제
+	</script>
+</body>
+</html>

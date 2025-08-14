@@ -1,0 +1,1081 @@
+// iso 인증절차
+.round-process {
+    display: flex;
+    --gap: 36px;
+    gap: var(--gap);
+    .round-process-content {
+        background: #EFEFEF;
+        border-radius: rem(800px);
+        padding: rem(24px) rem(8px);
+        flex: 1;
+        text-align: center;
+        position: relative;
+
+        &:not(:last-child)::after {
+            content: "";
+            position: absolute;
+            --size: 20px;
+            right: calc(-0.5 * var(--gap) - var(--size) / 2);
+            top: 50%;
+            transform: translateY(-50%);
+            width: var(--size);
+            height: var(--size);
+            background: url(../img/bt_arr2.svg) no-repeat center / contain;
+        }
+    }
+}
+
+// iso 인증서비스 개별스타일
+.bx-process-wrp {
+    --gutters-margin: -8px;
+    row-gap: 16px;
+
+    .bx-gray {
+        display: inline-block;
+        padding: 24px;
+        width: 100%;
+        height: 100%;
+        font-weight: 700;
+        color: #000;
+    }
+
+    .num {
+        display: block;
+        margin-bottom: 36px;
+    }
+
+    @include media-max(md){
+        --gutters-margin: -4px;
+        row-gap: 8px;
+        font-size: 16px;
+
+        .num {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.bx-expect {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 24px;
+
+    .top-img {
+        display: inline-block;
+        max-width: 405px;
+        mix-blend-mode: multiply;
+    }
+
+    .font-mont {
+        letter-spacing: -0.03em;
+    }
+
+    .img-wrp {
+        width: 132px;
+        flex-shrink: 0;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        border-radius: rem(16px);
+
+        @include media-max(md){
+            border-radius: 8px;
+        }
+
+        &.bg-007dbc{
+            background: #007dbc;
+        }
+        &.bg-00aed9{
+            background: #00aed9;
+        }
+        &.bg-fdb713{
+            background: #fdb713;
+        }
+        &.bg-8f1838{
+            background: #8f1838;
+        }
+        &.bg-f36d25{
+            background: #f36d25;
+        }
+        &.bg-f99d26{
+            background: #f99d26;
+        }
+        &.bg-02558b{
+            background: #02558b;
+        }
+        &.bg-279b48{
+            background: #279b48;
+        }
+    }
+
+    .expect-desc {
+        padding: 16px 24px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        width: 100%;
+
+        strong {
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+    }
+
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 16px;
+        column-gap: 24px;
+        margin-top: 24px;
+
+        li {
+            display: flex;
+            width: calc(50% - 12px);
+            background: #fff;
+            border-radius: 16px;
+            min-height: 132px;
+            
+
+            &:nth-last-child(1):nth-child(odd) {
+                width: 100%;
+            }
+        }
+    }
+
+    @include media-max(xl){
+        padding: 24px;
+
+        .top-img {
+            max-width: 405px;
+            width: 100%;
+        }
+
+        .img-wrp {
+            width: 100px;
+            height: auto;
+        }
+
+        .expect-desc {
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            justify-content: space-between;
+            margin-left: rem(16px);
+
+            strong {
+                margin-bottom: 4px;
+            }
+        }
+
+        ul {
+            display: block;
+            margin-top: 24px;
+
+            li {
+                width: 100%;
+                min-height: 112px;
+                padding: 20px;
+                align-items: flex-start;
+                margin-top: rem(16px);
+
+                &:first-child {
+                    margin-top: 0;
+                }
+
+                
+            }
+        }
+    }
+
+    @include media-max(sm){
+        padding: 16px;
+
+        .top-img {
+            max-width: 234px;
+            width: 100%;
+        }
+
+        .img-wrp {
+            width: 80px;
+            height: 80px;
+        }
+    }
+}
+
+.isomenu {
+    position: relative;
+    background: #fff;
+    left: 0;
+    z-index: 100;
+    margin-bottom: rem(13px);
+
+    @include media-min(xl){
+        position: sticky;
+        top: var(--hd);
+        &.is-sticky{
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .icon-close-gray{display: none;}
+    }
+
+    .depth-wrp {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: rem(24px);
+        padding: rem(16px) var(--container-padding) rem(27px);
+        margin-left: calc(var(--container-padding) * -1);
+        margin-right: calc(var(--container-padding) * -1);
+
+        @include media-max(xl){
+            gap: rem(16px);
+            white-space: nowrap;
+            overflow-x: auto;
+        }
+
+        &::-webkit-scrollbar {
+            height: 0;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: #ccc;
+            border-radius: 2em;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        button{
+            position: relative;
+            padding-bottom: 8px;
+            transition: .1s;
+            font-weight: 700;
+            color: #ccc;
+            line-height: 1.6;
+
+            &::after {
+                content: "";
+                position: absolute;
+                display: inline-block;
+                width: 24px;
+                height: 1px;
+                background: currentColor;
+                left: 0;
+                bottom: 0;
+                transition: .2s;
+
+            }
+
+            &:hover, &.active{
+                color: var(--primary);
+
+                &::after {
+                    width: 50px;
+                }
+            }
+
+        }
+    }
+
+    .sidemenu {
+        position: absolute;
+        background: #fff;
+        border-radius: 24px;
+        padding: 24px;
+        filter: drop-shadow(0px 0px 16px rgba(0, 0, 0, 0.1));
+        max-width: 500px;
+        top: 100%;
+
+        @include media-max(xl){
+            position: relative;
+            left: 0 !important;
+            width: 100%;
+            margin-bottom: rem(40px);
+            max-width: none;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: rem(27px);
+            height: rem(18px);
+            background: url(../img/lnb-bubble-tail.png) no-repeat center center / contain;
+            left: 15px;
+            bottom: 100%;
+            margin-bottom: -1px;
+
+            @include media-max(xl){
+                display: none;
+            }
+        }
+
+        &:not(.active){
+            display: none;
+        }
+
+        &-list {
+            li + li { margin-top: 8px; }
+
+            a {
+                display: flex;
+                gap: 8px;
+                color: #666;
+                font-size: rem(16px);
+
+                .text-primary {
+                    min-width: 6em;
+                }
+
+                &:hover>div:last-child{
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+
+
+.bd-dashed-red {
+    outline: 2px dashed red;
+    outline-offset: -2px;
+    border-radius: 24px;
+}
+
+.btn:has(.icon-forward) {
+    width: rem(56px);
+    height: rem(56px);
+    min-width: 0;
+    text-align: center;
+    padding: 0;
+    margin-bottom: rem(32px);
+
+    .icon-forward {
+        width: rem(32px);
+        height: rem(32px);
+        flex-shrink: 0;
+        background-image: url(../img/icon_forward.svg);
+    }
+    
+    @include media-max(sm){
+        width: rem(40px);
+        height: rem(40px);
+        margin-bottom: rem(24px);
+
+        .icon-forward {
+            width: rem(20px);
+            height: rem(20px);
+        }
+
+    }
+
+}
+
+// ---------------------------------------------------------------------------------
+.opacity-0 {
+    opacity: 0;
+}
+.keep-all {
+    word-break: keep-all;
+}
+// 인증종류
+.icon-plus-red {
+    width: rem(24px);
+    height: rem(24px);
+    background-image: url(../img/iso/service01/icon-plus-red.svg);
+}
+.icon-btn-x {
+    width: rem(24px);
+    height: rem(24px);
+    background-image: url(../img/iso/service01/icon-btn-x.svg);
+}
+.auth-type {
+    position: relative;
+    padding-top: rem(120px);
+
+    @include media-max(md){
+        padding-top: 60px;
+    }
+
+    .bg-overlay {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        margin-left: -50vw;
+        width: 100vw;
+        bottom: -200px;
+        background: linear-gradient(180deg, #fff 0%, #efefef 45%);
+        z-index: -1;
+    }
+
+
+    h3 {text-align: center;}
+    position: relative;
+
+    .content-wrp {
+        margin-top: rem(80px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+        .category-list {
+            position: relative;
+            z-index: 9;
+            &::after {
+                content: "";
+                position: absolute;
+                background: url(../img/iso/service01/1.png) no-repeat center / contain;
+                background-size: 65.111111rem 32.111111rem;
+                width: 1586px;
+                height: 740px;
+                top: 50%;
+                left: 50%;
+                z-index: -1;
+                transform: translate(-50%, -50%);
+            }
+            .circle-process {
+                gap: rem(16px);
+                margin-top: rem(80px);
+                &-item {
+                    position: relative;
+                    .circle-process-content {
+                        background-color: #fff;
+                        cursor: pointer;
+                        &:hover, &.is-active  {
+                            background: #DB0032;
+                            color: #fff;
+                            .icon-plus-red {
+                                background-image: url(../img/iso/service01/icon-plus.svg);
+                            }
+                        }
+                    }
+                    
+                      // 팝오버 기본 숨김
+                    .category-popover {
+                        display: none;
+                        position: absolute;
+                        top: 100%;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        margin-top: 12px;
+                        width: 320px;
+                        padding: 24px 32px;
+                        background: #fff;
+                        box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.10);
+                        border-radius: 24px;
+                        z-index: 10;
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            background: url(../img/iso/service01/popover-tail.png);
+                            width: rem(32px);
+                            height: rem(32px);
+                            top: rem(-24px);
+                            left: 50%;
+                            transform: translateX(-50%);
+                        }
+                        hr {
+                            margin: rem(16px) 0;
+                        }
+                        .popover-list {
+                            .mark-round {
+                                color: #333;
+                                font-size: 20px;
+                                &::before {
+                                    background: #DB0032;
+                                }
+                                + .mark-round {
+                                    margin-top: rem(8px);
+                                }
+                            }
+                        }
+                    }
+                }
+                
+            }
+            .circle-process-item:not(:last-child)::after { 
+                content: none;
+            }
+            .desc-box-group {
+                margin-top: rem(80px);
+                .desc-box {
+                    &-body {
+                        margin-top: rem(8px);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.wave-circle {
+    background: url(../img/wave-circle.png) no-repeat center/100% auto;
+    border-radius: 50%;
+    width: 90%;
+    max-width: rem(380px);
+    aspect-ratio: 1/1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+    margin: 0 auto;
+    color: #fff;
+    gap: rem(16px);
+
+    @include media-min(xl){
+        font-size: rem(20px);
+    }
+
+    &>p{
+        padding-bottom: 10%;
+    }
+
+    .wave {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        &::before, &::after  {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.06);
+            border-radius: 50%;
+            transform: scale(1);
+            top: 0;
+            left: 0;
+            animation: wavePulse 1s linear infinite;
+        }
+        &:nth-child(1)::after {
+            animation-delay: 0.5s;
+        }
+        &:nth-child(2)::before {
+            animation-delay: 1s;
+        }
+        &:nth-child(2)::after {
+            animation-delay: 1.5s;
+        }
+    }
+}
+
+@keyframes wavePulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1.3);
+        opacity: 0;
+    }
+}
+
+// 인증절차
+.iso-procedure .procedure-desc {
+    min-height: auto;
+    padding: rem(24px) rem(8px);
+    border-radius: rem(800px);
+}
+
+.flow-section {
+    display: flex;
+    flex-direction: column;
+    gap: rem(8px);
+
+    &-box{
+        padding: rem(24px);
+        border-radius: 16px;
+        text-align: center;
+    }
+
+    .row{
+        --gutters-margin: -4px;
+    }
+
+    .bx-gray{
+        padding-left: 16px;
+        padding-right: 16px;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+// 왜! KMR인증을 선택하는가
+.vertical-line {
+    display: inline-block;
+    width: rem(2px);
+    height: rem(8px);
+    background-color: #ccc;
+    vertical-align: middle;
+    margin: 0 rem(8px);
+}
+
+.service-section {
+    display: flex;
+    flex-direction: column;
+    gap: rem(24px);
+
+    &+&{
+        margin-top: rem(40px);
+    }
+
+    .fs-6 {
+        padding: rem(12px) rem(24px);
+        border-radius: 16px;
+        background: #f6f6f6;
+    }
+
+    .card-content {
+        display: flex;
+        align-items: center;
+        gap: rem(40px);
+        padding: 0 rem(24px);
+    }
+
+    .inner {
+        padding: 0 rem(24px);
+
+        @include media-max(lg){
+            padding: 0;
+        }
+    }
+
+    .contact {
+        color: #666;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        margin-top: 8px;
+
+        .icon-tel-gray{
+            width: 16px;
+            height: 16px;
+            margin-right: 4px;
+        }
+
+        dd{
+            display: flex;
+            align-items: center;
+            &::before{
+                content: '';
+                height: 8px;
+                margin: 0 rem(8px);
+                border-left: 1px solid #ccc;
+            }
+        }
+    }
+
+    .media{
+        align-items: center;
+        gap: rem(40px);
+
+        .thumbnail{
+            aspect-ratio: 350/196;
+            overflow: hidden;
+            img{
+                width: 100%;
+                height: 100%;
+                border-radius: 24px;
+            }
+        }
+
+        @include media-max(lg){
+            display: block;
+
+            .thumbnail{
+                margin-bottom: 24px;
+            }
+        }
+    }
+}
+
+
+// 식품/화장품
+.iso-wrp {
+    counter-reset: section;
+    margin-top: rem(56px);
+    &-2 {
+        margin-top: rem(24px);
+    }
+    .iso-group-wrp {
+        display: flex;
+        align-items: stretch;
+        .iso-group {
+            flex: 1;
+        }
+        .iso-group.group-text {
+            display: flex; 
+            justify-content: end;
+            flex-direction: column;
+        }
+    } 
+}
+.iso-box-wrp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: rem(24px);
+    align-items: stretch; 
+
+    .iso-box {
+        flex: 1;
+        height: 100%;
+        text-align: center;
+        justify-content: center;
+        gap: rem(8px);
+        &.bg-beige {
+            padding: rem(24px) rem(8px);
+            border-radius: 16px;
+            font-size: rem(20px);
+            display: flex;
+        .text {
+            display: flex;
+            align-items: center; 
+            justify-content: center;
+            gap: rem(8px);
+            &::before {
+                counter-increment: section;
+                content: counter(section);
+                position: relative;
+                left: 0;
+                top: 0;
+                width: rem(20px);
+                background: #DB0032;
+                color: #fff;
+                font-size: rem(12px);
+                font-weight: 700;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: rem(4px) rem(6px);
+                line-height: 108%;
+            }
+        }
+
+        p {
+            position: relative;
+            text-align: left;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: rem(8px);
+        }
+    }
+
+        &-hd {
+            padding: rem(24px) rem(20px);
+            background: #EEE5DF;
+            color: #fff;
+            border-radius: 16px;
+            font-size: rem(24px);
+    }
+
+        &-body {
+            padding: rem(16px) rem(24px);
+            background: #f6f6f6;
+            border-radius: 16px;
+            height: calc(100% - 75px); 
+            .iso-box-items {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr); 
+                gap: rem(12px) rem(30px); 
+                list-style: none;
+                padding: 0;
+                text-align: left;
+                margin-top: rem(12px);
+                &:first-of-type {
+                    margin-top: 0;
+                }
+            }
+            .iso-box-items2 {
+                text-align: left;
+                li {
+                    display: flex;
+                    gap: rem(16px);
+                }
+                strong {
+                    width: rem(180px);
+                }
+            }
+
+            .mark-round {
+                font-size: rem(18px);
+                line-height: 160%;
+                padding-left: rem(16px);
+                position: relative;
+                margin-top: 0;
+            }
+        }
+    }
+    .iso-text {
+        flex: 1;
+        font-size: rem(16px);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+}
+
+
+// 사회적책임수준진단
+.icon {
+    &-award { background-image: url(../img/icon-award.svg); }
+    &-cash { background-image: url(../img/icon-cash.svg); }
+    &-check { background-image: url(../img/badge-flower.svg); }
+    &-control { background-image: url(../img/icon-control.svg); }
+    &-earth { background-image: url(../img/icon-earth.svg); }
+    &-labor { background-image: url(../img/icon-labor.svg); }
+    &-multiple { background-image: url(../img/badge-people.svg); }
+    &-proposal { background-image: url(../img/icon-proposal.svg); }
+    &-diagnosis { background-image: url(../img/icon-diagnosis.svg); }
+    &-cogwheel { background-image: url(../img/icon-cogwheel.svg); }
+    &-heart { background-image: url(../img/icon-heart.svg); }
+    &-go-white { background-image: url(../img/esg/icon-go.svg); }
+    &-graph { background-image: url(../img/icon-graph.svg); }
+    &-pie { background-image: url(../img/icon-pie.svg); }
+    &-building { background-image: url(../img/icon-building.svg); }
+    &-starribbon { background-image: url(../img/icon-starribbon.svg); }
+    &-chip { background-image: url(../img/icon-chip.svg); }
+    &-light { background-image: url(../img/icon-light.svg); }
+    &-scale { background-image: url(../img/icon-scale.svg); }
+    &-lock { background-image: url(../img/icon-lock.svg); }
+    &-bookmark-red { background-image: url(../img/icon-bookmark-red.svg); }
+    &-clock { background-image: url(../img/brand/clock-red.svg); }
+    &-book { background-image: url(../img/icon-book.svg); }
+}
+
+.iso-lnb {
+    margin-top: rem(100px);
+    margin-bottom:  rem(56px);
+}
+.topic-items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4열 */
+    gap: rem(17px);
+    margin-top: rem(24px);
+    li {
+        background-color: #fff;
+        padding: rem(24px);
+        border-radius: 16px;
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 150%;
+    }
+}
+.iso-container {
+    .accordion {
+        .purpose-box {
+            padding: rem(24px) rem(28px);
+            background: #EEE5DF;
+            border-radius: 16px;
+            font-weight: 500;
+            font-size: 18px;
+            width: 100%;
+            text-align: center;
+        }
+        .kmr-section ~ .iso-box-wrp {
+            .iso-box-hd {
+                font-size: rem(20px);
+            }
+            .iso-box-body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: rem(32px) rem(24px);
+            }
+        }
+        li:first-child {
+            .wrp {
+                margin-top: rem(40px);
+            }
+        }
+        li:last-child {
+            margin-top: rem(96px);
+            .fs-3 {
+                margin-top: rem(40px);
+                margin-bottom: rem(24px);
+            }
+        }
+    }
+}
+.iso-circle {
+    margin-top: rem(24px);
+    li {
+        .circle-process-content {
+            font-weight: 400;
+            font-size: rem(18px);
+        }
+        .fsm {
+            font-weight: 600;
+            font-size: rem(16px) !important;
+        }
+        dd {
+            span {
+                font-size: rem(16px);
+            }
+        }
+    }
+}
+.arr-wrp {
+    display: flex;
+    align-items: center;
+    gap: rem(36px);
+    margin-top: rem(16px);
+    .arr-box {
+        display: flex;
+        align-items: center;
+
+        .arr-content {
+            flex: 1 1 auto; 
+            position: relative;
+            background: #666;
+            color: #fff;
+            border-radius: rem(800px);
+            padding: rem(12px) rem(40px);
+            margin: 0 rem(8px);
+        }
+    }
+}
+// .desc {
+//     &-box-hd.bg-gray {
+//         color: #fff;
+//         padding: rem(16px) rem(24px);
+//         border-radius: rem(16px);
+//         margin-top: rem(24px);
+//         font-size: 20px;
+//     }
+//     &-box-body {
+//         justify-content: center;
+//     }
+// }
+.iso-desc {
+    margin-top: rem(24px);
+    .bx-white {
+        padding: rem(24px);
+        width: 100%;
+        font-weight: 600;
+        color: #000;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #fff;
+        border-radius: rem(16px);
+        font-size: 18px;
+    }
+}
+
+
+@include media-max(sm) {
+    // 식품/화장품
+    .iso-wrp {
+        .iso-box-wrp {
+            .iso-box.bg-beige {
+                flex-direction: column;
+            }
+            .iso-box {
+                &-body {
+                    .iso-box-items2 {
+                        li {
+                            strong {
+                                max-width:rem(130px);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // 왜! KMR인증을 선택하는가
+    .service-wrp {
+        .service-card {
+            .card-content {
+                flex-direction: column;
+            }
+        }
+    }
+}
+@include media-max(md) {
+    // 식품/화장품
+    .iso-wrp {
+        .iso-box-wrp {
+            .iso-box {
+                &-body {
+                    .iso-box-items {
+                        grid-template-columns: repeat(2, 1fr);
+                    }
+                }
+            }
+        }
+    }
+
+    // 사회적책임수준진단
+    .circle-process.iso-circle {
+        overflow-x: inherit; 
+    }
+}
+
+@include media-max(lg) {
+    // 인증절차
+    .iso-auth, .iso-auth2 {
+        .desc ~ .btn-wrp {
+            text-align: center;
+        }
+    }
+    // 왜! KMR인증을 선택하는가 
+    .service-wrp {
+        .service-card {
+            .btn-wrp {
+                text-align: center;
+            }
+        }
+    }
+    // 식품/화장품
+    .iso-wrp {
+        .iso-group-wrp {
+            display: block;
+            .iso-group {
+                &:last-child {
+                    margin-top: rem(24px);
+                }
+            }
+        } 
+    }
+    // 사회적책임수준진단
+    .img-scroll.iso-scroll img {
+        max-width: 100%;
+        width: auto;  
+    }
+
+}
+
+.title-beige {
+    padding: rem(24px);
+    background: #EEE5DF;
+    border-radius: rem(16px);
+    text-align: center;
+    font-weight: 700;
+
+    @include media-min(xl){
+        padding: rem(40px);
+    }
+}

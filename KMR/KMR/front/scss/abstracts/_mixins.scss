@@ -1,0 +1,70 @@
+// Breakpoints
+@mixin media-min($breakpoints) {
+	$min: map-get($grid-breakpoints, $breakpoints);
+
+	@media (min-width: $min) {
+		@content;
+	}
+}
+
+@mixin media-max($breakpoints) {
+	$max: map-get($grid-breakpoints, $breakpoints) - 0.02;
+
+	@media (max-width: $max) {
+		@content;
+	}
+}
+
+// @mixin media-setting($maxpoint , $minpoint) {
+// 	$max: map-get($grid-breakpoints, $maxpoint) - 0.02;
+// 	$min: map-get($grid-breakpoints, $minpoint);
+	
+// 	@media (max-width: $max) and (min-width: $min) {
+// 		@content;
+// 	}
+// }
+
+@mixin text-clamp($line: 2, $line-height: 1.5em , $height: auto ) {
+	display: -webkit-box !important;
+	overflow: hidden;
+	max-height: #{$line-height*$line};
+	line-height: $line-height !important;
+	text-overflow: ellipsis;
+	-webkit-line-clamp: $line;
+	-webkit-box-orient: vertical;
+	word-wrap: break-word;
+	word-break: break-all !important;
+	white-space: normal !important;
+	@if($height != auto) {
+        height: #{$line-height*$line}em ;
+    } @else {
+		height: auto ;
+    }
+	
+}
+
+@mixin text-truncate {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+@mixin text-hide {  
+	font: 0/0 a;
+	color: transparent;
+	text-shadow: none;
+	background-color: transparent;
+	border: 0;
+}
+
+// Display
+@mixin flex($flex: flex, $align: normal, $justify: flex-start, $direction: row) {
+	display: $flex; 
+	flex-wrap: wrap;
+	align-items: $align;
+	justify-content: $justify;
+	flex-direction: $direction;
+} 
+@mixin col{
+	flex-basis:0;flex-grow:1;min-width:0;max-width:100%;
+}

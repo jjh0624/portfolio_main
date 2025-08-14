@@ -1,0 +1,295 @@
+/* 스테이지 공통 */
+@font-face { font-weight: 400; font-family:'tekton-pro'; src:url(../common/font/tektonpro-regular.woff) format('woff'); }
+
+@font-face {
+    font-family: 'TmoneyRoundWindExtraBold';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/TmoneyRoundWindExtraBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.icon-vtt{
+	position: absolute;
+	  background-image: url(../img/intro/icon-vtt.png);
+	  width: 70px; height: 70px;
+	  left: 885px; top: 25px;
+  }
+  .icon-vtt.on{
+	  background-image: url(../img/intro/icon-vtt-on.png);
+  }
+
+  #ct>div{
+	position: absolute;
+	width: 100%; height: 100%;
+	top: 0; left: 0;
+	overflow: hidden;
+	transition: 1s;
+  }
+
+  @keyframes blink-animation {
+	0%{opacity: 1;}
+	50%{opacity: 0;}
+	100%{opacity: 1;}
+}
+
+.text-red{color: red;}
+
+#stage1{
+	background: url(../img/intro/bg.jpg) no-repeat center / cover;
+}
+
+#ct[data-step="start"] #stage1 .arrow{display: none;}
+#ct[data-step="stage1"] #stage1 .arrow{display: block;}
+
+#stage1[data-count="0"].zoom-in{transform: scale(2) translate(151px, 174px);}
+#stage1[data-count="1"].zoom-in{transform: scale(1.85) translate(441px, -98px);}
+#stage1[data-count="2"].zoom-in{transform: scale(1.45) translate(-290px, -25px);}
+#stage1[data-count="3"].zoom-in{transform: scale(1.45) translate(-290px, -25px);}
+
+.title-text{font-family: 'TmoneyRoundWindExtraBold'; color: #0b2f71; font-size: 30px; position: absolute; top: 80px; left: 30px; transition: 1s; z-index: 1;}
+#stage1[data-count="0"].zoom-in .title-text{top: 118px;left: 339px; font-size: 15px;}
+#stage1[data-count="1"].zoom-in .title-text{top: 371px;left: 724px; font-size: 15px;}
+#stage1[data-count="2"].zoom-in .title-text{top: 230px; left: 551px; font-size: 22px;}
+#stage1[data-count="3"].zoom-in .title-text{top: 230px; left: 551px; font-size: 22px;}
+
+.arrow{position: absolute;top: 203px;left: 808px; z-index: 10; animation: 1.5s ease-in infinite alternate blink-animation; cursor: pointer;}
+#stage1[data-count="1"].zoom-in .arrow{top: 534px;left: 529px;}
+#stage1[data-count="2"].zoom-in .arrow{top: 477px;left: 1121px;}
+#stage1[data-count="3"].zoom-in .arrow{top: 329px;left: 1510px;}
+
+
+.pic{position: absolute;}
+.pic1{width: 219px; left: 674px; top: 120px; transition: 1s;}
+#stage1[data-count="0"].zoom-in .pic1{transform: scale(1.2); width: 219px;left: 674px;top: 134px;}
+
+.pic2{width: 454px; top: 365px; left: 282px;}
+.pic3{width: 599px;right: 297px;bottom: 319px;}
+.arrow-pink{position: absolute; top: 474px; left: 1118px; display: none; animation: 1.5s ease-in infinite alternate blink-animation;}
+#stage1[data-count="2"].zoom-in .arrow-pink{position: absolute; top: 474px; left: 1118px;}
+#stage1[data-count="3"].zoom-in .arrow-pink{top: 300px; left: 1374px;}
+
+.blank, .frame{position: absolute;}
+.blank1{left: 734px;top: 162px;width: 112px;}
+.blank2{top: 433px;left: 403px;width: 144px;}
+.blank3{width: 160px;right: 544px; top: 446px;}
+.blank4{right: 338px; top: 258px; width: 100px;}
+
+.frame{animation: frame 1.5s infinite; z-index: 2; display: none;}
+.frame.active{display: block;}
+.frame1{left: 733px;top: 161px; width: 111px;}
+.frame2{top: 433px;left: 403px;width: 144px;}
+.frame3{width: 160px;right: 544px; top: 446px;}
+.frame4{width: 104px;right: 336px; top: 256px;}
+
+@keyframes frame {
+	0%{opacity: 1;}
+	50%{opacity: 0;}
+	100%{opacity: 1;}
+}
+
+.char > img{position: absolute;}
+.charimg1{width: 349px;bottom: -27px;left: 644px;}
+.charimg2{width: 600px;right: 290px;bottom: 0;}
+
+
+.dialogue-wrap{width: 650px; display: none;}
+#stage1[data-count="0"].zoom-in .dialogue-wrap{top: 360px;left: 491px;width: 600px;}
+#stage1[data-count="1"].zoom-in .dialogue-wrap{top: 665px;left: 180px;}
+#stage1[data-count="2"].zoom-in .dialogue-wrap{top: 642px;left: 967px; width: 720px;}
+#stage1[data-count="3"].zoom-in .dialogue-wrap{top: 642px;left: 967px; width: 720px;}
+
+.dialogue-wrap{position: absolute; transition: 3s;}
+.dialogue{z-index: 2; position: relative; display: inline-block;}
+/* 인라인블럭으로 바꿔야함 */
+.dialogue-conts{position: absolute;left: 50%;top: 50%;transform: translate(-50%, -50%);display: flex; z-index: 3; width: 100%; justify-content: space-around; padding: 0 50px;}
+.dialogue-conts > div.show{display: flex;}
+.dialogue-conts > div{display: none;}
+
+.puzzle-modal1{display: none; align-items: center; justify-content: center; gap: 30px;}
+.puzzle-conts{position: relative;}
+.puzzle-conts.disabled{pointer-events: none;}
+.puzzle-conts > img:first-child{cursor: pointer;}
+.puzzle-conts img{display: none; width: 200px;}
+.puzzle-conts.puzzle2 img{width: 170px;}
+.puzzle-conts.puzzle4 img{width: 130px;}
+.puzzle-conts > .show{display: block;}
+.puzzle-move{position: absolute; top: 0; left: 0; animation-duration: 2s; animation-fill-mode: forwards;}
+#stage1[data-count="0"].zoom-in .puzzle-move.active{animation-name: puzzle-move1;}
+#stage1[data-count="1"].zoom-in .puzzle-move.active{animation-name: puzzle-move2;}
+#stage1[data-count="2"].zoom-in .puzzle-move.active{animation-name: puzzle-move3;}
+#stage1[data-count="3"].zoom-in .puzzle-move.active{animation-name: puzzle-move4;}
+
+/* puzzle move 퍼즐 움직이는 애니메이션 */
+@keyframes puzzle-move1 {
+	0%{top: 0; left: 0;}
+	100%{top: -251px;left: -200px;}
+}
+@keyframes puzzle-move2 {
+	0%{top: 0; left: 0;}
+	100%{top: -248px;left: -95px;transform: scale(1.3);}
+}
+@keyframes puzzle-move3 {
+	0%{top: 0; left: 0;}
+	100%{top: -247px;left: 206px;}
+}
+@keyframes puzzle-move4 {
+	0%{top: 0; left: 0;}
+	100%{top: -423px; left: 281px; transform: scale(1.2);}
+}
+
+.puzzle-modal2{display: flex;justify-content: right;width: 100%;align-items: center;column-gap: 80px; display: none;}
+.btn-voice{position: absolute; width: 35px;top: 66px;left: 434px;transform: scaleX(-1);}
+#stage1[data-count="0"].zoom-in .btn-voice{top: 60px;left: 382px;}
+#stage1[data-count="2"].zoom-in .btn-voice{top: 73px;left: 504px;}
+#stage1[data-count="3"].zoom-in .btn-voice{top: 73px;left: 504px;}
+
+.text-conts{font-size: 20px; text-align: center; margin-bottom: 17px;}
+.text-conts.md{font-size: 24px;}
+.text-conts > p{font-family: 'TmoneyRoundWindExtraBold'; color: #0b2f71; padding-bottom: 20px;}
+#stage1[data-count="0"].zoom-in .text-conts > p{font-size: 18px;}
+#stage1[data-count="2"].zoom-in .text-conts > p{font-size: 24px;}
+#stage1[data-count="3"].zoom-in .text-conts > p{font-size: 22px;}
+.text-list li{display: none; font-size: 25px; font-weight: 700; cursor: pointer;}
+.md .text-list li{font-size: 30px;}
+.text-list .show{display: block;}
+
+#stage1[data-count="0"].zoom-in .text-list1{display: block; font-size: 23px;}
+#stage1[data-count="1"].zoom-in .text-list2{display: block;}
+#stage1[data-count="2"].zoom-in .text-list3{display: block; font-size: 30px;}
+#stage1[data-count="3"].zoom-in .text-list4{display: block;  font-size: 28px;}
+
+.btn-wrap{display: flex; flex-direction: column; position: relative;justify-content: center; opacity: 0.6;pointer-events: none;}
+.btn-wrap.is-able{opacity: 1; pointer-events: all;}
+.btn-wrap > button{width: 90px; height: auto; display: none;}
+.btn-wrap > button.show{display: block;}
+.btn-wrap > button img{object-fit: cover;}
+.btn-wrap .hover{opacity: 0; position: absolute; top: 0; left: 0;}
+.btn-wrap > button:hover .hover,
+.btn-wrap > button:active .hover,
+.btn-wrap > button:focus .hover{opacity: 1; z-index: 1;}
+
+.sparkle-effect{display: none; position: absolute; z-index: 2; animation: effect 1.5s infinite;}
+#stage1[data-count="0"].zoom-in .sparkle-effect{top: 99px; left: 691px;}
+#stage1[data-count="1"].zoom-in .sparkle-effect{top: 416px;left: 376px;}
+#stage1[data-count="2"].zoom-in .sparkle-effect{top: 448px;left: 1191px;}
+#stage1[data-count="3"].zoom-in .sparkle-effect{ top: 260px;left: 1406px;}
+
+/* 반짝이 */
+@keyframes effect {
+    0% { content: url('../img/intro/modal2-effect1.png'); transform: translateY(0); }
+    25% { content: url('../img/intro/modal2-effect2.png'); transform: translateY(0); }
+    50% { content: url('../img/intro/modal2-effect1.png'); transform: translateY(5px); }
+    75% { content: url('../img/intro/modal2-effect2.png'); transform: translateY(0); }
+    100% { content: url('../img/intro/modal2-effect1.png'); transform: translateY(0); }
+}
+
+/* 흔들기 애니메이션 */
+/* 흔들기 */
+/* animate */
+.shake-bottom {
+	-webkit-animation: shake-bottom 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+	        animation: shake-bottom 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+}
+
+@-webkit-keyframes shake-bottom {
+	0%,
+	100% {
+	  -webkit-transform: rotate(0deg);
+			  transform: rotate(0deg);
+	  -webkit-transform-origin: 50% 100%;
+			  transform-origin: 50% 100%;
+	}
+	10% {
+	  -webkit-transform: rotate(2deg);
+			  transform: rotate(2deg);
+	}
+	20%,
+	40%,
+	60% {
+	  -webkit-transform: rotate(-4deg);
+			  transform: rotate(-4deg);
+	}
+	30%,
+	50%,
+	70% {
+	  -webkit-transform: rotate(4deg);
+			  transform: rotate(4deg);
+	}
+	80% {
+	  -webkit-transform: rotate(-2deg);
+			  transform: rotate(-2deg);
+	}
+	90% {
+	  -webkit-transform: rotate(2deg);
+			  transform: rotate(2deg);
+	}
+  }
+  @keyframes shake-bottom {
+	0%,
+	100% {
+	  -webkit-transform: rotate(0deg);
+			  transform: rotate(0deg);
+	  -webkit-transform-origin: 50% 100%;
+			  transform-origin: 50% 100%;
+	}
+	10% {
+	  -webkit-transform: rotate(2deg);
+			  transform: rotate(2deg);
+	}
+	20%,
+	40%,
+	60% {
+	  -webkit-transform: rotate(-4deg);
+			  transform: rotate(-4deg);
+	}
+	30%,
+	50%,
+	70% {
+	  -webkit-transform: rotate(4deg);
+			  transform: rotate(4deg);
+	}
+	80% {
+	  -webkit-transform: rotate(-2deg);
+			  transform: rotate(-2deg);
+	}
+	90% {
+	  -webkit-transform: rotate(2deg);
+			  transform: rotate(2deg);
+	}
+  }
+
+
+   /* vodmodal */
+ #vodModal { z-index: 1051; }
+
+ #vodModal .icon-vod { width: 75px; height: 75px; position: absolute; }
+.vod-script { position: absolute; right: 0; bottom: 0; border-radius: 20px; width: 574px; height: 332px; padding: 20px; background: url(../common/img/script-bg.png) no-repeat 0 0 / cover; display: none;}
+.vod-script.active { display: block; }
+.vod-script>div { font-size: 20px; height: 100%; overflow-y: scroll; }
+::-webkit-scrollbar { width:10px; }
+::-webkit-scrollbar-track { border-left:5px solid transparent; background: #efefef; background-clip: padding-box; cursor:pointer }
+::-webkit-scrollbar-thumb { background: #85bfcf; border-radius:0; border-left:5px solid transparent; background-clip: padding-box; cursor:pointer }
+::-webkit-scrollbar-thumb:hover { cursor:pointer }
+.icon-vtt { background-image: url(../common/img/ico-vtt.png); left: calc(100% + 10px); top: 50px; }
+.icon-vtt.on { background-image: url(../common/img/ico-vtt-on.png); }
+.icon-script { background-image: url(../common/img/ico-script.png); left: calc(100% + 10px); top: 130px; }
+.icon-script.on { background-image: url(../common/img/ico-script-on.png); }
+
+/* finish */
+#finalModal .modal-dialog { width: 1400px; }
+#finalModal .modal-body { padding: 40px 20px; }
+#finalModal .ex-list { justify-content: center; gap: 12px; margin: 20px 0; }
+#finalModal .ex-talk .tab-pane button { text-align: center; font-size: 44px; font-weight: 600; }
+#finalModal .ex-talk{height: 45px;font-size: 34px;line-height: 45px;margin-bottom: 40px;}
+
+#finalModal .nav-item { width: 270px; }
+#finalModal .img-wrp { position: relative; overflow: hidden; transition: all 200ms ease-in-out; }
+#finalModal .active .img-wrp { transform: scale(1.05); }
+#finalModal .active .img-wrp::after { content: ""; position: absolute; display: inline-block; width: 240px; height: 240px; background: url("../img/intro/modal-frame.png") no-repeat center center / contain; left: 0; top: 0; }
+
+#finalModal .ex-talk .script-text {display: inline-block; font-size: 34px;line-height: 45px; color: black; padding: 5px; animation: answer-wrp 2400ms infinite; pointer-events: all; cursor: pointer; font-weight: 600; }
+#finalModal .ex-talk.active .script-text { text-shadow: 0 3px rgba(255,255,255,1), 3px 0 rgba(255,255,255,1); font-size: 34px;line-height: 45px;color: #e6f4fc; }
+
+#finalModal .ex-talk .script-text.active{color:#ff0000;}
+#finalModal .ex-talk .script-text:hover {color: #f00;}
+#finalModal .ex-talk .script-text.active{color: #f00;}

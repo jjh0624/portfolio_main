@@ -1,0 +1,38 @@
+<svg width="88" height="88" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_d_249_37516)">
+<path d="M49.8741 37.1259C30.6054 17.8572 26.803 15.634 22.7185 19.7185C18.634 23.803 20.8572 27.6054 40.1259 46.8741C59.3946 66.1428 63.197 68.366 67.2815 64.2815C71.366 60.197 69.1428 56.3946 49.8741 37.1259Z" fill="#FFF9E0"/>
+<path d="M49.8741 46.8741C69.1428 27.6054 71.366 23.803 67.2815 19.7185C63.197 15.634 59.3946 17.8572 40.1259 37.1259C20.8572 56.3946 18.634 60.197 22.7185 64.2815C26.803 68.366 30.6054 66.1428 49.8741 46.8741Z" fill="#FFF9E0"/>
+<path d="M57.5009 42C63.3643 35.9657 67.0493 31.7879 69.0243 28.6732C70.3309 26.6127 71.0891 24.7203 70.9916 22.8698C70.8896 20.9331 69.88 19.4886 68.6957 18.3043C67.5114 17.12 66.0669 16.1104 64.1302 16.0084C62.2797 15.9109 60.3873 16.6691 58.3268 17.9757C55.2121 19.9507 51.0343 23.6357 45 29.4991C38.9657 23.6357 34.7879 19.9507 31.6732 17.9757C29.6127 16.6691 27.7203 15.9109 25.8698 16.0084C23.9331 16.1104 22.4886 17.12 21.3043 18.3043C20.12 19.4886 19.1104 20.9331 19.0084 22.8698C18.9109 24.7203 19.6691 26.6127 20.9757 28.6732C22.9507 31.7879 26.6357 35.9657 32.4991 42C26.6357 48.0343 22.9507 52.2121 20.9757 55.3268C19.6691 57.3873 18.9109 59.2797 19.0084 61.1302C19.1104 63.0669 20.12 64.5114 21.3043 65.6957C22.4886 66.88 23.9331 67.8896 25.8698 67.9916C27.7203 68.0891 29.6127 67.3309 31.6732 66.0243C34.7879 64.0493 38.9657 60.3643 45 54.5009C51.0343 60.3643 55.2121 64.0493 58.3268 66.0243C60.3873 67.3309 62.2797 68.0891 64.1302 67.9916C66.0669 67.8896 67.5114 66.88 68.6957 65.6957C69.88 64.5114 70.8896 63.0669 70.9916 61.1302C71.0891 59.2797 70.3309 57.3873 69.0243 55.3268C67.0493 52.2121 63.3643 48.0343 57.5009 42Z" stroke="#670000" stroke-width="4"/>
+</g>
+<g filter="url(#filter1_ii_249_37516)">
+<path d="M48.8741 37.1259C29.6054 17.8572 25.803 15.634 21.7185 19.7185C17.634 23.803 19.8572 27.6054 39.1259 46.8741C58.3946 66.1428 62.197 68.366 66.2815 64.2815C70.366 60.197 68.1428 56.3946 48.8741 37.1259Z" fill="#FFF9E0"/>
+<path d="M48.8741 46.8741C68.1428 27.6054 70.366 23.803 66.2815 19.7185C62.197 15.634 58.3946 17.8572 39.1259 37.1259C19.8572 56.3946 17.634 60.197 21.7185 64.2815C25.803 68.366 29.6054 66.1428 48.8741 46.8741Z" fill="#FFF9E0"/>
+</g>
+<defs>
+<filter id="filter0_d_249_37516" x="16.9999" y="14" width="56.0001" height="60" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="4"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_249_37516"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_249_37516" result="shape"/>
+</filter>
+<filter id="filter1_ii_249_37516" x="20" y="14" width="48" height="56" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="4"/>
+<feGaussianBlur stdDeviation="2"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.4 0"/>
+<feBlend mode="normal" in2="shape" result="effect1_innerShadow_249_37516"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="-4"/>
+<feGaussianBlur stdDeviation="2"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.820801 0 0 0 0 0.706625 0 0 0 0 0.599816 0 0 0 1 0"/>
+<feBlend mode="multiply" in2="effect1_innerShadow_249_37516" result="effect2_innerShadow_249_37516"/>
+</filter>
+</defs>
+</svg>

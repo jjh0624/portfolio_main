@@ -1,0 +1,124 @@
+.line-title{
+    padding-bottom: rem(24px);
+    border-bottom: 2px solid;
+    margin-bottom: rem(48px);
+}
+
+.term{
+
+    .fs-2{
+        word-break: break-all;
+    }
+
+    .flex-wrp{
+        margin: 0;
+
+        .desc{
+            max-width: none;
+            line-height: 1.6;
+        }
+
+        &+.flex-wrp{
+            margin-top: rem(48px);
+        }
+
+        .aside.sm{
+            max-width: 120px;
+        }
+
+        @include media-max(xl){
+            .aside{
+                margin-bottom: 8px;
+            }
+        }
+    }
+
+    &>.bx-gray{
+        padding: rem(32px) rem(40px);
+    }
+}
+
+
+.check-process{
+    display: flex;
+    gap: 50px 24px;
+    max-width: 920px;
+    margin: 0 auto;
+
+    &>div{
+        flex: 1;
+    }
+
+    @include media-min(xl){
+        column-gap: 40px;
+    }
+
+    @include media-max(md){
+        flex-direction: column;
+    }
+
+    .fs-7{
+        border-radius: 16px;
+        padding: rem(20px);
+        background: var(--primary);
+        color: #fff;
+        text-align: center;
+        margin-bottom: 16px;
+    }
+
+    .inner{
+        display: flex;
+
+        @include media-min(xl){
+            font-size: rem(20px);
+        }
+
+        .text{
+            flex-shrink: 0;
+            background: #EFEFEF;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            padding: 1.2em;
+            letter-spacing: .5em;
+            &>span{
+                 writing-mode: vertical-rl;
+            }
+        }
+
+        ol{
+            flex: 1;
+            li{
+                display: flex;
+                align-items: center;
+                &:not(:last-child){
+                    margin-bottom: rem(36px);
+                    span::after{
+                        content: '';
+                        position: absolute;
+                        width: rem(20px);
+                        height: rem(20px);
+                        background: url(../img/depth_arr.svg) no-repeat center/contain;
+                        top: 100%;
+                        left: 50%;
+                        margin: rem(8px) rem(-10px);
+                    }
+                }
+            }
+            span{
+                position: relative;
+                padding: 1.6em 1em;
+                flex: 1;
+                text-align: center;
+                background: #EFEFEF;
+                border-radius: 16px;
+            }
+            .icon{
+                width: rem(40px);
+                height: rem(20px);
+                background-image: url(../img/arr3.svg);
+                margin: 0 rem(8px);
+            }
+        }
+    }
+}
